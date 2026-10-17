@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ChiliesRouteImport } from './routes/chilies'
+import { Route as CoffeeRouteImport } from './routes/coffee'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DriedFruitsRouteImport } from './routes/dried-fruits'
+import { Route as ExportLogisticsRouteImport } from './routes/export-logistics'
+import { Route as MeatsRouteImport } from './routes/meats'
+import { Route as QualityRouteImport } from './routes/quality'
+import { Route as SustainabilityRouteImport } from './routes/sustainability'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChiliesRoute = ChiliesRouteImport.update({
+  id: '/chilies',
+  path: '/chilies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoffeeRoute = CoffeeRouteImport.update({
+  id: '/coffee',
+  path: '/coffee',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DriedFruitsRoute = DriedFruitsRouteImport.update({
+  id: '/dried-fruits',
+  path: '/dried-fruits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExportLogisticsRoute = ExportLogisticsRouteImport.update({
+  id: '/export-logistics',
+  path: '/export-logistics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeatsRoute = MeatsRouteImport.update({
+  id: '/meats',
+  path: '/meats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QualityRoute = QualityRouteImport.update({
+  id: '/quality',
+  path: '/quality',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SustainabilityRoute = SustainabilityRouteImport.update({
+  id: '/sustainability',
+  path: '/sustainability',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/chilies': typeof ChiliesRoute
+  '/coffee': typeof CoffeeRoute
+  '/contact': typeof ContactRoute
+  '/dried-fruits': typeof DriedFruitsRoute
+  '/export-logistics': typeof ExportLogisticsRoute
+  '/meats': typeof MeatsRoute
+  '/quality': typeof QualityRoute
+  '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/chilies': typeof ChiliesRoute
+  '/coffee': typeof CoffeeRoute
+  '/contact': typeof ContactRoute
+  '/dried-fruits': typeof DriedFruitsRoute
+  '/export-logistics': typeof ExportLogisticsRoute
+  '/meats': typeof MeatsRoute
+  '/quality': typeof QualityRoute
+  '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/chilies': typeof ChiliesRoute
+  '/coffee': typeof CoffeeRoute
+  '/contact': typeof ContactRoute
+  '/dried-fruits': typeof DriedFruitsRoute
+  '/export-logistics': typeof ExportLogisticsRoute
+  '/meats': typeof MeatsRoute
+  '/quality': typeof QualityRoute
+  '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/chilies'
+    | '/coffee'
+    | '/contact'
+    | '/dried-fruits'
+    | '/export-logistics'
+    | '/meats'
+    | '/quality'
+    | '/sustainability'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/chilies'
+    | '/coffee'
+    | '/contact'
+    | '/dried-fruits'
+    | '/export-logistics'
+    | '/meats'
+    | '/quality'
+    | '/sustainability'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/chilies'
+    | '/coffee'
+    | '/contact'
+    | '/dried-fruits'
+    | '/export-logistics'
+    | '/meats'
+    | '/quality'
+    | '/sustainability'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ChiliesRoute: typeof ChiliesRoute
+  CoffeeRoute: typeof CoffeeRoute
+  ContactRoute: typeof ContactRoute
+  DriedFruitsRoute: typeof DriedFruitsRoute
+  ExportLogisticsRoute: typeof ExportLogisticsRoute
+  MeatsRoute: typeof MeatsRoute
+  QualityRoute: typeof QualityRoute
+  SustainabilityRoute: typeof SustainabilityRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chilies': {
+      id: '/chilies'
+      path: '/chilies'
+      fullPath: '/chilies'
+      preLoaderRoute: typeof ChiliesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coffee': {
+      id: '/coffee'
+      path: '/coffee'
+      fullPath: '/coffee'
+      preLoaderRoute: typeof CoffeeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dried-fruits': {
+      id: '/dried-fruits'
+      path: '/dried-fruits'
+      fullPath: '/dried-fruits'
+      preLoaderRoute: typeof DriedFruitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/export-logistics': {
+      id: '/export-logistics'
+      path: '/export-logistics'
+      fullPath: '/export-logistics'
+      preLoaderRoute: typeof ExportLogisticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meats': {
+      id: '/meats'
+      path: '/meats'
+      fullPath: '/meats'
+      preLoaderRoute: typeof MeatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quality': {
+      id: '/quality'
+      path: '/quality'
+      fullPath: '/quality'
+      preLoaderRoute: typeof QualityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sustainability': {
+      id: '/sustainability'
+      path: '/sustainability'
+      fullPath: '/sustainability'
+      preLoaderRoute: typeof SustainabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ChiliesRoute: ChiliesRoute,
+  CoffeeRoute: CoffeeRoute,
+  ContactRoute: ContactRoute,
+  DriedFruitsRoute: DriedFruitsRoute,
+  ExportLogisticsRoute: ExportLogisticsRoute,
+  MeatsRoute: MeatsRoute,
+  QualityRoute: QualityRoute,
+  SustainabilityRoute: SustainabilityRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
