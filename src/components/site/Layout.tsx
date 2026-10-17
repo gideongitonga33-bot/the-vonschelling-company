@@ -1,0 +1,167 @@
+import { Link } from "@tanstack/react-router";
+import { useState, type ReactNode } from "react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/vonschelling-logo-wide.png.asset.json";
+import emblem from "@/assets/vonschelling-emblem.png.asset.json";
+
+export const NAV = [
+  { to: "/about", label: "About" },
+  { to: "/coffee", label: "Coffee" },
+  { to: "/chilies", label: "Chilies" },
+  { to: "/meats", label: "Meats" },
+  { to: "/dried-fruits", label: "Dried Fruits" },
+  { to: "/quality", label: "Quality" },
+  { to: "/sustainability", label: "Sustainability" },
+  { to: "/export-logistics", label: "Export" },
+] as const;
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+  return (
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+        <Link to="/" className="flex items-center" aria-label="VonSchelling home">
+          <img src={logo.url} alt="VonSchelling — Premium Kenyan Agricultural Exports" className="h-14 w-auto" />
+        </Link>
+        <nav className="hidden items-center gap-7 lg:flex">
+          {NAV.map((n) => (
+            <Link
+              key={n.to}
+              to={n.to}
+              className="text-[0.8rem] font-medium tracking-wide text-foreground/75 transition-colors hover:text-primary"
+              activeProps={{ className: "text-primary" }}
+            >
+              {n.label}
+            </Link>
+          ))}
+          <Link to="/contact" className="bg-primary px-5 py-2.5 text-[0.75rem] font-semibold tracking-[0.18em] uppercase text-primary-foreground transition hover:bg-forest-deep">
+            Request a Quote
+          </Link>
+        </nav>
+        <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
+          {open ? <X /> : <Menu />}
+        </button>
+      </div>
+      {open && (
+        <nav className="flex flex-col gap-1 border-t border-border bg-background px-6 py-4 lg:hidden">
+          {[...NAV, { to: "/contact", label: "Request a Quote" } as const].map((n) => (
+            <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="py-2 text-sm">
+              {n.label}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="bg-forest-deep text-ivory">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4">
+        <div className="md:col-span-2">
+          <img src={emblem.url} alt="" className="h-16 w-16 rounded-sm bg-ivory p-1" />
+          <p className="mt-6 font-display text-3xl">VonSchelling Limited</p>
+          <p className="eyebrow mt-2 text-gold">Premium Kenyan Agri-Exports</p>
+          <p className="mt-6 max-w-md text-sm leading-relaxed text-ivory/70">
+            Connecting Kenyan agricultural products to international markets through responsible sourcing,
+            quality assurance, traceability and dependable export partnerships.
+          </p>
+        </div>
+        <div>
+          <p className="eyebrow text-gold">Products</p>
+          <ul className="mt-5 space-y-2 text-sm text-ivory/75">
+            <li><Link to="/coffee">Coffee & Mizizi</Link></li>
+            <li><Link to="/chilies">Chilies</Link></li>
+            <li><Link to="/meats">Meats</Link></li>
+            <li><Link to="/dried-fruits">Dried Fruits</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="eyebrow text-gold">Company</p>
+          <ul className="mt-5 space-y-2 text-sm text-ivory/75">
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/quality">Quality & Traceability</Link></li>
+            <li><Link to="/sustainability">Sustainability</Link></li>
+            <li><Link to="/export-logistics">Export & Logistics</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-ivory/10">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-2 px-6 py-6 text-xs text-ivory/50 md:flex-row">
+          <span>© {new Date().getFullYear()} VonSchelling Limited · Nairobi, Kenya</span>
+          <span>Mizizi Coffee is a coffee brand of VonSchelling Limited.</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export function PageHero({ eyebrow, title, intro, image }: { eyebrow: string; title: string; intro: string; image: string }) {
+  return (
+    <section className="relative flex min-h-[70vh] items-end overflow-hidden">
+      <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="hero-overlay absolute inset-0" />
+      <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-20 text-ivory">
+        <p className="eyebrow text-gold-soft">{eyebrow}</p>
+        <h1 className="mt-5 max-w-4xl text-5xl leading-[1.02] md:text-7xl">{title}</h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ivory/85">{intro}</p>
+      </div>
+    </section>
+  );
+}
+
+export function Section({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return <section className={`mx-auto max-w-7xl px-6 py-24 md:py-32 ${className}`}>{children}</section>;
+}
+
+export function Heading({ eyebrow, title, intro, light }: { eyebrow: string; title: string; intro?: string; light?: boolean }) {
+  return (
+    <div className="max-w-3xl">
+      <p className={`eyebrow ${light ? "text-gold-soft" : "text-gold"}`}>{eyebrow}</p>
+      <h2 className="mt-4 text-4xl leading-tight md:text-5xl">{title}</h2>
+      {intro && <p className={`mt-5 text-lg leading-relaxed ${light ? "text-ivory/75" : "text-muted-foreground"}`}>{intro}</p>}
+    </div>
+  );
+}
+
+export function BulletGrid({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div>
+      <h3 className="text-2xl">{title}</h3>
+      <div className="gold-rule mt-4 w-24" />
+      <ul className="mt-6 space-y-4">
+        {items.map((i) => (
+          <li key={i} className="flex gap-4 text-[0.95rem] leading-relaxed text-foreground/80">
+            <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-gold" />
+            {i}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function Note({ children }: { children: ReactNode }) {
+  return (
+    <div className="border-l-2 border-gold bg-secondary/60 px-6 py-5 text-sm leading-relaxed text-foreground/80">{children}</div>
+  );
+}
+
+export function QuoteCTA({ title = "Discuss Your Requirements" }: { title?: string }) {
+  return (
+    <section className="bg-primary text-primary-foreground">
+      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 py-20 md:flex-row md:items-center">
+        <div>
+          <p className="eyebrow text-gold-soft">Request a Quotation</p>
+          <h2 className="mt-3 text-4xl md:text-5xl">{title}</h2>
+          <p className="mt-3 max-w-xl text-ivory/75">Share the product, specification, volume and destination — we'll respond with availability and terms.</p>
+        </div>
+        <Link to="/contact" className="border border-gold bg-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-forest-deep transition hover:bg-gold-soft">
+          Request a Quote
+        </Link>
+      </div>
+    </section>
+  );
+}
