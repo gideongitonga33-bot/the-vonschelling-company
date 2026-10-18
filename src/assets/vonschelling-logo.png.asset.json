@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "23b5bb91-f9d1-4c02-963b-76cd21020f01",
-  "project_id": "11f42071-838a-42d1-a0fa-eaa93cdc771f",
-  "url": "/__l5e/assets-v1/23b5bb91-f9d1-4c02-963b-76cd21020f01/vonschelling-logo.png",
-  "r2_key": "a/v1/11f42071-838a-42d1-a0fa-eaa93cdc771f/23b5bb91-f9d1-4c02-963b-76cd21020f01/vonschelling-logo.png",
-  "original_filename": "vonschelling-logo.png",
-  "size": 1449454,
   "content_type": "image/png",
-  "created_at": "2026-10-17T09:18:22Z"
+  "created_at": "2026-10-17T09:18:22Z",
+  "original_filename": "vonschelling-logo.png",
+  "project_id": "a77e9dd9-a262-46b7-845d-81f300795ab0",
+  "r2_key": "a/v1/a77e9dd9-a262-46b7-845d-81f300795ab0/23b5bb91-f9d1-4c02-963b-76cd21020f01/vonschelling-logo.png",
+  "size": 1449454,
+  "url": "/__l5e/assets-v1/23b5bb91-f9d1-4c02-963b-76cd21020f01/vonschelling-logo.png",
+  "version": 1
 }

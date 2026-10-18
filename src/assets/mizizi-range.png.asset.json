@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "da984f48-0a2f-4b70-9e3b-060572927cef",
-  "project_id": "11f42071-838a-42d1-a0fa-eaa93cdc771f",
-  "url": "/__l5e/assets-v1/da984f48-0a2f-4b70-9e3b-060572927cef/mizizi-range.png",
-  "r2_key": "a/v1/11f42071-838a-42d1-a0fa-eaa93cdc771f/da984f48-0a2f-4b70-9e3b-060572927cef/mizizi-range.png",
-  "original_filename": "mizizi-range.png",
-  "size": 2486755,
   "content_type": "image/png",
-  "created_at": "2026-10-17T09:18:28Z"
+  "created_at": "2026-10-17T09:18:28Z",
+  "original_filename": "mizizi-range.png",
+  "project_id": "a77e9dd9-a262-46b7-845d-81f300795ab0",
+  "r2_key": "a/v1/a77e9dd9-a262-46b7-845d-81f300795ab0/da984f48-0a2f-4b70-9e3b-060572927cef/mizizi-range.png",
+  "size": 2486755,
+  "url": "/__l5e/assets-v1/da984f48-0a2f-4b70-9e3b-060572927cef/mizizi-range.png",
+  "version": 1
 }

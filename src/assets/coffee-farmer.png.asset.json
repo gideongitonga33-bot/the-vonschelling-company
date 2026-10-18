@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "f6b03539-621c-4aeb-9398-96875729325e",
-  "project_id": "11f42071-838a-42d1-a0fa-eaa93cdc771f",
-  "url": "/__l5e/assets-v1/f6b03539-621c-4aeb-9398-96875729325e/coffee-farmer.png",
-  "r2_key": "a/v1/11f42071-838a-42d1-a0fa-eaa93cdc771f/f6b03539-621c-4aeb-9398-96875729325e/coffee-farmer.png",
-  "original_filename": "coffee-farmer.png",
-  "size": 281226,
   "content_type": "image/webp",
-  "created_at": "2026-10-18T04:35:03Z"
+  "created_at": "2026-10-18T04:35:03Z",
+  "original_filename": "coffee-farmer.png",
+  "project_id": "a77e9dd9-a262-46b7-845d-81f300795ab0",
+  "r2_key": "a/v1/a77e9dd9-a262-46b7-845d-81f300795ab0/f6b03539-621c-4aeb-9398-96875729325e/coffee-farmer.png",
+  "size": 281226,
+  "url": "/__l5e/assets-v1/f6b03539-621c-4aeb-9398-96875729325e/coffee-farmer.png",
+  "version": 1
 }

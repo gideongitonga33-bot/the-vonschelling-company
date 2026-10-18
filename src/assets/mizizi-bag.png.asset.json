@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "7c007cc7-af36-4546-b69a-f8bd329f8a8e",
-  "project_id": "11f42071-838a-42d1-a0fa-eaa93cdc771f",
-  "url": "/__l5e/assets-v1/7c007cc7-af36-4546-b69a-f8bd329f8a8e/mizizi-bag.png",
-  "r2_key": "a/v1/11f42071-838a-42d1-a0fa-eaa93cdc771f/7c007cc7-af36-4546-b69a-f8bd329f8a8e/mizizi-bag.png",
-  "original_filename": "mizizi-bag.png",
-  "size": 2073267,
   "content_type": "image/png",
-  "created_at": "2026-10-17T09:18:25Z"
+  "created_at": "2026-10-17T09:18:25Z",
+  "original_filename": "mizizi-bag.png",
+  "project_id": "a77e9dd9-a262-46b7-845d-81f300795ab0",
+  "r2_key": "a/v1/a77e9dd9-a262-46b7-845d-81f300795ab0/7c007cc7-af36-4546-b69a-f8bd329f8a8e/mizizi-bag.png",
+  "size": 2073267,
+  "url": "/__l5e/assets-v1/7c007cc7-af36-4546-b69a-f8bd329f8a8e/mizizi-bag.png",
+  "version": 1
 }
