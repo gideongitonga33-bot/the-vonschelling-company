@@ -136,7 +136,10 @@ function Coffee() {
       </section>
 
       <Section>
-        <Heading eyebrow="The Coffee Journey" title="From farmer to cup." intro="Coffee does not always travel the same route. Direct, cooperative and auction sourcing are distinct paths, and auction-sourced lots may carry different upstream traceability records." />
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <Heading eyebrow="The Coffee Journey" title="From farmer to cup." intro="Coffee does not always travel the same route. Direct, cooperative and auction sourcing are distinct paths, and auction-sourced lots may carry different upstream traceability records." />
+          <Photo src={dryingPhoto.url} alt="Coffee drying on raised beds at Fairview Estate, Kiambu" credit="Raised drying beds, Fairview Estate, Kiambu. Photo: Daniel Case, CC BY-SA 4.0" className="[&_img]:aspect-[16/10]" />
+        </div>
         <ol className="mt-16 grid gap-px bg-border md:grid-cols-4">
           {journey.map(([t, d], i) => (
             <li key={t} className="bg-background p-8">
