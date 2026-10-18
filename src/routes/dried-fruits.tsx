@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import img from "@/assets/dried-fruits.jpg";
-import { BulletGrid, Note, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
+import { BulletGrid, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/dried-fruits")({
@@ -20,7 +20,13 @@ export const Route = createFileRoute("/dried-fruits")({
             "Food-safety standards, testing and destination requirements.",
           ]} />
         </div>
-        <div className="mt-16"><Note>We clearly distinguish plain dried fruit from sweetened, preserved or otherwise processed fruit, buyers know exactly what they are purchasing.</Note></div>
+        <div className="mt-16">
+          <SpecTable title="Dried Fruit Specification Sheet" rows={[
+            ["Products", "Kent/Apple Mango, Smooth Cayenne Pineapple, Cavendish Banana, Solo Papaya"],
+            ["Preservation", "100% natural, Sugar-free, Moisture content controlled to 15-18% max"],
+          ]} />
+        </div>
+        <div className="mt-16"><Note>We clearly distinguish plain dried fruit from sweetened, preserved or otherwise processed fruit; buyers know exactly what they are purchasing.</Note></div>
       </Section>
       <QuoteCTA title="Request Dried Fruit Specifications" />
     </>

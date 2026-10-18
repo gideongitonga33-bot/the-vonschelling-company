@@ -3,7 +3,7 @@ import hero from "@/assets/hero-farm.jpg";
 import cupping from "@/assets/cupping.jpg";
 import bag from "@/assets/mizizi-bag.png.asset.json";
 import range from "@/assets/mizizi-range.png.asset.json";
-import { Heading, Note, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
+import { Heading, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/coffee")({
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/coffee")({
 const offers = [
   { n: "01", t: "Green Coffee Beans, Our Primary Export Offering", s: "For international importers, commodity traders, roasters and other qualified trade buyers.", d: "Depending on availability, offers can include Kenyan Arabica and other suitable lots. Details may include grade, origin, processing, crop information, screen size, defect profile, moisture, cup characteristics and available volume. Buyers can enquire about samples, specifications, bulk quantities, packaging and delivery terms." },
   { n: "02", t: "Mizizi Coffee, Roasted & Packaged", s: "Our specialist coffee brand for buyers seeking a finished Kenyan coffee product.", d: "Developed around whole-bean or ground coffee, roast profiles, pack sizes and target-market requirements. Retail, hospitality and distribution opportunities are discussed according to available products and production arrangements." },
-  { n: "03", t: "Private-Label Coffee", s: "Coffee supply and branding for businesses seeking coffee under their own brand.", d: "Depending on the production partner, services may include coffee selection, roast profile development, packaging formats, label coordination and production planning. Minimum quantities, lead times and branding capabilities are confirmed per project." },
+  { n: "03", t: "Private-Label Coffee", s: "Coffee supply and branding for businesses seeking coffee under their own brand.", d: "Depending on the production partner, services may include coffee selection, roast profile development, packaging formats, label coordination and production planning. Lead times and branding capabilities are confirmed per project." },
 ];
 
 const journey = [
@@ -50,6 +50,21 @@ function Coffee() {
               <p className="leading-relaxed text-foreground/80">{o.d}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+          <SpecTable title="Green Coffee Beans, Technical Specification" rows={[
+            ["Grade", "AA, AB, and C options available"],
+            ["Moisture Level", "11% to 12.5%"],
+            ["Defect Tolerance", "Primary defects 0%, Secondary defects < 5%"],
+          ]} />
+          <SpecTable title="Mizizi Coffee, Packing Data" rows={[
+            ["Packaging", "500g and 1Kg high-barrier nitrogen-flushed valve bags"],
+            ["Case Configuration", "20 bags per master shipping carton"],
+          ]} />
+          <div className="flex flex-col justify-center border border-gold/50 bg-secondary/60 p-8">
+            <p className="eyebrow text-gold">Private Label, Baseline Constraint</p>
+            <p className="mt-4 font-display text-2xl leading-snug">Minimum Order Quantity (MOQ) for private label custom packing begins at 1,000 Kilograms per roast profile.</p>
+          </div>
         </div>
       </Section>
 

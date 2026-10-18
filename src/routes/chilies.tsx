@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import img from "@/assets/chillies.jpg";
-import { BulletGrid, Note, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
+import img from "@/assets/chilies.jpg";
+import { BulletGrid, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/chilies")({
@@ -24,7 +24,14 @@ export const Route = createFileRoute("/chilies")({
             "Export volumes, samples, lead times and quotations.",
           ]} />
         </div>
-        <div className="mt-16"><Note>Fresh and dried chillies are handled differently, shelf-life controls and import requirements may differ. Phytosanitary certification for regulated plant exports is issued through Kenya's plant health authority, KEPHIS.</Note></div>
+        <div className="mt-16">
+          <SpecTable title="Chilli Specification Sheet" rows={[
+            ["Varieties", "African Bird's Eye (ABE), Cayenne"],
+            ["Forms", "Fresh whole, Sun-dried, Crushed Flakes"],
+            ["Aflatoxin Level", "< 5 ppb compliance"],
+          ]} />
+        </div>
+        <div className="mt-16"><Note>Fresh and dried chillies are handled differently; shelf-life controls and import requirements may differ. Phytosanitary certification for regulated plant exports is issued through Kenya's plant health authority, KEPHIS.</Note></div>
       </Section>
       <QuoteCTA title="Request Chilli Specifications" />
     </>
