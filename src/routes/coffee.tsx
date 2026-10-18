@@ -81,7 +81,7 @@ function Coffee() {
 
       <section className="bg-primary text-primary-foreground">
         <Section>
-          <Heading eyebrow="Where Our Coffee Grows" title="Six counties. One highland character." intro="Our green coffee beans are sourced from Kenya's central highlands, where volcanic soils, high altitude and cool nights produce the bright, complex cups Kenyan Arabica is famous for." />
+          <Heading light eyebrow="Where Our Coffee Grows" title="Six counties. One highland character." intro="Our green coffee beans are sourced from Kenya's central highlands, where volcanic soils, high altitude and cool nights produce the bright, complex cups Kenyan Arabica is famous for." />
           <div className="mt-14 grid gap-px bg-ivory/15 sm:grid-cols-2 lg:grid-cols-3">
             {regions.map(([name, alt, desc]) => (
               <div key={name} className="bg-primary p-8">
