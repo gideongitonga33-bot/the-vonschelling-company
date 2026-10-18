@@ -3,6 +3,19 @@ import hero from "@/assets/hero-farm.jpg";
 import cupping from "@/assets/cupping.jpg";
 import bag from "@/assets/mizizi-bag.png.asset.json";
 import range from "@/assets/mizizi-range.png.asset.json";
+import greenPhoto from "@/assets/coffee-green.jpg.asset.json";
+import dryingPhoto from "@/assets/coffee-drying.jpg.asset.json";
+import kiambuPhoto from "@/assets/coffee-kiambu.jpg.asset.json";
+import roastPhoto from "@/assets/coffee-roast.jpg.asset.json";
+
+function Photo({ src, alt, credit, className = "" }: { src: string; alt: string; credit: string; className?: string }) {
+  return (
+    <figure className={className}>
+      <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover" />
+      <figcaption className="mt-2 text-xs opacity-60">{credit}</figcaption>
+    </figure>
+  );
+}
 import { Heading, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
