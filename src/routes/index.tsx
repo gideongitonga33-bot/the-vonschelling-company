@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
 });
 
 const others = [
-  { to: "/chillies", title: "Chillies", text: "Fresh, dried whole and processed formats to agreed specifications.", img: chillies },
+  { to: "/chilies", title: "Chillies", text: "Fresh, dried whole and processed formats to agreed specifications.", img: chillies },
   { to: "/meats", title: "Meats", text: "Eligible products supplied through approved, veterinary-inspected partners.", img: meats },
   { to: "/dried-fruits", title: "Dried Fruits", text: "Mango, pineapple, banana and papaya, clearly specified.", img: fruits },
 ] as const;
