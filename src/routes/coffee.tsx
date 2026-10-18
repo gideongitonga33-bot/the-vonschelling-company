@@ -61,7 +61,7 @@ const docs = [
 function Coffee() {
   return (
     <>
-      <PageHero image={hero} eyebrow="VonSchelling Coffee Operations" title="Kenyan Coffee. From Origin to Opportunity." intro="Green coffee beans, Mizizi-branded roasted coffee and private-label opportunities, subject to confirmed availability and specifications." />
+      <PageHero image={hero.url} eyebrow="VonSchelling Coffee Operations" title="Kenyan Coffee. From Origin to Opportunity." intro="Green coffee beans, Mizizi-branded roasted coffee and private-label opportunities, subject to confirmed availability and specifications." />
       <Section>
         <Heading eyebrow="Our Coffee Offering" title="Green · Roasted · Private Label" />
         <div className="mt-14 divide-y divide-border border-y border-border">
