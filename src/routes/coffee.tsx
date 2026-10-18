@@ -12,7 +12,7 @@ export const Route = createFileRoute("/coffee")({
 });
 
 const offers = [
-  { n: "01", t: "Green Coffee Beans, Our Primary Export Offering", s: "For international importers, commodity traders, roasters and other qualified trade buyers.", d: "Depending on availability, offers can include Kenyan Arabica and other suitable lots. Details may include grade, origin, processing, crop information, screen size, defect profile, moisture, cup characteristics and available volume. Buyers can enquire about samples, specifications, bulk quantities, packaging and delivery terms." },
+  { n: "01", t: "Green Coffee Beans, Our Primary Export Offering", s: "For international importers, commodity traders, roasters and other qualified trade buyers.", d: "Washed Kenyan Arabica from the central highlands, offered in AA, AB, PB (Peaberry) and C grades, with specialty micro-lots from single estates and cooperative factories available on request. Details may include grade, origin, processing, crop information, screen size, defect profile, moisture, cup characteristics and available volume. Buyers can enquire about samples, specifications, bulk quantities, packaging and delivery terms." },
   { n: "02", t: "Mizizi Coffee, Roasted & Packaged", s: "Our specialist coffee brand for buyers seeking a finished Kenyan coffee product.", d: "Developed around whole-bean or ground coffee, roast profiles, pack sizes and target-market requirements. Retail, hospitality and distribution opportunities are discussed according to available products and production arrangements." },
   { n: "03", t: "Private-Label Coffee", s: "Coffee supply and branding for businesses seeking coffee under their own brand.", d: "Depending on the production partner, services may include coffee selection, roast profile development, packaging formats, label coordination and production planning. Lead times and branding capabilities are confirmed per project." },
 ];
@@ -53,8 +53,10 @@ function Coffee() {
         </div>
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
           <SpecTable title="Green Coffee Beans, Technical Specification" rows={[
-            ["Grade", "AA, AB, and C options available"],
-            ["Moisture Level", "11% to 12.5%"],
+            ["Grades", "AA, AB, PB (Peaberry), and C options available"],
+            ["Specialty Micro-Lots", "Single-estate and single-factory lots, cupping 84+ points, available on request"],
+            ["Varieties", "SL28, SL34, Ruiru 11 and Batian"],
+            ["Moisture Level", "10% to 11%"],
             ["Defect Tolerance", "Primary defects 0%, Secondary defects < 5%"],
           ]} />
           <SpecTable title="Mizizi Coffee, Packing Data" rows={[
