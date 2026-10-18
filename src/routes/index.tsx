@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import hero from "@/assets/hero-farm.jpg";
-import chilies from "@/assets/chilies.jpg";
+import chillies from "@/assets/chillies.jpg";
 import meats from "@/assets/meats.jpg";
 import fruits from "@/assets/dried-fruits.jpg";
 import cupping from "@/assets/cupping.jpg";
@@ -13,20 +13,20 @@ import { seo } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () =>
     seo(
-      "VonSchelling — Premium Kenyan Agricultural Exports",
-      "Kenyan green coffee, Mizizi roasted coffee, chilies, meats and dried fruits — responsibly sourced and export-ready for international buyers.",
+      "VonSchelling, Premium Kenyan Agricultural Exports",
+      "Kenyan green coffee beans, Mizizi roasted coffee, chillies, meats and dried fruits, responsibly sourced and export-ready for international buyers.",
     ),
   component: Index,
 });
 
 const others = [
-  { to: "/chilies", title: "Chilies", text: "Fresh, dried whole and processed formats to agreed specifications.", img: chilies },
+  { to: "/chillies", title: "Chillies", text: "Fresh, dried whole and processed formats to agreed specifications.", img: chillies },
   { to: "/meats", title: "Meats", text: "Eligible products supplied through approved, veterinary-inspected partners.", img: meats },
-  { to: "/dried-fruits", title: "Dried Fruits", text: "Mango, pineapple, banana and papaya — clearly specified.", img: fruits },
+  { to: "/dried-fruits", title: "Dried Fruits", text: "Mango, pineapple, banana and papaya, clearly specified.", img: fruits },
 ] as const;
 
 const pillars = [
-  ["Responsible Sourcing", "Farmers, cooperatives and licensed supply partners — and authorised auction channels where appropriate."],
+  ["Responsible Sourcing", "Farmers, cooperatives and licensed supply partners, and authorised auction channels where appropriate."],
   ["Quality Assurance", "Specifications, sampling, cupping and testing agreed for each commodity and buyer."],
   ["Traceability", "Supplier, origin, lot and shipment records, with traceability depth stated accurately."],
   ["Export Partnership", "Documentation, Incoterms, freight and shipment coordination from Kenya to destination."],
@@ -56,7 +56,7 @@ function Index() {
 
       <div className="border-b border-border bg-card">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-border md:grid-cols-4">
-          {["Coffee · Flagship", "Chilies", "Meats", "Dried Fruits"].map((t) => (
+          {["Coffee · Flagship", "Chillies", "Meats", "Dried Fruits"].map((t) => (
             <div key={t} className="eyebrow px-6 py-6 text-center text-primary">{t}</div>
           ))}
         </div>
@@ -69,10 +69,10 @@ function Index() {
             <Heading
               eyebrow="Flagship Operation · Coffee"
               title="Kenyan coffee. From origin to opportunity."
-              intro="We connect coffee supply partners in Kenya with international importers, commodity traders and roasters — offering green coffee, our Mizizi roasted coffee and private-label opportunities."
+              intro="We connect coffee supply partners in Kenya with international importers, commodity traders and roasters, offering green coffee beans, our Mizizi roasted coffee and private-label opportunities."
             />
             <div className="mt-10 grid gap-6 sm:grid-cols-3">
-              {[["01", "Green Coffee", "Primary export offering"], ["02", "Mizizi Coffee", "Roasted & packaged"], ["03", "Private Label", "Your brand, Kenyan coffee"]].map(([n, t, s]) => (
+              {[["01", "Green Coffee Beans", "Primary export offering"], ["02", "Mizizi Coffee", "Roasted & packaged"], ["03", "Private Label", "Your brand, Kenyan coffee"]].map(([n, t, s]) => (
                 <div key={n} className="border-t border-gold pt-4">
                   <p className="font-display text-3xl text-gold">{n}</p>
                   <p className="mt-1 font-semibold">{t}</p>
@@ -98,7 +98,7 @@ function Index() {
             <p className="mt-3 font-display text-2xl italic text-gold-soft">Rooted in Kenya. Crafted for the world.</p>
             <div className="gold-rule my-8 w-32" />
             <p className="max-w-lg leading-relaxed text-ivory/75">
-              "Mizizi" means <em>roots</em> in Swahili. Our premium roasted coffee — 100% Arabica from the heart of Kenya —
+              "Mizizi" means <em>roots</em> in Swahili. Our premium roasted coffee, 100% Arabica from the heart of Kenya —
               available in whole-bean or ground formats, light, medium and dark roasts, for retail, hospitality and distribution partners.
             </p>
             <Link to="/coffee" hash="mizizi" className="mt-10 inline-block border border-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-gold transition hover:bg-gold hover:text-navy">
@@ -128,7 +128,7 @@ function Index() {
       {/* Pillars */}
       <section className="bg-forest-deep text-ivory">
         <Section>
-          <Heading light eyebrow="Our Approach" title="Sourcing, quality and traceability — built into every transaction." />
+          <Heading light eyebrow="Our Approach" title="Sourcing, quality and traceability, built into every transaction." />
           <div className="mt-16 grid gap-10 md:grid-cols-4">
             {pillars.map(([t, d], i) => (
               <div key={t} className="border-t border-ivory/15 pt-6">

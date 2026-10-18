@@ -7,7 +7,7 @@ import emblem from "@/assets/vonschelling-emblem.png.asset.json";
 export const NAV = [
   { to: "/about", label: "About" },
   { to: "/coffee", label: "Coffee" },
-  { to: "/chilies", label: "Chilies" },
+  { to: "/chillies", label: "Chillies" },
   { to: "/meats", label: "Meats" },
   { to: "/dried-fruits", label: "Dried Fruits" },
   { to: "/quality", label: "Quality" },
@@ -21,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center" aria-label="VonSchelling home">
-          <img src={logo.url} alt="VonSchelling — Premium Kenyan Agricultural Exports" className="h-14 w-auto" />
+          <img src={logo.url} alt="VonSchelling, Premium Kenyan Agricultural Exports" className="h-14 w-auto" />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) => (
@@ -72,7 +72,7 @@ export function Footer() {
           <p className="eyebrow text-gold">Products</p>
           <ul className="mt-5 space-y-2 text-sm text-ivory/75">
             <li><Link to="/coffee">Coffee & Mizizi</Link></li>
-            <li><Link to="/chilies">Chilies</Link></li>
+            <li><Link to="/chillies">Chillies</Link></li>
             <li><Link to="/meats">Meats</Link></li>
             <li><Link to="/dried-fruits">Dried Fruits</Link></li>
           </ul>
@@ -156,7 +156,7 @@ export function QuoteCTA({ title = "Discuss Your Requirements" }: { title?: stri
         <div>
           <p className="eyebrow text-gold-soft">Request a Quotation</p>
           <h2 className="mt-3 text-4xl md:text-5xl">{title}</h2>
-          <p className="mt-3 max-w-xl text-ivory/75">Share the product, specification, volume and destination — we'll respond with availability and terms.</p>
+          <p className="mt-3 max-w-xl text-ivory/75">Share the product, specification, volume and destination, we'll respond with availability and terms.</p>
         </div>
         <Link to="/contact" className="border border-gold bg-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-forest-deep transition hover:bg-gold-soft">
           Request a Quote

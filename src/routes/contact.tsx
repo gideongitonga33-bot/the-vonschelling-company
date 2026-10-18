@@ -4,7 +4,7 @@ import { Heading, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => seo("Request a Quotation — VonSchelling", "Contact VonSchelling for Kenyan coffee, Mizizi coffee, chilies, meats and dried fruit quotations."),
+  head: () => seo("Request a Quotation, VonSchelling", "Contact VonSchelling for Kenyan coffee, Mizizi coffee, chillies, meats and dried fruit quotations."),
   component: Contact,
 });
 
@@ -34,8 +34,8 @@ function Contact() {
             <input className={field} placeholder="Destination country" />
             <select required className={field} defaultValue="">
               <option value="" disabled>Product of interest</option>
-              <option>Green coffee</option><option>Mizizi roasted coffee</option><option>Private-label coffee</option>
-              <option>Chilies</option><option>Meats</option><option>Dried fruits</option>
+              <option>Green coffee beans</option><option>Mizizi roasted coffee</option><option>Private-label coffee</option>
+              <option>Chillies</option><option>Meats</option><option>Dried fruits</option>
             </select>
             <input className={field} placeholder="Estimated volume" />
             <textarea rows={4} className={`${field} md:col-span-2`} placeholder="Specifications, packaging, Incoterms, delivery date…" />

@@ -4,7 +4,7 @@ import { BulletGrid, Heading, Note, PageHero, QuoteCTA, Section } from "@/compon
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/export-logistics")({
-  head: () => seo("Export & Logistics from Kenya — VonSchelling", "From enquiry to delivery: quotations, samples, contracts, documentation and freight coordinated from Kenya."),
+  head: () => seo("Export & Logistics from Kenya, VonSchelling", "From enquiry to delivery: quotations, samples, contracts, documentation and freight coordinated from Kenya."),
   component: Exp,
 });
 
@@ -49,7 +49,7 @@ function Exp() {
             <div>
               <h3 className="text-2xl">Incoterms & payment</h3>
               <div className="gold-rule mt-4 w-24" />
-              <p className="mt-6 leading-relaxed text-foreground/80">Quotations are prepared using agreed Incoterms — such as FOB or CIF where suitable for the product and route. Each quotation specifies the delivery point, cost allocation, insurance responsibilities, payment milestones and contract conditions.</p>
+              <p className="mt-6 leading-relaxed text-foreground/80">Quotations are prepared using agreed Incoterms, such as FOB or CIF where suitable for the product and route. Each quotation specifies the delivery point, cost allocation, insurance responsibilities, payment milestones and contract conditions.</p>
               <div className="mt-8"><Note>We don't promise fixed transit times or guaranteed capacity until supported by confirmed freight arrangements. For temperature-sensitive products, logistics and import eligibility are established before an order is accepted.</Note></div>
             </div>
           </div>

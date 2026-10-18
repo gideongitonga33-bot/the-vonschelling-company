@@ -5,7 +5,7 @@ import { Heading, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => seo("About VonSchelling Limited — Kenyan Agri-Exports", "A Kenyan agricultural trading company connecting supply partners with domestic and international buyers."),
+  head: () => seo("About VonSchelling Limited, Kenyan Agri-Exports", "A Kenyan agricultural trading company connecting supply partners with domestic and international buyers."),
   component: About,
 });
 
@@ -25,9 +25,9 @@ function About() {
       <Section>
         <div className="grid items-center gap-16 md:grid-cols-2">
           <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
-            <p>We are developing our business around four product categories: coffee, chilies, meats and dried fruits. Coffee is our flagship — green coffee for international trade, Mizizi-branded roasted coffee and private-label opportunities.</p>
+            <p>We are developing our business around four product categories: coffee, chillies, meats and dried fruits. Coffee is our flagship, green coffee beans for international trade, Mizizi-branded roasted coffee and private-label opportunities.</p>
             <p>We work with farmers, cooperatives and licensed supply partners, and where appropriate use authorised auction and market channels to meet buyer specifications and volumes.</p>
-            <p>International agricultural trade depends on more than product availability — it requires accurate specifications, credible supply, documentation, logistics and clear contractual responsibilities. Our role is to coordinate these elements and give buyers transparent information about each offer.</p>
+            <p>International agricultural trade depends on more than product availability, it requires accurate specifications, credible supply, documentation, logistics and clear contractual responsibilities. Our role is to coordinate these elements and give buyers transparent information about each offer.</p>
           </div>
           <img src={logo.url} alt="VonSchelling emblem" loading="lazy" className="w-full" />
         </div>

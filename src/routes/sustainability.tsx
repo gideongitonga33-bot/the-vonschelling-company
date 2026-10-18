@@ -4,20 +4,20 @@ import { Heading, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/sustainability")({
-  head: () => seo("Sustainability & Responsible Sourcing — VonSchelling", "Growth that begins at origin: responsible sourcing aligned with UN SDG 8 and SDG 12."),
+  head: () => seo("Sustainability & Responsible Sourcing, VonSchelling", "Growth that begins at origin: responsible sourcing aligned with UN SDG 8 and SDG 12."),
   component: Sus,
 });
 
 const pillars = [
   ["Supporting Agricultural Livelihoods", "We work with farmers, cooperatives and supply partners to connect products with market opportunities, grounded in clear requirements and fair dealing."],
-  ["Traceability & Transparency", "We maintain supplier, origin, product and lot records by commodity and sourcing route — and keep improving their completeness and reliability."],
+  ["Traceability & Transparency", "We maintain supplier, origin, product and lot records by commodity and sourcing route, and keep improving their completeness and reliability."],
   ["Responsible Product Handling", "We protect product integrity and reduce avoidable losses through appropriate storage, handling, packaging and transport."],
 ];
 
 function Sus() {
   return (
     <>
-      <PageHero image={img} eyebrow="Sustainability & Responsible Sourcing" title="Growth That Begins at Origin." intro="Agricultural trade should create value across the supply chain — through responsible relationships, transparent information and fair commercial practice." />
+      <PageHero image={img} eyebrow="Sustainability & Responsible Sourcing" title="Growth That Begins at Origin." intro="Agricultural trade should create value across the supply chain, through responsible relationships, transparent information and fair commercial practice." />
       <Section>
         <div className="grid gap-px bg-border md:grid-cols-3">
           {pillars.map(([t, d]) => (<div key={t} className="bg-background p-10"><h3 className="text-3xl">{t}</h3><p className="mt-4 text-muted-foreground">{d}</p></div>))}
