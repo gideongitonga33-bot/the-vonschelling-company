@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hero from "@/assets/hero-farm.jpg";
+import hero from "@/assets/coffee-hero.jpg.asset.json";
 import cupping from "@/assets/cupping.jpg";
 import bag from "@/assets/mizizi-bag.png.asset.json";
 import range from "@/assets/mizizi-range.png.asset.json";
