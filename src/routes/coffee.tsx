@@ -12,7 +12,7 @@ export const Route = createFileRoute("/coffee")({
 });
 
 const offers = [
-  { n: "01", t: "Green Coffee Beans, Our Primary Export Offering", s: "For international importers, commodity traders, roasters and other qualified trade buyers.", d: "Depending on availability, offers can include Kenyan Arabica and other suitable lots. Details may include grade, origin, processing, crop information, screen size, defect profile, moisture, cup characteristics and available volume. Buyers can enquire about samples, specifications, bulk quantities, packaging and delivery terms." },
+  { n: "01", t: "Green Coffee Beans, Our Primary Export Offering", s: "For international importers, commodity traders, roasters and other qualified trade buyers.", d: "Washed Kenyan Arabica from the central highlands, offered in AA, AB, PB (Peaberry) and C grades, with specialty micro-lots from single estates and cooperative factories available on request. Details may include grade, origin, processing, crop information, screen size, defect profile, moisture, cup characteristics and available volume. Buyers can enquire about samples, specifications, bulk quantities, packaging and delivery terms." },
   { n: "02", t: "Mizizi Coffee, Roasted & Packaged", s: "Our specialist coffee brand for buyers seeking a finished Kenyan coffee product.", d: "Developed around whole-bean or ground coffee, roast profiles, pack sizes and target-market requirements. Retail, hospitality and distribution opportunities are discussed according to available products and production arrangements." },
   { n: "03", t: "Private-Label Coffee", s: "Coffee supply and branding for businesses seeking coffee under their own brand.", d: "Depending on the production partner, services may include coffee selection, roast profile development, packaging formats, label coordination and production planning. Lead times and branding capabilities are confirmed per project." },
 ];
@@ -25,6 +25,15 @@ const journey = [
   ["Scores & verification", "Share documented cupping results, test results and certifications only when available and verified."],
   ["Buyer samples & approval", "Provide representative samples and agree the specifications the order will be supplied against."],
   ["Contract & shipment", "Confirm commercial terms, export requirements, shipment arrangements and records supplied."],
+];
+
+const regions = [
+  ["Nyeri", "1,600 to 2,300 m", "The heartland of classic Kenyan coffee on the slopes of Mount Kenya and the Aberdares. Deep red volcanic soils produce intense, complex cups with blackcurrant brightness and winey acidity."],
+  ["Kirinyaga", "1,400 to 1,900 m", "Mount Kenya's southern slopes, home to celebrated cooperative factories. Bright, sweet and layered cups with pronounced fruit character."],
+  ["Murang'a", "1,350 to 1,950 m", "East of the Aberdare Range, with a dense network of cooperative wet mills. Juicy, balanced coffees with vibrant acidity."],
+  ["Kiambu", "1,500 to 2,200 m", "Nairobi's neighbouring highlands and one of Kenya's oldest coffee districts. Large estates and smallholders producing full-bodied, well-structured lots."],
+  ["Embu", "1,300 to 1,900 m", "On Mount Kenya's eastern slopes. Floral, delicate cups with refined complexity and sweet citrus notes."],
+  ["Meru", "1,300 to 1,950 m", "Northeast of Mount Kenya, a fast-rising specialty origin. Rich volcanic soils give bold, fruity coffees with excellent depth."],
 ];
 
 const docs = [
@@ -53,8 +62,10 @@ function Coffee() {
         </div>
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
           <SpecTable title="Green Coffee Beans, Technical Specification" rows={[
-            ["Grade", "AA, AB, and C options available"],
-            ["Moisture Level", "11% to 12.5%"],
+            ["Grades", "AA, AB, PB (Peaberry), and C options available"],
+            ["Specialty Micro-Lots", "Single-estate and single-factory lots, cupping 84+ points, available on request"],
+            ["Varieties", "SL28, SL34, Ruiru 11 and Batian"],
+            ["Moisture Level", "10% to 11%"],
             ["Defect Tolerance", "Primary defects 0%, Secondary defects < 5%"],
           ]} />
           <SpecTable title="Mizizi Coffee, Packing Data" rows={[
@@ -67,6 +78,21 @@ function Coffee() {
           </div>
         </div>
       </Section>
+
+      <section className="bg-primary text-primary-foreground">
+        <Section>
+          <Heading light eyebrow="Where Our Coffee Grows" title="Six counties. One highland character." intro="Our green coffee beans are sourced from Kenya's central highlands, where volcanic soils, high altitude and cool nights produce the bright, complex cups Kenyan Arabica is famous for." />
+          <div className="mt-14 grid gap-px bg-ivory/15 sm:grid-cols-2 lg:grid-cols-3">
+            {regions.map(([name, alt, desc]) => (
+              <div key={name} className="bg-primary p-8">
+                <p className="eyebrow text-gold-soft">{alt}</p>
+                <h3 className="mt-2 font-display text-3xl">{name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      </section>
 
       <section id="mizizi" className="bg-navy text-ivory">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 py-24 md:grid-cols-[1fr_1.1fr]">
