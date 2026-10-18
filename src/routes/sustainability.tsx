@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import img from "@/assets/hero-farm.jpg";
+import farmer from "@/assets/coffee-farmer.png.asset.json";
 import { Heading, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
@@ -23,6 +24,23 @@ function Sus() {
           {pillars.map(([t, d]) => (<div key={t} className="bg-background p-10"><h3 className="text-3xl">{t}</h3><p className="mt-4 text-muted-foreground">{d}</p></div>))}
         </div>
       </Section>
+
+      <section className="bg-secondary/50">
+        <Section>
+          <div className="grid items-center gap-16 md:grid-cols-2">
+            <img src={farmer.url} alt="Kenyan farmer hand-picking ripe coffee cherries on a highland farm" loading="lazy" className="shadow-elegant aspect-[4/3] w-full object-cover" />
+            <div>
+              <Heading eyebrow="Direct & Fair Pathways" title="Trading directly with Kenyan cooperative societies." intro="Our sourcing model prioritises fair and direct transaction pathways with domestic agricultural cooperative societies, so more of the export value reaches the farmers who grow the product." />
+              <ul className="mt-8 space-y-4 text-[0.95rem] leading-relaxed text-foreground/80">
+                <li className="flex gap-4"><span className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-gold" />Direct engagement with registered farmer cooperatives and societies across Kenya's highland growing regions.</li>
+                <li className="flex gap-4"><span className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-gold" />Transparent pricing agreed at the society level, with payment records retained per lot.</li>
+                <li className="flex gap-4"><span className="mt-2.5 h-1.5 w-1.5 shrink-0 rotate-45 bg-gold" />Shorter supply chains that cut unnecessary intermediaries between farmer and export market.</li>
+              </ul>
+            </div>
+          </div>
+        </Section>
+      </section>
+
       <section className="bg-forest-deep text-ivory">
         <Section>
           <Heading light eyebrow="Our SDG Alignment" title="Measured by practice, not promises." />

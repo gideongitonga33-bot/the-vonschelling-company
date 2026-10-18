@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import img from "@/assets/port.jpg";
-import { BulletGrid, Heading, Note, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
+import { BulletGrid, Heading, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/export-logistics")({
@@ -46,13 +46,19 @@ function Exp() {
               "Inspections, permits, certificates and customs documentation.",
               "Cargo insurance and risk allocation as agreed.",
             ]} />
-            <div>
-              <h3 className="text-2xl">Incoterms & payment</h3>
-              <div className="gold-rule mt-4 w-24" />
-              <p className="mt-6 leading-relaxed text-foreground/80">Quotations are prepared using agreed Incoterms, such as FOB or CIF where suitable for the product and route. Each quotation specifies the delivery point, cost allocation, insurance responsibilities, payment milestones and contract conditions.</p>
-              <div className="mt-8"><Note>We don't promise fixed transit times or guaranteed capacity until supported by confirmed freight arrangements. For temperature-sensitive products, logistics and import eligibility are established before an order is accepted.</Note></div>
+            <div className="space-y-8">
+              <SpecTable title="Loading Points & Shipping Configurations" rows={[
+                ["Sea Freight", "FOB Port of Mombasa (KE_MBA) containerized cargo"],
+                ["Air Freight", "FCA Jomo Kenyatta International Airport (KE_NBO) cargo terminals"],
+                ["Incoterms Supported", "FOB, CFR, CIF"],
+              ]} />
+              <SpecTable title="Documentation Support" rows={[
+                ["Certificates", "Phytosanitary Certificates, Certificates of Origin, EUR.1 movement certificates"],
+                ["Freight", "Bill of Lading clearance and full shipment documentation"],
+              ]} />
             </div>
           </div>
+          <div className="mt-12"><Note>We don't promise fixed transit times or guaranteed capacity until supported by confirmed freight arrangements. For temperature-sensitive products, logistics and import eligibility are established before an order is accepted.</Note></div>
         </Section>
       </section>
       <QuoteCTA />
