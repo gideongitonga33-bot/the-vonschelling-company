@@ -31,6 +31,7 @@ export function Header() {
           <img src={logo.url} alt="VonSchelling, Premium Kenyan Agricultural Exports" className="h-14 w-auto" />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
+          <Link to="/" className={linkCls} activeProps={{ className: "text-primary" }}>Home</Link>
           <Link to="/about" className={linkCls} activeProps={{ className: "text-primary" }}>About</Link>
           <div className="relative" onMouseEnter={() => setDrop(true)} onMouseLeave={() => setDrop(false)}>
             <button className={`${linkCls} flex items-center gap-1.5`} aria-haspopup="true" aria-expanded={drop} onClick={() => setDrop(!drop)}>
@@ -63,6 +64,7 @@ export function Header() {
       </div>
       {open && (
         <nav className="flex flex-col gap-1 border-t border-border bg-background px-6 py-4 lg:hidden">
+          <Link to="/" onClick={() => setOpen(false)} className="py-2 text-sm">Home</Link>
           <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-sm">About</Link>
           <p className="eyebrow pt-3 text-gold">Operations</p>
           {OPERATIONS.map((o) => (
