@@ -79,8 +79,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "VonSchelling — Premium Kenyan Agri-Exports" },
-      { name: "description", content: "Kenyan coffee, chilies, meats and dried fruits for international buyers." },
+      { title: "VonSchelling, Premium Kenyan Agri-Exports" },
+      { name: "description", content: "Kenyan coffee, chillies, meats and dried fruits for international buyers." },
       { name: "author", content: "VonSchelling Limited" },
     ],
     links: [
