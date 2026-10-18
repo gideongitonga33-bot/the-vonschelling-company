@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import hero from "@/assets/hero-farm.jpg";
-import chillies from "@/assets/chillies.jpg";
+import chillies from "@/assets/chilies.jpg";
 import meats from "@/assets/meats.jpg";
 import fruits from "@/assets/dried-fruits.jpg";
 import cupping from "@/assets/cupping.jpg";
