@@ -3,6 +3,19 @@ import hero from "@/assets/hero-farm.jpg";
 import cupping from "@/assets/cupping.jpg";
 import bag from "@/assets/mizizi-bag.png.asset.json";
 import range from "@/assets/mizizi-range.png.asset.json";
+import greenPhoto from "@/assets/coffee-green.jpg.asset.json";
+import dryingPhoto from "@/assets/coffee-drying.jpg.asset.json";
+import kiambuPhoto from "@/assets/coffee-kiambu.jpg.asset.json";
+import roastPhoto from "@/assets/coffee-roast.jpg.asset.json";
+
+function Photo({ src, alt, credit, className = "" }: { src: string; alt: string; credit: string; className?: string }) {
+  return (
+    <figure className={className}>
+      <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover" />
+      <figcaption className="mt-2 text-xs opacity-60">{credit}</figcaption>
+    </figure>
+  );
+}
 import { Heading, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
@@ -60,7 +73,8 @@ function Coffee() {
             </div>
           ))}
         </div>
-        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+        <div className="mt-14 grid items-start gap-10 lg:grid-cols-2">
+          <Photo src={greenPhoto.url} alt="Inspecting the shape, colour and aroma of raw green coffee beans" credit="Green bean inspection. Photo: DFID, CC BY 2.0" className="[&_img]:aspect-[4/3]" />
           <SpecTable title="Green Coffee Beans, Technical Specification" rows={[
             ["Grades", "AA, AB, PB (Peaberry), and C options available"],
             ["Specialty Micro-Lots", "Single-estate and single-factory lots, cupping 84+ points, available on request"],
@@ -68,6 +82,8 @@ function Coffee() {
             ["Moisture Level", "10% to 11%"],
             ["Defect Tolerance", "Primary defects 0%, Secondary defects < 5%"],
           ]} />
+        </div>
+        <div className="mt-10 grid gap-8 lg:grid-cols-3">
           <SpecTable title="Mizizi Coffee, Packing Data" rows={[
             ["Packaging", "500g and 1Kg high-barrier nitrogen-flushed valve bags"],
             ["Case Configuration", "20 bags per master shipping carton"],
@@ -76,12 +92,16 @@ function Coffee() {
             <p className="eyebrow text-gold">Private Label, Baseline Constraint</p>
             <p className="mt-4 font-display text-2xl leading-snug">Minimum Order Quantity (MOQ) for private label custom packing begins at 1,000 Kilograms per roast profile.</p>
           </div>
+          <Photo src={roastPhoto.url} alt="Freshly roasted coffee beans turning in a roaster cooling tray" credit="Roast profiling. Photo: Wikimedia Commons, CC BY-SA 3.0" className="[&_img]:aspect-[4/3]" />
         </div>
       </Section>
 
       <section className="bg-primary text-primary-foreground">
         <Section>
-          <Heading light eyebrow="Where Our Coffee Grows" title="Six counties. One highland character." intro="Our green coffee beans are sourced from Kenya's central highlands, where volcanic soils, high altitude and cool nights produce the bright, complex cups Kenyan Arabica is famous for." />
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <Heading light eyebrow="Where Our Coffee Grows" title="Six counties. One highland character." intro="Our green coffee beans are sourced from Kenya's central highlands, where volcanic soils, high altitude and cool nights produce the bright, complex cups Kenyan Arabica is famous for." />
+            <Photo src={kiambuPhoto.url} alt="Coffee plantation near Kawaida Falls, Cianda, Kiambu County" credit="Cianda, Kiambu County. Photo: Lebu Ayiga, CC BY 4.0" className="[&_img]:aspect-[4/3]" />
+          </div>
           <div className="mt-14 grid gap-px bg-ivory/15 sm:grid-cols-2 lg:grid-cols-3">
             {regions.map(([name, alt, desc]) => (
               <div key={name} className="bg-primary p-8">
@@ -116,7 +136,10 @@ function Coffee() {
       </section>
 
       <Section>
-        <Heading eyebrow="The Coffee Journey" title="From farmer to cup." intro="Coffee does not always travel the same route. Direct, cooperative and auction sourcing are distinct paths, and auction-sourced lots may carry different upstream traceability records." />
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <Heading eyebrow="The Coffee Journey" title="From farmer to cup." intro="Coffee does not always travel the same route. Direct, cooperative and auction sourcing are distinct paths, and auction-sourced lots may carry different upstream traceability records." />
+          <Photo src={dryingPhoto.url} alt="Coffee drying on raised beds at Fairview Estate, Kiambu" credit="Raised drying beds, Fairview Estate, Kiambu. Photo: Daniel Case, CC BY-SA 4.0" className="[&_img]:aspect-[16/10]" />
+        </div>
         <ol className="mt-16 grid gap-px bg-border md:grid-cols-4">
           {journey.map(([t, d], i) => (
             <li key={t} className="bg-background p-8">
