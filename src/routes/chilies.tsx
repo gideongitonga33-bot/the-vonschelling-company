@@ -3,7 +3,7 @@ import img from "@/assets/chillies.jpg";
 import { BulletGrid, Note, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
-export const Route = createFileRoute("/chillies")({
+export const Route = createFileRoute("/chilies")({
   head: () => seo("Kenyan Chilli Exports, VonSchelling", "Fresh, dried whole and processed Kenyan chillies supplied to agreed quality, food-safety and destination-market specifications."),
   component: () => (
     <>

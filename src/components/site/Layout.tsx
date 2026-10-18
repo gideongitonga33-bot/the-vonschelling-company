@@ -1,22 +1,29 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import logo from "@/assets/vonschelling-logo-wide.png.asset.json";
 import emblem from "@/assets/vonschelling-emblem.png.asset.json";
 
-export const NAV = [
-  { to: "/about", label: "About" },
+export const OPERATIONS = [
   { to: "/coffee", label: "Coffee" },
-  { to: "/chillies", label: "Chillies" },
+  { to: "/chilies", label: "Chillies" },
   { to: "/meats", label: "Meats" },
   { to: "/dried-fruits", label: "Dried Fruits" },
+] as const;
+
+export const NAV = [
+  { to: "/about", label: "About" },
   { to: "/quality", label: "Quality" },
   { to: "/sustainability", label: "Sustainability" },
   { to: "/export-logistics", label: "Export" },
 ] as const;
 
+const linkCls =
+  "text-[0.8rem] font-medium tracking-wide text-foreground/75 transition-colors hover:text-primary";
+
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [drop, setDrop] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
@@ -24,13 +31,25 @@ export function Header() {
           <img src={logo.url} alt="VonSchelling, Premium Kenyan Agricultural Exports" className="h-14 w-auto" />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
-          {NAV.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-              className="text-[0.8rem] font-medium tracking-wide text-foreground/75 transition-colors hover:text-primary"
-              activeProps={{ className: "text-primary" }}
-            >
+          <Link to="/about" className={linkCls} activeProps={{ className: "text-primary" }}>About</Link>
+          <div className="relative" onMouseEnter={() => setDrop(true)} onMouseLeave={() => setDrop(false)}>
+            <button className={`${linkCls} flex items-center gap-1.5`} aria-haspopup="true" aria-expanded={drop} onClick={() => setDrop(!drop)}>
+              Operations <ChevronDown className={`h-3.5 w-3.5 transition-transform ${drop ? "rotate-180" : ""}`} />
+            </button>
+            {drop && (
+              <div className="absolute left-1/2 top-full w-56 -translate-x-1/2 pt-3">
+                <div className="border border-border bg-card py-2 shadow-elegant">
+                  {OPERATIONS.map((o) => (
+                    <Link key={o.to} to={o.to} onClick={() => setDrop(false)} className="block px-6 py-3 text-sm text-foreground/80 transition hover:bg-secondary hover:text-primary" activeProps={{ className: "text-primary" }}>
+                      {o.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          {NAV.slice(1).map((n) => (
+            <Link key={n.to} to={n.to} className={linkCls} activeProps={{ className: "text-primary" }}>
               {n.label}
             </Link>
           ))}
@@ -44,7 +63,14 @@ export function Header() {
       </div>
       {open && (
         <nav className="flex flex-col gap-1 border-t border-border bg-background px-6 py-4 lg:hidden">
-          {[...NAV, { to: "/contact", label: "Request a Quote" } as const].map((n) => (
+          <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-sm">About</Link>
+          <p className="eyebrow pt-3 text-gold">Operations</p>
+          {OPERATIONS.map((o) => (
+            <Link key={o.to} to={o.to} onClick={() => setOpen(false)} className="py-2 pl-4 text-sm">
+              {o.label}
+            </Link>
+          ))}
+          {[...NAV.slice(1), { to: "/contact", label: "Request a Quote" } as const].map((n) => (
             <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="py-2 text-sm">
               {n.label}
             </Link>
@@ -69,22 +95,22 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <p className="eyebrow text-gold">Products</p>
+          <p className="eyebrow text-gold">Operations</p>
           <ul className="mt-5 space-y-2 text-sm text-ivory/75">
             <li><Link to="/coffee">Coffee & Mizizi</Link></li>
-            <li><Link to="/chillies">Chillies</Link></li>
+            <li><Link to="/chilies">Chillies</Link></li>
             <li><Link to="/meats">Meats</Link></li>
             <li><Link to="/dried-fruits">Dried Fruits</Link></li>
           </ul>
         </div>
         <div>
-          <p className="eyebrow text-gold">Company</p>
+          <p className="eyebrow text-gold">Contact</p>
           <ul className="mt-5 space-y-2 text-sm text-ivory/75">
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/quality">Quality & Traceability</Link></li>
-            <li><Link to="/sustainability">Sustainability</Link></li>
-            <li><Link to="/export-logistics">Export & Logistics</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li>90 JGO Building, Ikigai, Lavington</li>
+            <li>90 James Gichuru Road</li>
+            <li>P.O. Box 9226, 00300 Nairobi, Kenya</li>
+            <li><a href="mailto:info@vonschelling.co.ke" className="hover:text-gold-soft">info@vonschelling.co.ke</a></li>
+            <li><a href="https://www.vonschelling.co.ke" target="_blank" rel="noreferrer" className="hover:text-gold-soft">www.vonschelling.co.ke</a></li>
           </ul>
         </div>
       </div>
@@ -143,6 +169,22 @@ export function BulletGrid({ title, items }: { title: string; items: string[] })
   );
 }
 
+export function SpecTable({ title, rows }: { title: string; rows: [string, string][] }) {
+  return (
+    <div className="border border-border bg-card">
+      <p className="eyebrow border-b border-border bg-secondary/60 px-6 py-4 text-primary">{title}</p>
+      <dl className="divide-y divide-border">
+        {rows.map(([k, v]) => (
+          <div key={k} className="grid gap-1 px-6 py-4 sm:grid-cols-[200px_1fr] sm:gap-6">
+            <dt className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">{k}</dt>
+            <dd className="text-sm leading-relaxed text-foreground/85">{v}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}
+
 export function Note({ children }: { children: ReactNode }) {
   return (
     <div className="border-l-2 border-gold bg-secondary/60 px-6 py-5 text-sm leading-relaxed text-foreground/80">{children}</div>
@@ -156,7 +198,7 @@ export function QuoteCTA({ title = "Discuss Your Requirements" }: { title?: stri
         <div>
           <p className="eyebrow text-gold-soft">Request a Quotation</p>
           <h2 className="mt-3 text-4xl md:text-5xl">{title}</h2>
-          <p className="mt-3 max-w-xl text-ivory/75">Share the product, specification, volume and destination, we'll respond with availability and terms.</p>
+          <p className="mt-3 max-w-xl text-ivory/75">Share the product, specification, volume and destination, and we'll respond with availability and terms.</p>
         </div>
         <Link to="/contact" className="border border-gold bg-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-forest-deep transition hover:bg-gold-soft">
           Request a Quote
