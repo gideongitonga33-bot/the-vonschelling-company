@@ -27,6 +27,7 @@ export const Route = createFileRoute("/meats")({
         </div>
         <div className="mt-16">
           <SpecTable title="Meat Specification Sheet" rows={[
+            ["Livestock Focus", "Shoats (Sheep & Goats), including Black-headed Persian and Galla breeds"],
             ["Sourcing", "100% Veterinary-Inspected & Certified Processing Facilities"],
             ["Regulatory Compliance", "HACCP Certified, Halal Export Verification available upon request"],
             ["Cold-Chain Integrity", "Deep frozen (-18°C) or Chilled (0-4°C) air/sea freight configurations"],
