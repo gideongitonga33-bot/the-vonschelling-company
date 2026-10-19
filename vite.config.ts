@@ -14,5 +14,4 @@ tanstackStart: {
       nitro: {
         preset: "node_server",
       },
-    },
-Fix nitro preset to node_server
+    }),
