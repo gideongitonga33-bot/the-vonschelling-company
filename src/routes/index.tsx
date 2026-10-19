@@ -4,7 +4,7 @@ import hero from "@/assets/hero-farm.jpg";
 import chillies from "@/assets/chilies.jpg";
 import meats from "@/assets/meats.jpg";
 import fruits from "@/assets/dried-fruits.jpg";
-import flagship from "@/assets/espresso-cup-and-beans.jpg.asset.json";
+import flagship from "@/assets/rustic-coffee-flat-lay.png.asset.json";
 import port from "@/assets/port.jpg";
 import bag from "@/assets/mizizi-bag.png.asset.json";
 import { Heading, QuoteCTA, Section } from "@/components/site/Layout";
