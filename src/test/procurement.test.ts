@@ -20,8 +20,8 @@ describe("Coffee procurement", () => {
     expect(result.body).toContain("Sample: 500g");
     expect(result.body).toContain("Grade: AA");
     expect(result.body).toContain("Destination: Berlin, Germany");
-    expect(result.href).toStartWith("mailto:info@vonschelling.co.ke?");
-    expect(decodeURIComponent(result.href.split("&body=")[1])).toBe(result.body);
+    expect(result.href.startsWith("mailto:info@vonschelling.co.ke?")).toBe(true);
+    expect(new URLSearchParams(result.href.split("?")[1]).get("body")).toBe(result.body);
   });
   it("retains commercial volume and Incoterm in quotation emails", () => {
     const data = new FormData(); data.set("volume", "10"); data.set("unit", "Metric Tons"); data.set("incoterm", "FOB");

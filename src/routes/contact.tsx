@@ -8,7 +8,7 @@ import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   head: () => seo("Quotations, Coffee Samples & Buyer Documents, VonSchelling", "Request Kenyan coffee evaluation samples, commercial quotations and lot-specific buyer documentation from VonSchelling."),
-  validateSearch: (search: Record<string, unknown>) => ({ request: parseRequestKind(search.request) }),
+  validateSearch: (search: Record<string, unknown>): { request?: RequestKind } => ({ request: parseRequestKind(search['request']) }),
   component: Contact,
 });
 
@@ -18,7 +18,7 @@ const label = "eyebrow text-gold";
 function Contact() {
   const { request } = Route.useSearch();
   const [selected, setSelected] = useState<RequestKind | null>(null);
-  const kind = selected ?? request;
+  const kind = selected ?? request ?? "quote";
   const [draft, setDraft] = useState<ReturnType<typeof buildEnquiryEmail> | null>(null);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);

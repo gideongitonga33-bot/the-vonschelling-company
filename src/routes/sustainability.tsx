@@ -66,11 +66,11 @@ function Sus() {
           <p className="mt-14 max-w-3xl font-display text-2xl italic text-ivory/85">"We view sustainability as an ongoing operational responsibility rather than a marketing claim."</p>
         </Section>
       </section>
-      <QuoteCTA />
       <Section>
         <Heading eyebrow="Responsible Sourcing Evidence" title="Ask what can be traced for your lot." intro="Cooperative, estate and auction sourcing can provide different levels of upstream evidence. For EU-bound coffee, confirm production-plot information, chain-of-custody records and deforestation-related evidence before accepting the source." />
         <Button asChild variant="link" className="mt-6 h-auto whitespace-normal px-0 text-left"><Link to="/quality">Review our EUDR due diligence guidance<ArrowUpRight /></Link></Button>
       </Section>
+      <QuoteCTA />
     </>
   );
 }
