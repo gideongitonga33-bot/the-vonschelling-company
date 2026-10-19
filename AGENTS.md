@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Website media
+- Store uploaded and downloaded website photos as Lovable Assets pointers and import their `.url`; this preserves reliable media delivery without committing large binaries.
+- Attribute documentary photographs to their verified creator and licence; never retain a previous photograph's credit or location claim after replacing it.

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import img from "@/assets/port.jpg";
+import storage from "@/assets/Warm_Burlap_Sacks_in_Storage.webp.asset.json";
 import { BulletGrid, Heading, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
@@ -58,6 +59,10 @@ function Exp() {
               ]} />
             </div>
           </div>
+          <figure className="mt-12">
+            <img src={storage.url} alt="Burlap coffee sacks stacked in a warehouse ahead of shipment" loading="lazy" width={1535} height={1024} className="aspect-[4/3] w-full object-cover md:aspect-[21/9]" />
+            <figcaption className="mt-3 text-xs text-muted-foreground">Coffee storage and shipment preparation.</figcaption>
+          </figure>
           <div className="mt-12"><Note>We don't promise fixed transit times or guaranteed capacity until supported by confirmed freight arrangements. For temperature-sensitive products, logistics and import eligibility are established before an order is accepted.</Note></div>
         </Section>
       </section>

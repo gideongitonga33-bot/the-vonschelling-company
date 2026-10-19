@@ -125,10 +125,10 @@ export function Footer() {
   );
 }
 
-export function PageHero({ eyebrow, title, intro, image }: { eyebrow: string; title: string; intro: string; image: string }) {
+export function PageHero({ eyebrow, title, intro, image, imageClassName = "" }: { eyebrow: string; title: string; intro: string; image: string; imageClassName?: string }) {
   return (
     <section className="relative flex min-h-[70vh] items-end overflow-hidden">
-      <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={image} alt="" className={`absolute inset-0 h-full w-full object-cover ${imageClassName}`} />
       <div className="hero-overlay absolute inset-0" />
       <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-20 text-ivory">
         <p className="eyebrow text-gold-soft">{eyebrow}</p>
