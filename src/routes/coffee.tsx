@@ -1,4 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { BuyerResources } from "@/components/site/BuyerResources";
+import { COFFEE_MOISTURE } from "@/lib/procurement";
 import hero from "@/assets/Burlap_Sacks_of_Green_Coffee_Beans.webp.asset.json";
 import cupping from "@/assets/Professional_Coffee_Cupping_Evaluation.png.asset.json";
 import bag from "@/assets/mizizi-bag.png.asset.json";
@@ -79,9 +83,20 @@ function Coffee() {
             ["Grades", "AA, AB, PB (Peaberry), and C options available"],
             ["Specialty Micro-Lots", "Single-estate and single-factory lots, cupping 84+ points, available on request"],
             ["Varieties", "SL28, SL34, Ruiru 11 and Batian"],
-            ["Moisture Level", "10% to 11%"],
-            ["Defect Tolerance", "Primary defects 0%, Secondary defects < 5%"],
+            ["Moisture Level", `${COFFEE_MOISTURE.min}% to ${COFFEE_MOISTURE.max}%`],
+            ["Physical Grading", "Screen distribution, defect count, sample weight and acceptance limits confirmed per lot"],
+            ["Water Activity", "Testing method, result and buyer acceptance limit agreed where required"],
           ]} />
+        </div>
+        <div className="mt-12 grid gap-8 border-y border-gold/40 py-10 lg:grid-cols-[1.3fr_1fr]">
+          <div>
+            <Heading eyebrow="Sample First" title="Evaluate the lot before you commit." intro="Request a representative Green Coffee Beans sample in AA, AB, PB, C or a specialty micro-lot. Share your preferred origin and target cup profile." />
+            <p className="mt-5 text-sm leading-relaxed text-muted-foreground">Choose a 300g or 500g preference. Availability, final sample size, packaging, courier charges and dispatch timing are confirmed individually. Agree the cup and physical acceptance criteria before contracting.</p>
+          </div>
+          <div className="flex flex-col items-start justify-center gap-4">
+            <Button asChild className="h-auto whitespace-normal px-6 py-4 text-left"><Link to="/contact" search={{ request: "sample" }}>Request an evaluation sample<ArrowUpRight /></Link></Button>
+            <Button asChild variant="outline" className="h-auto whitespace-normal px-6 py-4 text-left"><Link to="/contact" search={{ request: "quote" }}>Request a commercial quotation<ArrowUpRight /></Link></Button>
+          </div>
         </div>
         <div className="mt-10 grid gap-8 lg:grid-cols-3">
           <SpecTable title="Mizizi Coffee, Packing Data" rows={[
@@ -174,6 +189,7 @@ function Coffee() {
               <div className="mt-8"><Note>We do not display a universal coffee score, certification logo or a blanket "fully traceable" promise. Instead, we share verifiable evidence for each lot.</Note></div>
             </div>
           </div>
+          <BuyerResources />
         </Section>
       </section>
       <QuoteCTA title="Request Samples & Lot Specifications" />

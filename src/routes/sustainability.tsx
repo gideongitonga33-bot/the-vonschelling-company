@@ -1,4 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import farmer from "@/assets/coffee-farmer.png.asset.json";
 import cooperative from "@/assets/cooperative-cherries.jpg.asset.json";
 import { Heading, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
@@ -65,6 +67,10 @@ function Sus() {
         </Section>
       </section>
       <QuoteCTA />
+      <Section>
+        <Heading eyebrow="Responsible Sourcing Evidence" title="Ask what can be traced for your lot." intro="Cooperative, estate and auction sourcing can provide different levels of upstream evidence. For EU-bound coffee, confirm production-plot information, chain-of-custody records and deforestation-related evidence before accepting the source." />
+        <Button asChild variant="link" className="mt-6 h-auto whitespace-normal px-0 text-left"><Link to="/quality">Review our EUDR due diligence guidance<ArrowUpRight /></Link></Button>
+      </Section>
     </>
   );
 }
