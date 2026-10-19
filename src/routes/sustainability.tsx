@@ -18,7 +18,7 @@ const pillars = [
 function Sus() {
   return (
     <>
-      <PageHero image={farmer.url} eyebrow="Sustainability & Responsible Sourcing" title="Growth That Begins at Origin." intro="Agricultural trade should create value across the supply chain, through responsible relationships, transparent information and fair commercial practice." />
+      <PageHero image={farmer.url} imageClassName="object-[75%_center] md:object-center" eyebrow="Sustainability & Responsible Sourcing" title="Growth That Begins at Origin." intro="Agricultural trade should create value across the supply chain, through responsible relationships, transparent information and fair commercial practice." />
       <Section>
         <div className="grid gap-px bg-border md:grid-cols-3">
           {pillars.map(([t, d]) => (<div key={t} className="bg-background p-10"><h3 className="text-3xl">{t}</h3><p className="mt-4 text-muted-foreground">{d}</p></div>))}
