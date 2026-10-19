@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import img from "@/assets/cupping.jpg";
+import img from "@/assets/Hands-on_Coffee_Cupping_Tasting_1.png.asset.json";
 import { Heading, Note, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
@@ -31,7 +31,7 @@ const pipeline = [
 function Quality() {
   return (
     <>
-      <PageHero image={img} eyebrow="Quality & Traceability" title="Our Quality & Compliance Framework." intro="One disciplined approach, applied according to the requirements of each commodity, facility and destination." />
+      <PageHero image={img.url} eyebrow="Quality & Traceability" title="Our Quality & Compliance Framework." intro="One disciplined approach, applied according to the requirements of each commodity, facility and destination." />
       <Section>
         <div className="grid gap-px bg-border md:grid-cols-5">
           {steps.map(([t, d], i) => (

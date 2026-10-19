@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hero from "@/assets/coffee-hero.jpg.asset.json";
-import cupping from "@/assets/cupping.jpg";
+import hero from "@/assets/Burlap_Sacks_of_Green_Coffee_Beans.webp.asset.json";
+import cupping from "@/assets/Professional_Coffee_Cupping_Evaluation.png.asset.json";
 import bag from "@/assets/mizizi-bag.png.asset.json";
 import range from "@/assets/mizizi-range.png.asset.json";
-import greenPhoto from "@/assets/coffee-green.jpg.asset.json";
+import greenPhoto from "@/assets/Macro_Pile_of_Green_Coffee_Beans.webp.asset.json";
 import dryingPhoto from "@/assets/coffee-drying.jpg.asset.json";
-import kiambuPhoto from "@/assets/coffee-kiambu.jpg.asset.json";
+import harvestPhoto from "@/assets/Joyful_Coffee_Harvest_in_Lush_Plantation.png.asset.json";
 import roastPhoto from "@/assets/coffee-roast.jpg.asset.json";
 
 function Photo({ src, alt, credit, className = "" }: { src: string; alt: string; credit: string; className?: string }) {
@@ -74,7 +74,7 @@ function Coffee() {
           ))}
         </div>
         <div className="mt-14 grid items-start gap-10 lg:grid-cols-2">
-          <Photo src={greenPhoto.url} alt="Inspecting the shape, colour and aroma of raw green coffee beans" credit="Green bean inspection. Photo: DFID, CC BY 2.0" className="[&_img]:aspect-[4/3]" />
+          <Photo src={greenPhoto.url} alt="Close-up of unroasted green coffee beans showing their shape and colour" credit="Green Coffee Beans, before roasting." className="[&_img]:aspect-[4/3]" />
           <SpecTable title="Green Coffee Beans, Technical Specification" rows={[
             ["Grades", "AA, AB, PB (Peaberry), and C options available"],
             ["Specialty Micro-Lots", "Single-estate and single-factory lots, cupping 84+ points, available on request"],
@@ -100,7 +100,7 @@ function Coffee() {
         <Section>
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <Heading light eyebrow="Where Our Coffee Grows" title="Six counties. One highland character." intro="Our green coffee beans are sourced from Kenya's central highlands, where volcanic soils, high altitude and cool nights produce the bright, complex cups Kenyan Arabica is famous for." />
-            <Photo src={kiambuPhoto.url} alt="Coffee plantation near Kawaida Falls, Cianda, Kiambu County" credit="Cianda, Kiambu County. Photo: Lebu Ayiga, CC BY 4.0" className="[&_img]:aspect-[4/3]" />
+            <Photo src={harvestPhoto.url} alt="A farmer harvesting ripe coffee cherries into a basket among coffee trees" credit="Harvesting ripe coffee cherries." className="[&_img]:aspect-[4/3]" />
           </div>
           <div className="mt-14 grid gap-px bg-ivory/15 sm:grid-cols-2 lg:grid-cols-3">
             {regions.map(([name, alt, desc]) => (
@@ -160,7 +160,7 @@ function Coffee() {
           <div className="grid gap-16 md:grid-cols-[1fr_1.4fr]">
             <div>
               <Heading eyebrow="Buyer Documentation" title="Cupping scores, certifications & traceability." intro="Each offered lot is supported by a specification sheet stating what is known and verified." />
-              <img src={cupping} alt="" loading="lazy" className="mt-10 aspect-[4/3] w-full object-cover" />
+              <img src={cupping.url} alt="A coffee evaluator tasting a sample with a cupping spoon and recording her assessment" loading="lazy" width={1537} height={1023} className="mt-10 aspect-[4/3] w-full object-cover" />
             </div>
             <div>
               <table className="w-full text-left text-sm">

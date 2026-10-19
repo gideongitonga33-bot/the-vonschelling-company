@@ -4,7 +4,7 @@ import hero from "@/assets/hero-farm.jpg";
 import chillies from "@/assets/chilies.jpg";
 import meats from "@/assets/meats.jpg";
 import fruits from "@/assets/dried-fruits.jpg";
-import cupping from "@/assets/cupping.jpg";
+import cupping from "@/assets/Hands-on_Coffee_Cupping_Tasting_1.png.asset.json";
 import port from "@/assets/port.jpg";
 import bag from "@/assets/mizizi-bag.png.asset.json";
 import { Heading, QuoteCTA, Section } from "@/components/site/Layout";
@@ -84,7 +84,7 @@ function Index() {
               Discover the coffee operation <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <img src={cupping} alt="Cupping Kenyan coffee" loading="lazy" width={1280} height={960} className="shadow-elegant aspect-[4/5] w-full object-cover" />
+          <img src={cupping.url} alt="Hands-on coffee cupping with tasting spoons, sample bowls and water glasses" loading="lazy" width={1537} height={1023} className="shadow-elegant aspect-[4/3] w-full object-cover" />
         </div>
       </Section>
 
