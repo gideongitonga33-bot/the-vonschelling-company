@@ -1,4 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import img from "@/assets/port.jpg";
 import storage from "@/assets/Warm_Burlap_Sacks_in_Storage.webp.asset.json";
 import { BulletGrid, Heading, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/components/site/Layout";
@@ -17,6 +19,14 @@ const steps = [
   ["Preparation & documentation", "Sourcing, processing, packing, inspections and export documents."],
   ["Freight & shipment", "Road, air or sea transport, temperature control, insurance and tracking."],
   ["Delivery & records", "Shipment documents and communication through post-shipment follow-up."],
+];
+
+const milestones = [
+  ["Lot matching", "Confirm available coffee, grade, volume and destination requirements before quoting."],
+  ["Sample dispatch", "Confirm a representative sample, shipping charges and courier window once the lot is identified."],
+  ["Buyer approval", "Allow for sample delivery, test roasting, cupping and written acceptance of specifications."],
+  ["Contract & preparation", "Confirm payment conditions, milling or packing needs, testing and export records."],
+  ["Shipment booking", "Agree the shipment window against readiness, documents and confirmed carrier capacity."],
 ];
 
 function Exp() {
@@ -64,6 +74,29 @@ function Exp() {
             <figcaption className="mt-3 text-xs text-muted-foreground">Coffee storage and shipment preparation.</figcaption>
           </figure>
           <div className="mt-12"><Note>We don't promise fixed transit times or guaranteed capacity until supported by confirmed freight arrangements. For temperature-sensitive products, logistics and import eligibility are established before an order is accepted.</Note></div>
+        </Section>
+      </section>
+      <Section>
+        <Heading eyebrow="Coffee Export Planning" title="Five milestones. A schedule agreed for your order." intro="A shipment window depends on lot readiness, sample approval, payment, documentation and carrier availability. The quotation should identify both the target dates and what each date depends on." />
+        <ol className="mt-12 grid gap-x-8 gap-y-10 md:grid-cols-3">
+          {milestones.map(([title, description], i) => <li key={title} className="border-t border-gold/40 pt-6"><p className="font-display text-4xl text-gold">0{i + 1}</p><h3 className="mt-4 text-2xl">{title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{description}</p></li>)}
+        </ol>
+        <div className="mt-10"><Note>There is no universal 5 to 7 day sample dispatch promise or 4 to 6 week export guarantee. Request a dated schedule for the identified lot and route.</Note></div>
+      </Section>
+      <section className="bg-secondary/50">
+        <Section>
+          <Heading eyebrow="Commercial Clarity" title="Agree the terms before the coffee moves." intro="Payment methods below are options for discussion, not automatically accepted terms. The signed contract sets the arrangement for the buyer, order and banking requirements." />
+          <div className="mt-12 space-y-8">
+            <SpecTable title="Quotation & Contract Checklist" rows={[
+              ["Incoterm & place", "Specify FOB, CFR or CIF with the named port and Incoterms edition. Air cargo may require FCA at the agreed airport."],
+              ["Price & currency", "Confirm unit price, settlement currency, validity, quantity, packaging and included charges."],
+              ["Letter of credit", "An irrevocable L/C at sight may be discussed, subject to bank acceptance, document conditions and contract approval."],
+              ["Cash against documents", "CAD / documentary collection may be discussed with the collection instructions and payment-release conditions agreed in writing."],
+              ["Bank transfer", "Any deposit, balance and document-release sequence must be agreed. Independently verify beneficiary details before payment."],
+              ["Risk & records", "Agree inspection, acceptance, insurance, title transfer and shipment-document responsibilities."],
+            ]} />
+          </div>
+          <Button asChild className="mt-8 h-auto whitespace-normal px-6 py-4"><Link to="/contact" search={{ request: "quote" }}>Discuss your shipment and terms<ArrowUpRight /></Link></Button>
         </Section>
       </section>
       <QuoteCTA />

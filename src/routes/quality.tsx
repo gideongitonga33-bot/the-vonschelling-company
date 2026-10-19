@@ -1,4 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { BuyerResources } from "@/components/site/BuyerResources";
 import img from "@/assets/Hands-on_Coffee_Cupping_Tasting_1.png.asset.json";
 import { Heading, Note, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
@@ -26,6 +29,13 @@ const pipeline = [
   ["Central Nairobi Cupping & Sorting Facility", "Grading, sensory cupping, physical sorting and pre-shipment sampling under one roof."],
   ["Mombasa Port, Port-Side Logistics", "Container stuffing, customs clearance, certification checks and vessel loading."],
   ["Global Destination Port", "Documented handover to the buyer's destination with full shipment records."],
+];
+
+const authorities = [
+  ["Coffee licensing", "Verify the current licence, issuer, validity and activity scope with the competent Kenyan coffee authority. Confirm the applicable role of AFA and the Coffee Board of Kenya for the transaction."],
+  ["ICO · Coffee origin records", "Check whether an International Coffee Organization Certificate of Origin is applicable to the consignment. This is not a quality certification."],
+  ["KEPHIS · Plant health", "Confirm destination-specific phytosanitary requirements and applicable Kenya Plant Health Inspectorate Service certificates for plant products."],
+  ["KNCCI · Trade origin", "Confirm the required origin documentation and competent issuer, including the Kenya National Chamber of Commerce and Industry where applicable. Preferential origin rules are assessed separately."],
 ];
 
 function Quality() {
@@ -68,6 +78,33 @@ function Quality() {
           <div className="mt-10"><Note>Depending on customer and supply chain, buyers may request HACCP, ISO 22000, GlobalG.A.P., organic or other market-specific schemes. KEPHIS handles phytosanitary certification for plant products; the Directorate of Veterinary Services oversees veterinary trade certification for meat.</Note></div>
         </Section>
       </section>
+      <Section>
+        <Heading eyebrow="Regulatory & Trade Records" title="Verify the authority. Verify the document." intro="Buyer approval starts with current, transaction-specific evidence. The bodies below describe checks to make, not memberships, licences or certifications claimed by VonSchelling." />
+        <div className="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2">
+          {authorities.map(([title, description]) => <div key={title} className="border-t border-gold/40 pt-6"><h3 className="text-2xl">{title}</h3><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{description}</p></div>)}
+        </div>
+      </Section>
+      <section className="bg-forest-deep text-ivory">
+        <Section>
+          <Heading light eyebrow="EU Buyer Due Diligence · EUDR" title="Evidence at plot level. Confidence at lot level." intro="For EU-bound coffee, establish the available production-plot evidence before committing to a lot. Origin labels and auction references alone do not establish EUDR compliance." />
+          <ol className="mt-12 grid gap-8 md:grid-cols-3">
+            {[
+              ["Locate production", "Request plot geolocation, production dates and the chain linking the plots to the offered coffee. Polygon data is needed where the regulation requires it."],
+              ["Review the evidence", "Assess records against the 31 December 2020 deforestation cut-off and relevant production-country law. Identify gaps and risk mitigation requirements."],
+              ["Agree responsibilities", "Confirm the EU operator's applicable due diligence and Information System statement obligations. An export document does not replace EUDR due diligence."],
+            ].map(([title, description], i) => <li key={title} className="border-t border-gold/40 pt-6"><p className="font-display text-4xl text-gold">0{i + 1}</p><h3 className="mt-4 text-2xl">{title}</h3><p className="mt-4 text-sm leading-relaxed text-ivory/75">{description}</p></li>)}
+          </ol>
+          <p className="mt-10 max-w-3xl text-sm leading-relaxed text-ivory/75">Supporting records and sourcing eligibility must be confirmed per lot. We do not claim blanket EUDR readiness, existing plot mapping or completed due diligence statements. Buyers should check the current rules and obligations for their operator category.</p>
+          <div className="mt-8 flex flex-wrap items-center gap-6">
+            <Button asChild className="h-auto whitespace-normal bg-gold px-6 py-4 text-forest-deep hover:bg-gold-soft"><Link to="/contact" search={{ request: "documents" }}>Enquire about EUDR-related records<ArrowUpRight /></Link></Button>
+            <a href="https://eur-lex.europa.eu/eli/reg/2023/1115" target="_blank" rel="noreferrer" className="text-sm text-gold-soft underline underline-offset-4">Read the EU regulation</a>
+          </div>
+        </Section>
+      </section>
+      <Section>
+        <Heading eyebrow="Evidence for Procurement" title="Build a lot-specific approval file." intro="Request the issuing laboratory, test method, date and lot reference for a COA, and the evaluator and method for a cupping report. Document availability is confirmed before it is promised." />
+        <BuyerResources />
+      </Section>
       <QuoteCTA />
     </>
   );
