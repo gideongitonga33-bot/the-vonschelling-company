@@ -12,6 +12,7 @@ tanstackStart: {
       // nitro/vite builds from this
       server: { entry: "server" },
       nitro: {
-        preset: "node_server",
-      },
-    }),
+      preset: "node_server",
+    },
+  },
+});
