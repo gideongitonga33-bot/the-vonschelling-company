@@ -84,7 +84,7 @@ function Index() {
               Discover the coffee operation <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <img src={flagship.url} alt="Espresso in a ceramic cup with roasted coffee beans and a rustic spoon on dark wood" loading="lazy" width={1024} height={1535} className="shadow-elegant aspect-[4/3] w-full object-cover object-top" />
+          <img src={flagship.url} alt="Espresso in a ceramic cup with roasted coffee beans and a rustic spoon on dark wood" loading="lazy" width={1024} height={1535} className="shadow-elegant h-auto w-full object-contain" />
         </div>
       </Section>
 
