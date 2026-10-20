@@ -1,16 +1,16 @@
 # Photo portability and Coffee blueprint
 
-- [ ] Download all asset-pointer photos into local image files and update references.
-- [ ] Reorder Coffee into green export and finished coffee chapters, adding qualified trade details.
-- [ ] Verify local photos, buyer links, layouts and tests.
+- [x] Download all asset-pointer photos into local image files and update references.
+- [x] Reorder Coffee into green export and finished coffee chapters, adding qualified trade details.
+- [x] Verify local photos, buyer links, layouts and tests.
 
 ## Buyer conversion enhancements
 
-- [ ] Add evidence-led regulatory and EUDR guidance to Quality and Sustainability.
-- [ ] Add coffee evaluation sample requests and downloadable buyer checklists.
-- [ ] Clarify export milestones and conditional payment arrangements.
-- [ ] Add sample and commercial enquiry choices with an honest email handoff.
-- [ ] Verify request flows, existing pages and tests without changing photographs.
+- [x] Add evidence-led regulatory and EUDR guidance to Quality and Sustainability.
+- [x] Add coffee evaluation sample requests and downloadable buyer checklists.
+- [x] Clarify export milestones and conditional payment arrangements.
+- [x] Add sample and commercial enquiry choices with an honest email handoff.
+- [x] Verify request flows, existing pages and tests.
 
 ## Completed photo updates
 
@@ -18,4 +18,4 @@
 - [x] Move the existing Sustainability farmer photo to its hero and add the approved cooperative-sorting photograph with attribution.
 - [x] Verify all pages, image framing, navigation and existing tests; report any remaining functional limitations.
 
-Audit advisory: the existing quote form does not deliver or save inquiries. Connecting inquiry delivery requires a separately approved Cloud setup; it is outside these photo updates.
+Enquiries prepare email drafts with an explicit buyer send step. Automated delivery is not enabled or part of the requested work.
