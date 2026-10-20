@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import logo from "@/assets/vonschelling-logo-wide.png.asset.json";
-import emblem from "@/assets/vonschelling-emblem.png.asset.json";
+import logo from "@/assets/vonschelling-logo-wide.png";
+import emblem from "@/assets/vonschelling-emblem.png";
 
 export const OPERATIONS = [
   { to: "/coffee", label: "Coffee" },
@@ -28,7 +28,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center" aria-label="VonSchelling home">
-          <img src={logo.url} alt="VonSchelling, Premium Kenyan Agricultural Exports" className="h-14 w-auto" />
+          <img src={logo} alt="VonSchelling, Premium Kenyan Agricultural Exports" className="h-14 w-auto" />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           <Link to="/" className={linkCls} activeProps={{ className: "text-primary" }}>Home</Link>
@@ -88,7 +88,7 @@ export function Footer() {
     <footer className="bg-forest-deep text-ivory">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src={emblem.url} alt="" className="h-16 w-16 rounded-sm bg-ivory p-1" />
+          <img src={emblem} alt="" className="h-16 w-16 rounded-sm bg-ivory p-1" />
           <p className="mt-6 font-display text-3xl">VonSchelling Limited</p>
           <p className="eyebrow mt-2 text-gold">Premium Kenyan Agri-Exports</p>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-ivory/70">

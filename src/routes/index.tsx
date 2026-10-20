@@ -4,9 +4,9 @@ import hero from "@/assets/hero-farm.jpg";
 import chillies from "@/assets/chilies.jpg";
 import meats from "@/assets/meats.jpg";
 import fruits from "@/assets/dried-fruits.jpg";
-import flagship from "@/assets/rustic-coffee-flat-lay.png.asset.json";
+import flagship from "@/assets/rustic-coffee-flat-lay.png";
 import port from "@/assets/port.jpg";
-import bag from "@/assets/mizizi-bag.png.asset.json";
+import bag from "@/assets/mizizi-bag.png";
 import { Heading, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
@@ -84,14 +84,14 @@ function Index() {
               Discover the coffee operation <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <img src={flagship.url} alt="Espresso in a ceramic cup with roasted coffee beans and a rustic spoon on dark wood" loading="lazy" width={1024} height={1535} className="shadow-elegant h-auto w-full object-contain" />
+          <img src={flagship} alt="Espresso in a ceramic cup with roasted coffee beans and a rustic spoon on dark wood" loading="lazy" width={1024} height={1535} className="shadow-elegant h-auto w-full object-contain" />
         </div>
       </Section>
 
       {/* Mizizi */}
       <section className="overflow-hidden bg-navy text-ivory">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:py-0">
-          <img src={bag.url} alt="Mizizi Coffee 500g medium roast bag" loading="lazy" className="w-full md:max-h-[760px] md:object-cover" />
+          <img src={bag} alt="Mizizi Coffee 500g medium roast bag" loading="lazy" className="w-full md:max-h-[760px] md:object-cover" />
           <div className="md:py-24">
             <p className="eyebrow text-gold">Our Special Blend</p>
             <h2 className="mt-4 text-5xl md:text-7xl">Mizizi Coffee</h2>

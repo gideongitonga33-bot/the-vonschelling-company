@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import farmer from "@/assets/coffee-farmer.png.asset.json";
-import cooperative from "@/assets/cooperative-cherries.jpg.asset.json";
+import farmer from "@/assets/coffee-farmer.png";
+import cooperative from "@/assets/cooperative-cherries.jpg";
 import { Heading, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
@@ -20,7 +20,7 @@ const pillars = [
 function Sus() {
   return (
     <>
-      <PageHero image={farmer.url} imageClassName="object-[75%_center] md:object-center" eyebrow="Sustainability & Responsible Sourcing" title="Growth That Begins at Origin." intro="Agricultural trade should create value across the supply chain, through responsible relationships, transparent information and fair commercial practice." />
+      <PageHero image={farmer} imageClassName="object-[75%_center] md:object-center" eyebrow="Sustainability & Responsible Sourcing" title="Growth That Begins at Origin." intro="Agricultural trade should create value across the supply chain, through responsible relationships, transparent information and fair commercial practice." />
       <Section>
         <div className="grid gap-px bg-border md:grid-cols-3">
           {pillars.map(([t, d]) => (<div key={t} className="bg-background p-10"><h3 className="text-3xl">{t}</h3><p className="mt-4 text-muted-foreground">{d}</p></div>))}
@@ -31,7 +31,7 @@ function Sus() {
         <Section>
           <div className="grid items-center gap-16 md:grid-cols-2">
             <figure>
-              <img src={cooperative.url} alt="Kenyan farmers sorting harvested coffee cherries by hand on raised beds" loading="lazy" width={1371} height={2048} className="shadow-elegant aspect-[4/5] w-full object-cover object-top" />
+              <img src={cooperative} alt="Kenyan farmers sorting harvested coffee cherries by hand on raised beds" loading="lazy" width={1371} height={2048} className="shadow-elegant aspect-[4/5] w-full object-cover object-top" />
               <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">
                 <a href="https://commons.wikimedia.org/wiki/File:Kenyan_farmers_sorting_coffee_cherries.jpg" target="_blank" rel="noreferrer" className="underline underline-offset-2">Kenyan farmers sorting coffee cherries</a>. Photo: Kamweti wa Mutu · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer" className="underline underline-offset-2">CC BY-SA 4.0</a>. Cropped for display.
               </figcaption>
