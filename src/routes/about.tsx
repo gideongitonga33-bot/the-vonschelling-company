@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import img from "@/assets/hero-farm.jpg";
-import logo from "@/assets/vonschelling-logo.png.asset.json";
+import logo from "@/assets/vonschelling-logo.png";
 import { Heading, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
@@ -29,7 +29,7 @@ function About() {
             <p>We work with farmers, cooperatives and licensed supply partners, and where appropriate use authorised auction and market channels to meet buyer specifications and volumes.</p>
             <p>International agricultural trade depends on more than product availability, it requires accurate specifications, credible supply, documentation, logistics and clear contractual responsibilities. Our role is to coordinate these elements and give buyers transparent information about each offer.</p>
           </div>
-          <img src={logo.url} alt="VonSchelling emblem" loading="lazy" className="w-full" />
+          <img src={logo} alt="VonSchelling emblem" loading="lazy" className="w-full" />
         </div>
       </Section>
       <section className="bg-forest-deep text-ivory">

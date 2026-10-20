@@ -10,10 +10,11 @@
 <!-- LOVABLE:END -->
 
 ## Website media
-- Store uploaded and downloaded website photos as Lovable Assets pointers and import their `.url`; this preserves reliable media delivery without committing large binaries.
+- Keep website media as local files in `src/assets` and use direct image imports so GitHub deployments do not depend on Lovable asset delivery.
 - Attribute documentary photographs to their verified creator and licence; never retain a previous photograph's credit or location claim after replacing it.
 
 ## Buyer enquiries and resources
+- Keep Coffee organised into green export and finished-coffee chapters; distinguish educational trade references from confirmed lot specifications to avoid unsupported guarantees.
 - Keep request modes and email composition in a browser-safe procurement module so sample, quotation and documentation flows share one validated vocabulary.
 - Until hosted inquiry delivery is approved, enquiry forms prepare email drafts with an explicit send step; never claim receipt or save buyer details locally.
 - Generate buyer planning checklists in the browser, separate from verified lot certificates, so downloads cannot imply licences or compliance evidence are held.
