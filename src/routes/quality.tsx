@@ -41,7 +41,7 @@ const authorities = [
 function Quality() {
   return (
     <>
-      <PageHero image={img} eyebrow="Quality & Traceability" title="Our Quality & Compliance Framework." intro="One disciplined approach, applied according to the requirements of each commodity, facility and destination." />
+      <PageHero image={img} eyebrow="Quality & Traceability" title="Our Quality & Compliance Framework." intro="One disciplined approach, applied to the needs of each commodity and destination market." />
       <Section>
         <div className="grid gap-px bg-border md:grid-cols-5">
           {steps.map(([t, d], i) => (
@@ -69,7 +69,7 @@ function Quality() {
 
       <section className="bg-secondary/50">
         <Section>
-          <Heading eyebrow="By Commodity" title="Requirements we assess." intro="Categories we assess with suppliers and authorities for each product, not a claim of certificates held." />
+          <Heading eyebrow="By Commodity" title="Requirements we assess." intro="What we check with suppliers and authorities for every product we offer." />
           <div className="mt-12 divide-y divide-border border-y border-border">
             {reqs.map(([a, b]) => (
               <div key={a} className="grid gap-4 py-8 md:grid-cols-[220px_1fr]"><p className="font-display text-3xl">{a}</p><p className="text-foreground/75">{b}</p></div>
@@ -79,14 +79,14 @@ function Quality() {
         </Section>
       </section>
       <Section>
-        <Heading eyebrow="Regulatory & Trade Records" title="Verify the authority. Verify the document." intro="Buyer approval starts with current, transaction-specific evidence. The bodies below describe checks to make, not memberships, licences or certifications claimed by VonSchelling." />
+        <Heading eyebrow="Regulatory & Trade Records" title="Verify the authority. Verify the document." intro="Buyer approval starts with current, transaction-specific evidence. These are the Kenyan bodies whose records support each shipment, so your team can verify every document." />
         <div className="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2">
           {authorities.map(([title, description]) => <div key={title} className="border-t border-gold/40 pt-6"><h3 className="text-2xl">{title}</h3><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{description}</p></div>)}
         </div>
       </Section>
       <section className="bg-forest-deep text-ivory">
         <Section>
-          <Heading light eyebrow="EU Buyer Due Diligence · EUDR" title="Evidence at plot level. Confidence at lot level." intro="For EU-bound coffee, establish the available production-plot evidence before committing to a lot. Origin labels and auction references alone do not establish EUDR compliance." />
+          <Heading light eyebrow="EU Buyer Due Diligence · EUDR" title="Evidence at plot level. Confidence at lot level." intro="For EU-bound coffee, we work through the plot-level evidence with you before you commit to a lot, so your due diligence rests on records." />
           <ol className="mt-12 grid gap-8 md:grid-cols-3">
             {[
               ["Locate production", "Request plot geolocation, production dates and the chain linking the plots to the offered coffee. Polygon data is needed where the regulation requires it."],
@@ -94,7 +94,7 @@ function Quality() {
               ["Agree responsibilities", "Confirm the EU operator's applicable due diligence and Information System statement obligations. An export document does not replace EUDR due diligence."],
             ].map(([title, description], i) => <li key={title} className="border-t border-gold/40 pt-6"><p className="font-display text-4xl text-gold">0{i + 1}</p><h3 className="mt-4 text-2xl">{title}</h3><p className="mt-4 text-sm leading-relaxed text-ivory/75">{description}</p></li>)}
           </ol>
-          <p className="mt-10 max-w-3xl text-sm leading-relaxed text-ivory/75">Supporting records and sourcing eligibility must be confirmed per lot. We do not claim blanket EUDR readiness, existing plot mapping or completed due diligence statements. Buyers should check the current rules and obligations for their operator category.</p>
+          <p className="mt-10 max-w-3xl text-sm leading-relaxed text-ivory/75">We prepare the supporting records lot by lot and share them early, so your compliance team can review them in good time against the obligations for your operator category.</p>
           <div className="mt-8 flex flex-wrap items-center gap-6">
             <Button asChild className="h-auto whitespace-normal bg-gold px-6 py-4 text-forest-deep hover:bg-gold-soft"><Link to="/contact" search={{ request: "documents" }}>Enquire about EUDR-related records<ArrowUpRight /></Link></Button>
             <a href="https://eur-lex.europa.eu/eli/reg/2023/1115" target="_blank" rel="noreferrer" className="text-sm text-gold-soft underline underline-offset-4">Read the EU regulation</a>
@@ -102,7 +102,7 @@ function Quality() {
         </Section>
       </section>
       <Section>
-        <Heading eyebrow="Evidence for Procurement" title="Build a lot-specific approval file." intro="Request the issuing laboratory, test method, date and lot reference for a COA, and the evaluator and method for a cupping report. Document availability is confirmed before it is promised." />
+        <Heading eyebrow="Evidence for Procurement" title="Build a lot-specific approval file." intro="Request the issuing laboratory, test method, date and lot reference for a COA, and the evaluator and method for a cupping report. We tell you upfront which documents come with your lot." />
         <BuyerResources />
       </Section>
       <QuoteCTA />

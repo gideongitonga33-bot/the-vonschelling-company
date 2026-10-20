@@ -55,7 +55,7 @@ const docs = [
 function Coffee() {
   return (
     <>
-      <PageHero image={hero} eyebrow="VonSchelling Coffee Operations" title="Kenyan Coffee. From Origin to Opportunity." intro="Green Coffee Beans for international importers and roasters, Mizizi-branded roasted coffee and private-label opportunities. Availability and specifications confirmed per order." />
+      <PageHero image={hero} eyebrow="VonSchelling Coffee Operations" title="Kenyan Coffee. From Origin to Opportunity." intro="Green Coffee Beans for international importers and roasters, Mizizi-branded roasted coffee and private-label opportunities. Every offer comes with its lot specification." />
 
       <Section className="!py-16">
         <div className="grid gap-8 md:grid-cols-3">
@@ -77,14 +77,14 @@ function Coffee() {
           <div className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {regions.map(([name, alt, desc]) => <div key={name} className="border-t border-primary-foreground/20 pt-5"><p className="eyebrow text-gold-soft">{alt}</p><h3 className="mt-2 text-3xl">{name}</h3><p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">{desc}</p></div>)}
           </div>
-          <p className="mt-8 text-xs text-primary-foreground/65">Regional profiles are indicative, not a promise of flavour. Crop, variety, processing and cupping determine the offered lot's character.</p>
+          <p className="mt-8 text-xs text-primary-foreground/65">Each region has its own character. We cup the lot itself and send you the sample and notes before you commit.</p>
         </Section>
       </section>
 
       <Section>
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
-            <Heading eyebrow="Washed Processing" title="Washed for clarity. Dried with care." intro="Many Kenyan wet mills combine pulping, fermentation, washing and a clean-water soak before drying on raised beds. The exact method and duration are confirmed for each lot." />
+            <Heading eyebrow="Washed Processing" title="Washed for clarity. Dried with care." intro="Many Kenyan wet mills combine pulping, fermentation, washing and a clean-water soak before drying on raised beds. We share the processing details with every lot offer." />
             <ol className="mt-8 space-y-5">
               {[
                 ["Pulp & ferment", "Remove the cherry skin and break down mucilage. Fermentation responds to temperature, ripeness and the mill's practice."],
@@ -95,14 +95,14 @@ function Coffee() {
           </div>
           <Photo src={dryingPhoto} alt="Coffee drying on raised beds at Fairview Estate, Kiambu" credit="Raised drying beds, Fairview Estate, Kiambu. Photo: Daniel Case, CC BY-SA 4.0. Cropped for display." className="[&_img]:aspect-[4/3]" />
         </div>
-        <div className="mt-10"><Note>Processing is not a universal 72-hour recipe. Request the mill's fermentation, soak and drying records where available.</Note></div>
+        <div className="mt-10"><Note>Fermentation and drying are managed to the conditions of each mill and season. Mill records are available with the lot on request.</Note></div>
       </Section>
 
       <section className="bg-secondary/50">
         <Section>
-          <Heading eyebrow="Grades & Specifications" title="Choose the grade. Approve the cup." intro="AA, AB, PB and C describe physical size or shape, not a quality ranking. Confirm screen distribution and cup performance against your requirements." />
+          <Heading eyebrow="Grades & Specifications" title="Choose the grade. Approve the cup." intro="AA, AB, PB and C are graded by bean size and shape. We match screen distribution and cup profile to your requirements and send samples for approval." />
           <div className="mt-10 grid items-start gap-10 lg:grid-cols-2">
-            <div><Photo src={greenPhoto} alt="Close-up of unroasted green coffee beans showing their shape and colour" credit="Green Coffee Beans, before roasting." className="[&_img]:aspect-[4/3]" /><p className="mt-5 text-sm leading-relaxed text-muted-foreground">Specialty micro-lots from single estates and cooperative factories are available on request, including documented 84+ point selections where verified. Cup score, evaluator and sample date are confirmed per lot.</p></div>
+            <div><Photo src={greenPhoto} alt="Close-up of unroasted green coffee beans showing their shape and colour" credit="Green Coffee Beans, before roasting." className="[&_img]:aspect-[4/3]" /><p className="mt-5 text-sm leading-relaxed text-muted-foreground">Specialty micro-lots from single estates and cooperative factories are available on request, each offered with its cup score, evaluator and sample date.</p></div>
             <div className="space-y-6">
               <SpecTable title="Kenyan Grade Guide" rows={COFFEE_GRADES} />
               <SpecTable title="Green Coffee Beans · Technical Specification" rows={[
@@ -118,14 +118,14 @@ function Coffee() {
       </section>
 
       <Section>
-        <Heading eyebrow="Harvest & Shipment Planning" title="Two crops. More ways to plan." intro="Indicative central-highland seasons help buyers plan freshness and replenishment. Harvests vary by county, weather and crop year; dispatch depends on lot readiness." />
+        <Heading eyebrow="Harvest & Shipment Planning" title="Two crops. More ways to plan." intro="Kenya's two harvests let you plan fresh arrivals through the year. We agree your shipment window when the lot is approved." />
         <div className="mt-10 grid gap-10 md:grid-cols-2">
           {[
             ["Main crop", "Harvest · October to January", "Typical export planning · January to June"],
             ["Fly crop", "Harvest · May to July", "Typical export planning · July to October"],
           ].map(([t, h, e]) => <div key={t} className="border-t-2 border-gold pt-6"><h3 className="text-3xl">{t}</h3><p className="mt-4 font-semibold">{h}</p><p className="mt-2 text-sm text-muted-foreground">{e}</p></div>)}
         </div>
-        <p className="mt-8 text-sm text-muted-foreground">Confirm crop year, milling status, sample approval and the contracted shipment window. These are planning ranges, not fixed dispatch dates.</p>
+        <p className="mt-8 text-sm text-muted-foreground">Your contract states the crop year, milling status and agreed shipment window for your lot.</p>
         <a href="https://www.ico.org/documents/cy2018-19/icc-124-7e-profile-kenya.pdf" target="_blank" rel="noreferrer" className="mt-4 inline-block text-xs text-primary underline underline-offset-4">Kenya coffee country profile · ICO / AFA</a>
       </Section>
 
