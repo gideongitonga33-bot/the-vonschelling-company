@@ -63,11 +63,11 @@ function Sus() {
               <p className="mt-4 text-ivory/70">Encourage sourcing records, traceability, food-safety practices, responsible resource use and reduced avoidable losses.</p>
             </div>
           </div>
-          <p className="mt-14 max-w-3xl font-display text-2xl italic text-ivory/85">"We view sustainability as an ongoing operational responsibility rather than a marketing claim."</p>
+          <p className="mt-14 max-w-3xl font-display text-2xl italic text-ivory/85">"Sustainability is part of how we operate every day."</p>
         </Section>
       </section>
       <Section>
-        <Heading eyebrow="Responsible Sourcing Evidence" title="Ask what can be traced for your lot." intro="Cooperative, estate and auction sourcing can provide different levels of upstream evidence. For EU-bound coffee, confirm production-plot information, chain-of-custody records and deforestation-related evidence before accepting the source." />
+        <Heading eyebrow="Responsible Sourcing Evidence" title="Traceability you can review for your lot." intro="We share the sourcing records behind every lot, from cooperative and estate details to chain-of-custody documents. For EU-bound coffee, we provide the production-plot and deforestation-related evidence your team needs to approve the source." />
         <Button asChild variant="link" className="mt-6 h-auto whitespace-normal px-0 text-left"><Link to="/quality">Review our EUDR due diligence guidance<ArrowUpRight /></Link></Button>
       </Section>
       <QuoteCTA />

@@ -33,7 +33,7 @@ export const Route = createFileRoute("/meats")({
             ["Cold-Chain Integrity", "Deep frozen (-18°C) or Chilled (0-4°C) air/sea freight configurations"],
           ]} />
         </div>
-        <div className="mt-16"><Note>VonSchelling acts as the commercial exporter coordinating supply through eligible, approved partners. Veterinary trade and health certification is overseen by Kenya's Directorate of Veterinary Services.</Note></div>
+        <div className="mt-16"><Note>VonSchelling is the commercial exporter, supplying through approved, export-eligible processing partners. Veterinary trade and health certification is overseen by Kenya's Directorate of Veterinary Services.</Note></div>
       </Section>
       <QuoteCTA title="Discuss Meat Supply" />
     </>

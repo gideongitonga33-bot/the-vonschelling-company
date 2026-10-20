@@ -31,7 +31,7 @@ export const Route = createFileRoute("/chilies")({
             ["Aflatoxin Level", "< 5 ppb compliance"],
           ]} />
         </div>
-        <div className="mt-16"><Note>Fresh and dried chillies are handled differently; shelf-life controls and import requirements may differ. Phytosanitary certification for regulated plant exports is issued through Kenya's plant health authority, KEPHIS.</Note></div>
+        <div className="mt-16"><Note>Fresh and dried chillies each have their own handling, shelf-life and import controls, and we manage them accordingly. Phytosanitary certification for regulated plant exports is issued through Kenya's plant health authority, KEPHIS.</Note></div>
       </Section>
       <QuoteCTA title="Request Chilli Specifications" />
     </>

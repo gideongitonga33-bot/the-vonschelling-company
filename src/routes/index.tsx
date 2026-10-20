@@ -44,8 +44,8 @@ function Index() {
             From Kenyan soil<br /><em className="text-gold-soft">to world markets.</em>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ivory/85">
-            VonSchelling connects Kenyan agricultural products to international buyers through responsible sourcing,
-            quality assurance, traceability and dependable export partnerships.
+            We source, grade and export Kenyan agricultural products for international buyers, with clear specifications,
+            documented traceability and export handling managed from Nairobi to the port.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/coffee" className="bg-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-forest-deep transition hover:bg-gold-soft">Explore Our Coffee</Link>
@@ -69,7 +69,7 @@ function Index() {
             <Heading
               eyebrow="Flagship Operation · Coffee"
               title="Kenyan coffee. From origin to opportunity."
-              intro="We connect coffee supply partners in Kenya with international importers, commodity traders and roasters, offering green coffee beans, our Mizizi roasted coffee and private-label opportunities."
+              intro="We supply international importers, traders and roasters with Kenyan Green Coffee Beans, our Mizizi roasted coffee and private-label programmes, sourced and prepared at origin."
             />
             <div className="mt-10 grid gap-6 sm:grid-cols-3">
               {[["01", "Green Coffee Beans", "Primary export offering"], ["02", "Mizizi Coffee", "Roasted & packaged"], ["03", "Private Label", "Your brand, Kenyan coffee"]].map(([n, t, s]) => (

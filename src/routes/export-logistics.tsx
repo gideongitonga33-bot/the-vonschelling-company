@@ -73,19 +73,19 @@ function Exp() {
             <img src={storage} alt="Burlap coffee sacks stacked in a warehouse ahead of shipment" loading="lazy" width={1535} height={1024} className="aspect-[4/3] w-full object-cover md:aspect-[21/9]" />
             <figcaption className="mt-3 text-xs text-muted-foreground">Coffee storage and shipment preparation.</figcaption>
           </figure>
-          <div className="mt-12"><Note>We don't promise fixed transit times or guaranteed capacity until supported by confirmed freight arrangements. For temperature-sensitive products, logistics and import eligibility are established before an order is accepted.</Note></div>
+          <div className="mt-12"><Note>Transit times and capacity are confirmed with the booked carrier for your shipment. For temperature-sensitive products, we settle cold-chain logistics and import eligibility before the order is accepted.</Note></div>
         </Section>
       </section>
       <Section>
-        <Heading eyebrow="Coffee Export Planning" title="Five milestones. A schedule agreed for your order." intro="A shipment window depends on lot readiness, sample approval, payment, documentation and carrier availability. The quotation should identify both the target dates and what each date depends on." />
+        <Heading eyebrow="Coffee Export Planning" title="Five milestones. A schedule agreed for your order." intro="A shipment window depends on lot readiness, sample approval, payment, documentation and carrier availability. Your quotation sets out the target dates and the steps behind each one." />
         <ol className="mt-12 grid gap-x-8 gap-y-10 md:grid-cols-3">
           {milestones.map(([title, description], i) => <li key={title} className="border-t border-gold/40 pt-6"><p className="font-display text-4xl text-gold">0{i + 1}</p><h3 className="mt-4 text-2xl">{title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{description}</p></li>)}
         </ol>
-        <div className="mt-10"><Note>There is no universal 5 to 7 day sample dispatch promise or 4 to 6 week export guarantee. Request a dated schedule for the identified lot and route.</Note></div>
+        <div className="mt-10"><Note>You receive a dated schedule for your lot and route, and we keep you updated at every milestone.</Note></div>
       </Section>
       <section className="bg-secondary/50">
         <Section>
-          <Heading eyebrow="Commercial Clarity" title="Agree the terms before the coffee moves." intro="Payment methods below are options for discussion, not automatically accepted terms. The signed contract sets the arrangement for the buyer, order and banking requirements." />
+          <Heading eyebrow="Commercial Clarity" title="Agree the terms before the coffee moves." intro="We work with established international payment terms. The signed contract sets the arrangement that suits your order and bank." />
           <div className="mt-12 space-y-8">
             <SpecTable title="Quotation & Contract Checklist" rows={[
               ["Incoterm & place", "Specify FOB, CFR or CIF with the named port and Incoterms edition. Air cargo may require FCA at the agreed airport."],
