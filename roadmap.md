@@ -1,4 +1,10 @@
-# Buyer conversion enhancements
+# Photo portability and Coffee blueprint
+
+- [ ] Download all asset-pointer photos into local image files and update references.
+- [ ] Reorder Coffee into green export and finished coffee chapters, adding qualified trade details.
+- [ ] Verify local photos, buyer links, layouts and tests.
+
+## Buyer conversion enhancements
 
 - [ ] Add evidence-led regulatory and EUDR guidance to Quality and Sustainability.
 - [ ] Add coffee evaluation sample requests and downloadable buyer checklists.
