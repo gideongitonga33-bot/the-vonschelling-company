@@ -19,3 +19,10 @@
 - [x] Verify all pages, image framing, navigation and existing tests; report any remaining functional limitations.
 
 Enquiries prepare email drafts with an explicit buyer send step. Automated delivery is not enabled or part of the requested work.
+
+## Coffee buyer documents and photo captions
+
+- [ ] Create, visually inspect and deliver the separate Coffee Company Profile and Coffee Product Catalog PDFs.
+- [ ] Add same-origin downloads for both PDFs to the Coffee page and publish their static copies.
+- [ ] Remove clickable links from photo captions; retain required documentary photo attribution in plain text.
+- [ ] Run Coffee tests, verify build output and check the completed page and document downloads.

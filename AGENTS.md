@@ -18,3 +18,4 @@
 - Keep request modes and email composition in a browser-safe procurement module so sample, quotation and documentation flows share one validated vocabulary.
 - Until hosted inquiry delivery is approved, enquiry forms prepare email drafts with an explicit send step; never claim receipt or save buyer details locally.
 - Generate buyer planning checklists in the browser, separate from verified lot certificates, so downloads cannot imply licences or compliance evidence are held.
+- Serve prebuilt buyer-facing PDFs from `public/docs/` for direct same-origin downloads, while also providing a copy in workspace Files.
