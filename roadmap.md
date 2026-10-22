@@ -22,7 +22,7 @@ Enquiries prepare email drafts with an explicit buyer send step. Automated deliv
 
 ## Coffee buyer documents and photo captions
 
-- [ ] Create, visually inspect and deliver the separate Coffee Company Profile and Coffee Product Catalog PDFs.
-- [ ] Add same-origin downloads for both PDFs to the Coffee page and publish their static copies.
-- [ ] Remove clickable links from photo captions; retain required documentary photo attribution in plain text.
-- [ ] Run Coffee tests, verify build output and check the completed page and document downloads.
+- [x] Create, visually inspect and deliver the separate Coffee Company Profile and Coffee Product Catalog PDFs.
+- [x] Add same-origin downloads for both PDFs to the Coffee page and publish their static copies.
+- [x] Remove clickable links from photo captions; retain required documentary photo attribution in plain text.
+- [x] Run Coffee tests, verify build output and check the completed page and document downloads.

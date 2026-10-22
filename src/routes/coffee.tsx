@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BuyerResources } from "@/components/site/BuyerResources";
 import { COFFEE_MOISTURE } from "@/lib/procurement";
@@ -65,6 +65,13 @@ function Coffee() {
             ["03", "Private Label", "Coffee selection, custom roast profiles and packaging coordination under your brand, from 1,000 kg per roast profile."],
           ].map(([n, t, d]) => <div key={n} className="border-t border-gold pt-5"><p className="font-display text-4xl text-gold">{n}</p><h2 className="mt-3 text-3xl">{t}</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d}</p></div>)}
         </div>
+        <div className="mt-12 flex flex-col gap-5 border-y border-gold/40 py-6 md:flex-row md:items-center md:justify-between">
+          <div><p className="eyebrow text-gold">Coffee Buyer Documents</p><p className="mt-2 font-display text-2xl">Take our coffee story to your buying team.</p></div>
+          <div className="flex flex-wrap gap-3">
+            <Button asChild className="h-auto whitespace-normal py-3"><a href="/docs/vonschelling-coffee-company-profile.pdf" download="VonSchelling_Coffee_Company_Profile.pdf"><Download />Company Profile (PDF)</a></Button>
+            <Button asChild variant="outline" className="h-auto whitespace-normal py-3"><a href="/docs/vonschelling-coffee-product-catalog.pdf" download="VonSchelling_Coffee_Product_Catalog.pdf"><Download />Product Catalog (PDF)</a></Button>
+          </div>
+        </div>
       </Section>
 
       <section className="bg-primary text-primary-foreground">
@@ -93,7 +100,7 @@ function Coffee() {
               ].map(([t, d], i) => <li key={t} className="flex gap-4 border-t border-border pt-5"><span className="font-display text-3xl text-gold">0{i + 1}</span><div><h3 className="text-2xl">{t}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p></div></li>)}
             </ol>
           </div>
-          <Photo src={dryingPhoto} alt="Coffee drying on raised beds at Fairview Estate, Kiambu" credit="Raised drying beds, Fairview Estate, Kiambu. Photo: Daniel Case, CC BY-SA 4.0. Cropped for display." className="[&_img]:aspect-[4/3]" />
+          <Photo src={dryingPhoto} alt="Coffee drying on raised beds at Fairview Estate, Kiambu" credit="Raised drying beds, Fairview Estate, Kiambu. Daniel Case, CC BY-SA 4.0." className="[&_img]:aspect-[4/3]" />
         </div>
         <div className="mt-10"><Note>Fermentation and drying are managed to the conditions of each mill and season. Mill records are available with the lot on request.</Note></div>
       </Section>
@@ -176,7 +183,7 @@ function Coffee() {
       <Section>
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div><Heading eyebrow="Private-Label Coffee" title="Your brand. Kenyan coffee." intro="Build around coffee selection, roast profile development, whole-bean or ground formats, pack sizes and target-market requirements." /><p className="mt-5 leading-relaxed text-muted-foreground">Depending on the production partner, services include packaging formats, label coordination and production planning. Lead times and branding capabilities are confirmed per project.</p><div className="mt-8 border-l-2 border-gold pl-6"><p className="eyebrow text-gold">Minimum Order Quantity</p><p className="mt-3 font-display text-3xl">{PRIVATE_LABEL_MOQ_KG.toLocaleString("en-US")} kg per roast profile</p></div></div>
-          <Photo src={roastPhoto} alt="Freshly roasted coffee beans turning in a roaster cooling tray" credit="Roast profiling. Photo: Wikimedia Commons, CC BY-SA 3.0. Cropped for display." className="[&_img]:aspect-[4/3]" />
+          <Photo src={roastPhoto} alt="Freshly roasted coffee beans turning in a roaster cooling tray" credit="Freshly roasted beans in the cooling tray. Jkafader, CC BY-SA 3.0." className="[&_img]:aspect-[4/3]" />
         </div>
       </Section>
 
