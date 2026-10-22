@@ -32,9 +32,7 @@ function Sus() {
           <div className="grid items-center gap-16 md:grid-cols-2">
             <figure>
               <img src={cooperative} alt="Kenyan farmers sorting harvested coffee cherries by hand on raised beds" loading="lazy" width={1371} height={2048} className="shadow-elegant aspect-[4/5] w-full object-cover object-top" />
-              <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">
-                <a href="https://commons.wikimedia.org/wiki/File:Kenyan_farmers_sorting_coffee_cherries.jpg" target="_blank" rel="noreferrer" className="underline underline-offset-2">Kenyan farmers sorting coffee cherries</a>. Photo: Kamweti wa Mutu · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer" className="underline underline-offset-2">CC BY-SA 4.0</a>. Cropped for display.
-              </figcaption>
+              <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">Farmers hand sorting freshly picked cherries. Kamweti wa Mutu, CC BY-SA 4.0.</figcaption>
             </figure>
             <div>
               <Heading eyebrow="Direct & Fair Pathways" title="Trading directly with Kenyan cooperative societies." intro="Our sourcing model prioritises fair and direct transaction pathways with domestic agricultural cooperative societies, so more of the export value reaches the farmers who grow the product." />
