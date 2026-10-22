@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BuyerResources } from "@/components/site/BuyerResources";
 import { COFFEE_MOISTURE } from "@/lib/procurement";
@@ -64,6 +64,13 @@ function Coffee() {
             ["02", "Mizizi Coffee", "Our specialist Kenyan coffee brand for retail, hospitality and distribution, in whole-bean and ground formats."],
             ["03", "Private Label", "Coffee selection, custom roast profiles and packaging coordination under your brand, from 1,000 kg per roast profile."],
           ].map(([n, t, d]) => <div key={n} className="border-t border-gold pt-5"><p className="font-display text-4xl text-gold">{n}</p><h2 className="mt-3 text-3xl">{t}</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d}</p></div>)}
+        </div>
+        <div className="mt-12 flex flex-col gap-5 border-y border-gold/40 py-6 md:flex-row md:items-center md:justify-between">
+          <div><p className="eyebrow text-gold">Coffee Buyer Documents</p><p className="mt-2 font-display text-2xl">Take our coffee story to your buying team.</p></div>
+          <div className="flex flex-wrap gap-3">
+            <Button asChild className="h-auto whitespace-normal py-3"><a href="/docs/vonschelling-coffee-company-profile.pdf" download="VonSchelling_Coffee_Company_Profile.pdf"><Download />Company Profile (PDF)</a></Button>
+            <Button asChild variant="outline" className="h-auto whitespace-normal py-3"><a href="/docs/vonschelling-coffee-product-catalog.pdf" download="VonSchelling_Coffee_Product_Catalog.pdf"><Download />Product Catalog (PDF)</a></Button>
+          </div>
         </div>
       </Section>
 
