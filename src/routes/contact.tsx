@@ -7,7 +7,8 @@ import { buildEnquiryEmail, parseRequestKind, SAMPLE_SIZES, type RequestKind } f
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => seo("Quotations, Coffee Samples & Buyer Documents, VonSchelling", "Request Kenyan coffee evaluation samples, commercial quotations and lot-specific buyer documentation from VonSchelling."),
+  staticData: { sitemap: true },
+  head: () => seo("Quotations, Coffee Samples & Buyer Documents, VonSchelling", "Request Kenyan coffee evaluation samples, commercial quotations and lot-specific buyer documentation from VonSchelling.", "/contact"),
   validateSearch: (search: Record<string, unknown>): { request?: RequestKind } => ({ request: parseRequestKind(search['request']) }),
   component: Contact,
 });

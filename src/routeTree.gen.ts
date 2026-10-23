@@ -18,6 +18,7 @@ import { Route as DriedFruitsRouteImport } from './routes/dried-fruits'
 import { Route as ExportLogisticsRouteImport } from './routes/export-logistics'
 import { Route as MeatsRouteImport } from './routes/meats'
 import { Route as QualityRouteImport } from './routes/quality'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SustainabilityRouteImport } from './routes/sustainability'
 
 const IndexRoute = IndexRouteImport.update({
@@ -65,6 +66,11 @@ const QualityRoute = QualityRouteImport.update({
   path: '/quality',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SustainabilityRoute = SustainabilityRouteImport.update({
   id: '/sustainability',
   path: '/sustainability',
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
   '/quality': typeof QualityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRoutesByTo {
@@ -93,6 +100,7 @@ export interface FileRoutesByTo {
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
   '/quality': typeof QualityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRoutesById {
@@ -106,6 +114,7 @@ export interface FileRoutesById {
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
   '/quality': typeof QualityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRouteTypes {
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/export-logistics'
     | '/meats'
     | '/quality'
+    | '/sitemap.xml'
     | '/sustainability'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
     | '/export-logistics'
     | '/meats'
     | '/quality'
+    | '/sitemap.xml'
     | '/sustainability'
   id:
     | '__root__'
@@ -144,6 +155,7 @@ export interface FileRouteTypes {
     | '/export-logistics'
     | '/meats'
     | '/quality'
+    | '/sitemap.xml'
     | '/sustainability'
   fileRoutesById: FileRoutesById
 }
@@ -157,6 +169,7 @@ export interface RootRouteChildren {
   ExportLogisticsRoute: typeof ExportLogisticsRoute
   MeatsRoute: typeof MeatsRoute
   QualityRoute: typeof QualityRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SustainabilityRoute: typeof SustainabilityRoute
 }
 
@@ -225,6 +238,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QualityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sustainability': {
       id: '/sustainability'
       path: '/sustainability'
@@ -245,6 +265,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExportLogisticsRoute: ExportLogisticsRoute,
   MeatsRoute: MeatsRoute,
   QualityRoute: QualityRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SustainabilityRoute: SustainabilityRoute,
 }
 export const routeTree = rootRouteImport

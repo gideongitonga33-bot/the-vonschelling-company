@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://the-vonschelling-company.lovable.app/sitemap.xml

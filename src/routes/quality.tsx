@@ -7,7 +7,8 @@ import { Heading, Note, PageHero, QuoteCTA, Section } from "@/components/site/La
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/quality")({
-  head: () => seo("Quality, Compliance & Traceability, VonSchelling", "Our framework for supplier qualification, product verification, traceability, certifications and export documentation."),
+  staticData: { sitemap: true },
+  head: () => seo("Quality, Compliance & Traceability, VonSchelling", "Our framework for supplier qualification, product verification, traceability, certifications and export documentation.", "/quality", "quality.jpg"),
   component: Quality,
 });
 

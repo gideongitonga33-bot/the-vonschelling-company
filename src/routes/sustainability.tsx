@@ -7,7 +7,8 @@ import { Heading, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/sustainability")({
-  head: () => seo("Sustainability & Responsible Sourcing, VonSchelling", "Growth that begins at origin: responsible sourcing aligned with UN SDG 8 and SDG 12."),
+  staticData: { sitemap: true },
+  head: () => seo("Sustainability & Responsible Sourcing, VonSchelling", "Growth that begins at origin: responsible sourcing aligned with UN SDG 8 and SDG 12.", "/sustainability", "sustainability.jpg"),
   component: Sus,
 });
 

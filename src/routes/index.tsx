@@ -11,11 +11,11 @@ import { Heading, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () =>
     seo(
       "VonSchelling, Premium Kenyan Agricultural Exports",
-      "Kenyan green coffee beans, Mizizi roasted coffee, chillies, meats and dried fruits, responsibly sourced and export-ready for international buyers.",
-    ),
+      "Kenyan green coffee beans, Mizizi roasted coffee, chillies, meats and dried fruits, responsibly sourced and export-ready for international buyers.", "/", "home.jpg"),
   component: Index,
 });
 
@@ -41,7 +41,7 @@ function Index() {
         <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-24 text-ivory">
           <p className="eyebrow text-gold-soft">Premium Kenyan Agri-Exports</p>
           <h1 className="mt-6 max-w-4xl text-6xl leading-[0.98] md:text-8xl">
-            From Kenyan soil<br /><em className="text-gold-soft">to world markets.</em>
+            From Kenyan soil{" "}<br /><em className="text-gold-soft">to world markets.</em>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ivory/85">
             We source, grade and export Kenyan agricultural products for international buyers, with clear specifications,

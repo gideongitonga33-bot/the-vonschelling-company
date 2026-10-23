@@ -4,7 +4,8 @@ import { BulletGrid, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/comp
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/dried-fruits")({
-  head: () => seo("Dried Fruit Exports from Kenya, VonSchelling", "Dried mango, pineapple, banana and papaya with clear specifications for importers, wholesalers and food businesses."),
+  staticData: { sitemap: true },
+  head: () => seo("Dried Fruit Exports from Kenya, VonSchelling", "Dried mango, pineapple, banana and papaya with clear specifications for importers, wholesalers and food businesses.", "/dried-fruits", "dried-fruits.jpg"),
   component: () => (
     <>
       <PageHero image={img} eyebrow="Products · Dried Fruits" title="Dried Fruits. Carefully Sourced. Clearly Specified." intro="Suitable dried fruit products for importers, wholesalers, distributors and food businesses seeking reliable supply and clearly defined specifications." />

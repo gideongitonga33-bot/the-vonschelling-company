@@ -5,7 +5,8 @@ import { Heading, PageHero, QuoteCTA, Section } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => seo("About VonSchelling Limited, Kenyan Agri-Exports", "A Kenyan agricultural trading company connecting supply partners with domestic and international buyers."),
+  staticData: { sitemap: true },
+  head: () => seo("About VonSchelling Limited, Kenyan Agri-Exports", "A Kenyan agricultural trading company connecting supply partners with domestic and international buyers.", "/about", "home.jpg"),
   component: About,
 });
 
@@ -41,7 +42,7 @@ function About() {
         </Section>
       </section>
       <Section>
-        <Heading eyebrow="Our Values" title="What we stand on." />
+        <Heading eyebrow="Our Values" title="Our values in Kenyan agricultural trade." />
         <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
           {values.map(([t, d]) => (
             <div key={t} className="bg-background p-10"><h3 className="text-3xl">{t}</h3><p className="mt-3 text-muted-foreground">{d}</p></div>
