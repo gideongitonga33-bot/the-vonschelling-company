@@ -32,7 +32,7 @@ function Contact() {
     <Section>
       <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
         <div>
-          <Heading eyebrow="Contact · Samples & Quotations" title="Tell us what you're looking for." intro="Share your product, specifications and destination. Sample availability, documentation and commercial terms are confirmed for your request." />
+          <Heading as="h1" eyebrow="Contact · Samples & Quotations" title="Request Kenyan Coffee Samples and Export Quotations." intro="Tell us what you're looking for. Share your product, specifications and destination. Sample availability, documentation and commercial terms are confirmed for your request." />
           <div className="mt-12 space-y-6 text-sm">
             <div><p className={label}>Office</p><p className="mt-2 leading-relaxed">90 JGO Building, Ikigai, Lavington<br />P.O. Box 9226, 00300<br />Nairobi, Kenya</p></div>
             <div><p className={label}>Email</p><p className="mt-2"><a href="mailto:info@vonschelling.co.ke" className="hover:text-primary">info@vonschelling.co.ke</a></p></div>
@@ -77,7 +77,7 @@ function Contact() {
             <Button type="submit" className="h-auto whitespace-normal px-6 py-4 md:col-span-2"><Mail />Prepare enquiry email</Button>
           </form>
           {draft && <div role="status" className="mt-8 border border-gold/50 bg-card p-6">
-            <p className={label}>Email draft ready</p><h3 className="mt-3 text-3xl">Review and send your enquiry.</h3>
+            <p className={label}>Email draft ready</p><h2 className="mt-3 text-3xl">Review and send your enquiry.</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Nothing has been sent yet. Open your email app and send the draft to info@vonschelling.co.ke, or copy the details below.</p>
             <textarea aria-label="Enquiry email details" readOnly value={draft.body} rows={10} className="mt-5 w-full border border-border bg-background p-4 text-sm" />
             <div className="mt-5 flex flex-wrap gap-3"><Button asChild className="h-auto whitespace-normal py-3"><a href={draft.href}><Mail />Open email draft</a></Button><Button variant="outline" className="h-auto whitespace-normal py-3" onClick={async () => { try { await navigator.clipboard.writeText(draft.body); setCopied(true); setCopyError(false); } catch { setCopyError(true); } }}>{copied ? <Check /> : <Copy />}{copied ? 'Copied' : 'Copy enquiry'}</Button></div>

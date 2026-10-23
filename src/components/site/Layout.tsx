@@ -143,11 +143,11 @@ export function Section({ children, className = "" }: { children: ReactNode; cla
   return <section className={`mx-auto max-w-7xl px-6 py-24 md:py-32 ${className}`}>{children}</section>;
 }
 
-export function Heading({ eyebrow, title, intro, light }: { eyebrow: string; title: string; intro?: string; light?: boolean }) {
+export function Heading({ eyebrow, title, intro, light, as: Tag = "h2" }: { eyebrow: string; title: string; intro?: string; light?: boolean; as?: "h1" | "h2" }) {
   return (
     <div className="max-w-3xl">
       <p className={`eyebrow ${light ? "text-gold-soft" : "text-gold"}`}>{eyebrow}</p>
-      <h2 className="mt-4 text-4xl leading-tight md:text-5xl">{title}</h2>
+      <Tag className="mt-4 text-4xl leading-tight md:text-5xl">{title}</Tag>
       {intro && <p className={`mt-5 text-lg leading-relaxed ${light ? "text-ivory/75" : "text-muted-foreground"}`}>{intro}</p>}
     </div>
   );
@@ -156,7 +156,7 @@ export function Heading({ eyebrow, title, intro, light }: { eyebrow: string; tit
 export function BulletGrid({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
-      <h3 className="text-2xl">{title}</h3>
+      <h2 className="text-2xl">{title}</h2>
       <div className="gold-rule mt-4 w-24" />
       <ul className="mt-6 space-y-4">
         {items.map((i) => (
