@@ -19,3 +19,7 @@
 - Until hosted inquiry delivery is approved, enquiry forms prepare email drafts with an explicit send step; never claim receipt or save buyer details locally.
 - Generate buyer planning checklists in the browser, separate from verified lot certificates, so downloads cannot imply licences or compliance evidence are held.
 - Serve prebuilt buyer-facing PDFs from `public/docs/` for direct same-origin downloads, while also providing a copy in workspace Files.
+
+## SEO
+- Build every page's head with `seo()` in `src/lib/seo.ts`, passing its own path and a 1200x630 copy of its hero photo in `public/og/`, so canonical, og:url and share images stay self-referencing and absolute.
+- Every route sets `staticData.sitemap`; `/sitemap.xml` derives its URLs from the router so new pages are listed without a manual list.
