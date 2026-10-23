@@ -4,7 +4,8 @@ import { BulletGrid, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/comp
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/chilies")({
-  head: () => seo("Kenyan Chilli Exports, VonSchelling", "Fresh, dried whole and processed Kenyan chillies supplied to agreed quality, food-safety and destination-market specifications."),
+  staticData: { sitemap: true },
+  head: () => seo("Kenyan Chilli Exports, VonSchelling", "Fresh, dried whole and processed Kenyan chillies supplied to agreed quality, food-safety and destination-market specifications.", "/chilies", "chillies.jpg"),
   component: () => (
     <>
       <PageHero image={img} eyebrow="Products · Chillies" title="Chillies, Selected for Market Requirements." intro="We connect chilli supply partners with buyers seeking products that meet agreed specifications for quality, food safety, packaging and destination-market requirements." />

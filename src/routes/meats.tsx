@@ -4,7 +4,8 @@ import { BulletGrid, Note, PageHero, QuoteCTA, Section, SpecTable } from "@/comp
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/meats")({
-  head: () => seo("Meat Export Supply from Kenya, VonSchelling", "Eligible chilled and frozen meat products coordinated through approved, veterinary-inspected Kenyan partners."),
+  staticData: { sitemap: true },
+  head: () => seo("Meat Export Supply from Kenya, VonSchelling", "Eligible chilled and frozen meat products coordinated through approved, veterinary-inspected Kenyan partners.", "/meats", "meats.jpg"),
   component: () => (
     <>
       <PageHero image={img} eyebrow="Products · Meats" title="Meat Products for Qualified Trade Markets." intro="We connect buyers with suitable meat supply and processing partners, with product selection and export arrangements guided by the requirements of the intended market." />

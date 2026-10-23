@@ -7,7 +7,8 @@ import { BulletGrid, Heading, Note, PageHero, QuoteCTA, Section, SpecTable } fro
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/export-logistics")({
-  head: () => seo("Export & Logistics from Kenya, VonSchelling", "From enquiry to delivery: quotations, samples, contracts, documentation and freight coordinated from Kenya."),
+  staticData: { sitemap: true },
+  head: () => seo("Export & Logistics from Kenya, VonSchelling", "From enquiry to delivery: quotations, samples, contracts, documentation and freight coordinated from Kenya.", "/export-logistics", "export-logistics.jpg"),
   component: Exp,
 });
 

@@ -16,7 +16,8 @@ import { Heading, Note, PageHero, Section, SpecTable } from "@/components/site/L
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/coffee")({
-  head: () => seo("Kenyan Coffee Exports & Mizizi Coffee, VonSchelling", "Explore Kenyan Green Coffee Beans, highland origins, grades, crop seasons and export planning, plus Mizizi roasted and private-label coffee."),
+  staticData: { sitemap: true },
+  head: () => seo("Kenyan Coffee Exports & Mizizi Coffee, VonSchelling", "Explore Kenyan Green Coffee Beans, highland origins, grades, crop seasons and export planning, plus Mizizi roasted and private-label coffee.", "/coffee", "coffee.jpg"),
   component: Coffee,
 });
 
