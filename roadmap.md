@@ -46,3 +46,8 @@ Enquiries prepare email drafts with an explicit buyer send step. Automated deliv
 
 - [x] Align website URLs, canonical and share URLs, structured data, robots and AI reference links with https://www.vonschelling.co.ke, keeping email unchanged.
 - [x] Run regression tests and verify rendered page metadata and sitemap.
+## Coffee documents v2 and Algrano channel
+
+- [ ] Add Algrano roastery-direct channel, FOB Mombasa basis, OS to PSS sample protocol and indicative cup tiers to the Coffee page and FAQs.
+- [ ] Build 8-page Product Catalog v2 and 10-page Company Profile v2 with real photos only; visually QA every page.
+- [ ] Replace public/docs downloads, keep v1 files in Files, run tests.
