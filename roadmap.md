@@ -41,3 +41,8 @@ Enquiries prepare email drafts with an explicit buyer send step. Automated deliv
 - [x] Add guide bylines, review dates, summaries and matching Article metadata. No unverified LinkedIn URL added.
 - [x] Add concise Privacy and Terms of Trade pages with footer links.
 - [x] Verify pages, navigation, enquiry flow and tests. Preserve /chilies with no rename or redirect.
+
+## Render www address alignment
+
+- [x] Align website URLs, canonical and share URLs, structured data, robots and AI reference links with https://www.vonschelling.co.ke, keeping email unchanged.
+- [x] Run regression tests and verify rendered page metadata and sitemap.
