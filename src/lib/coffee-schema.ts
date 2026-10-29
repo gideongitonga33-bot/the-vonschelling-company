@@ -45,6 +45,10 @@ export const COFFEE_BUYER_FAQS = [
     question: "Can I request FOB Mombasa or CIF coffee shipment terms?",
     answer: "Request a quotation stating FOB Mombasa or CIF to your named destination port, volume and shipment window. We agree the terms for the order. Under FOB, risk transfers when goods are on board at the shipment port. Under CIF, the seller also arranges freight and insurance to the named destination, but risk still transfers at shipment, not on arrival.",
   },
+  {
+    question: "Can roasters in Europe or North America buy less than a full container?",
+    answer: "Yes. Through our partnership with Algrano, roasters in Europe and North America can buy our Kenyan lots in smaller volumes, with import handled and the coffee delivered to their warehouse or chosen address. Importers and larger roasters can also buy full containers directly from us on FOB Mombasa, CFR or CIF terms.",
+  },
 ] as const;
 
 export const coffeeProductSchema = {
