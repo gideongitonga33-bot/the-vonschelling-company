@@ -17,9 +17,11 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DriedFruitsRouteImport } from './routes/dried-fruits'
 import { Route as ExportLogisticsRouteImport } from './routes/export-logistics'
 import { Route as MeatsRouteImport } from './routes/meats'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as QualityRouteImport } from './routes/quality'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SustainabilityRouteImport } from './routes/sustainability'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as GuidesIndexRouteImport } from './routes/guides.index'
 import { Route as GuidesCoffeeAuctionVsDirectTradeKenyaRouteImport } from './routes/guides.coffee-auction-vs-direct-trade-kenya'
 import { Route as GuidesCoffeeMoistureAndWaterActivityStandardsRouteImport } from './routes/guides.coffee-moisture-and-water-activity-standards'
@@ -67,6 +69,11 @@ const MeatsRoute = MeatsRouteImport.update({
   path: '/meats',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const QualityRoute = QualityRouteImport.update({
   id: '/quality',
   path: '/quality',
@@ -80,6 +87,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const SustainabilityRoute = SustainabilityRouteImport.update({
   id: '/sustainability',
   path: '/sustainability',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GuidesIndexRoute = GuidesIndexRouteImport.update({
@@ -127,9 +139,11 @@ export interface FileRoutesByFullPath {
   '/dried-fruits': typeof DriedFruitsRoute
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
+  '/privacy': typeof PrivacyRoute
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
+  '/terms': typeof TermsRoute
   '/guides/coffee-auction-vs-direct-trade-kenya': typeof GuidesCoffeeAuctionVsDirectTradeKenyaRoute
   '/guides/coffee-moisture-and-water-activity-standards': typeof GuidesCoffeeMoistureAndWaterActivityStandardsRoute
   '/guides/kenyan-coffee-crop-calendar': typeof GuidesKenyanCoffeeCropCalendarRoute
@@ -146,9 +160,11 @@ export interface FileRoutesByTo {
   '/dried-fruits': typeof DriedFruitsRoute
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
+  '/privacy': typeof PrivacyRoute
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
+  '/terms': typeof TermsRoute
   '/guides/coffee-auction-vs-direct-trade-kenya': typeof GuidesCoffeeAuctionVsDirectTradeKenyaRoute
   '/guides/coffee-moisture-and-water-activity-standards': typeof GuidesCoffeeMoistureAndWaterActivityStandardsRoute
   '/guides/kenyan-coffee-crop-calendar': typeof GuidesKenyanCoffeeCropCalendarRoute
@@ -166,9 +182,11 @@ export interface FileRoutesById {
   '/dried-fruits': typeof DriedFruitsRoute
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
+  '/privacy': typeof PrivacyRoute
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
+  '/terms': typeof TermsRoute
   '/guides/coffee-auction-vs-direct-trade-kenya': typeof GuidesCoffeeAuctionVsDirectTradeKenyaRoute
   '/guides/coffee-moisture-and-water-activity-standards': typeof GuidesCoffeeMoistureAndWaterActivityStandardsRoute
   '/guides/kenyan-coffee-crop-calendar': typeof GuidesKenyanCoffeeCropCalendarRoute
@@ -187,9 +205,11 @@ export interface FileRouteTypes {
     | '/dried-fruits'
     | '/export-logistics'
     | '/meats'
+    | '/privacy'
     | '/quality'
     | '/sitemap.xml'
     | '/sustainability'
+    | '/terms'
     | '/guides/coffee-auction-vs-direct-trade-kenya'
     | '/guides/coffee-moisture-and-water-activity-standards'
     | '/guides/kenyan-coffee-crop-calendar'
@@ -206,9 +226,11 @@ export interface FileRouteTypes {
     | '/dried-fruits'
     | '/export-logistics'
     | '/meats'
+    | '/privacy'
     | '/quality'
     | '/sitemap.xml'
     | '/sustainability'
+    | '/terms'
     | '/guides/coffee-auction-vs-direct-trade-kenya'
     | '/guides/coffee-moisture-and-water-activity-standards'
     | '/guides/kenyan-coffee-crop-calendar'
@@ -225,9 +247,11 @@ export interface FileRouteTypes {
     | '/dried-fruits'
     | '/export-logistics'
     | '/meats'
+    | '/privacy'
     | '/quality'
     | '/sitemap.xml'
     | '/sustainability'
+    | '/terms'
     | '/guides/coffee-auction-vs-direct-trade-kenya'
     | '/guides/coffee-moisture-and-water-activity-standards'
     | '/guides/kenyan-coffee-crop-calendar'
@@ -245,9 +269,11 @@ export interface RootRouteChildren {
   DriedFruitsRoute: typeof DriedFruitsRoute
   ExportLogisticsRoute: typeof ExportLogisticsRoute
   MeatsRoute: typeof MeatsRoute
+  PrivacyRoute: typeof PrivacyRoute
   QualityRoute: typeof QualityRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SustainabilityRoute: typeof SustainabilityRoute
+  TermsRoute: typeof TermsRoute
   GuidesCoffeeAuctionVsDirectTradeKenyaRoute: typeof GuidesCoffeeAuctionVsDirectTradeKenyaRoute
   GuidesCoffeeMoistureAndWaterActivityStandardsRoute: typeof GuidesCoffeeMoistureAndWaterActivityStandardsRoute
   GuidesKenyanCoffeeCropCalendarRoute: typeof GuidesKenyanCoffeeCropCalendarRoute
@@ -314,6 +340,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MeatsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/quality': {
       id: '/quality'
       path: '/quality'
@@ -333,6 +366,13 @@ declare module '@tanstack/react-router' {
       path: '/sustainability'
       fullPath: '/sustainability'
       preLoaderRoute: typeof SustainabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/guides/': {
@@ -389,9 +429,11 @@ const rootRouteChildren: RootRouteChildren = {
   DriedFruitsRoute: DriedFruitsRoute,
   ExportLogisticsRoute: ExportLogisticsRoute,
   MeatsRoute: MeatsRoute,
+  PrivacyRoute: PrivacyRoute,
   QualityRoute: QualityRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SustainabilityRoute: SustainabilityRoute,
+  TermsRoute: TermsRoute,
   GuidesCoffeeAuctionVsDirectTradeKenyaRoute:
     GuidesCoffeeAuctionVsDirectTradeKenyaRoute,
   GuidesCoffeeMoistureAndWaterActivityStandardsRoute:
