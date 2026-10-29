@@ -17,6 +17,12 @@ export type BuyerGuide = {
   sources: { label: string; url: string }[];
 };
 
+export function getBuyerGuide(index: number): BuyerGuide {
+  const guide = BUYER_GUIDES[index];
+  if (!guide) throw new Error("Buyer guide configuration is missing");
+  return guide;
+}
+
 export const BUYER_GUIDES: BuyerGuide[] = [
   {
     slug: "kenyan-coffee-grades-explained",
