@@ -1,8 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { coffeeProductSchema, organizationSchema } from "@/lib/coffee-schema";
+import { COFFEE_BUYER_FAQS, coffeeProductSchema, organizationSchema } from "@/lib/coffee-schema";
 import { seo, SITE_URL } from "@/lib/seo";
 
 describe("Approved buyer search facts", () => {
+  it("offers Algrano roastery-direct buying for Europe and North America", () => {
+    const faq = COFFEE_BUYER_FAQS.find((f) => f.answer.includes("Algrano"));
+    expect(faq?.answer).toContain("Europe and North America");
+  });
   it("uses the official production domain for canonical and share URLs", () => {
     expect(SITE_URL).toBe("https://www.vonschelling.co.ke");
     expect(seo("Coffee", "Buyer information", "/coffee", "coffee.jpg").links).toEqual([
