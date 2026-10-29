@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://the-vonschelling-company.lovable.app/sitemap.xml
+Sitemap: https://vonschelling.co.ke/sitemap.xml

@@ -104,6 +104,10 @@ export function Footer() {
             <li><Link to="/meats">Meats</Link></li>
             <li><Link to="/dried-fruits">Dried Fruits</Link></li>
           </ul>
+          <p className="eyebrow mt-8 text-gold">Buyer Resources</p>
+          <ul className="mt-5 space-y-2 text-sm text-ivory/75">
+            <li><Link to="/guides">Kenyan Coffee Buyer Guides</Link></li>
+          </ul>
         </div>
         <div>
           <p className="eyebrow text-gold">Contact</p>

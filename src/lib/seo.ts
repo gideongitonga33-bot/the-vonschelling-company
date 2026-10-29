@@ -1,4 +1,4 @@
-export const SITE_URL = "https://the-vonschelling-company.lovable.app";
+export const SITE_URL = "https://vonschelling.co.ke";
 
 /**
  * Per-page head metadata. `path` is the page's own URL path (used for og:url and

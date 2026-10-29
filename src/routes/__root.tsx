@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header, Footer } from "@/components/site/Layout";
+import { jsonLd, organizationSchema, websiteSchema } from "@/lib/coffee-schema";
 
 function NotFoundComponent() {
   return (
@@ -80,10 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "VonSchelling, Premium Kenyan Agri-Exports" },
-      { name: "description", content: "Kenyan coffee, chillies, meats and dried fruits for international buyers." },
       { name: "author", content: "VonSchelling Limited" },
+      { property: "og:site_name", content: "VonSchelling Limited" },
     ],
+    scripts: [jsonLd(organizationSchema), jsonLd(websiteSchema)],
     links: [
       {
         rel: "stylesheet",
