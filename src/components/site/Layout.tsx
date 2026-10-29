@@ -116,7 +116,7 @@ export function Footer() {
             <li>90 JGO Building, Ikigai, Lavington</li>
             <li>P.O. Box 9226, 00300 Nairobi, Kenya</li>
             <li><a href="mailto:info@vonschelling.co.ke" className="hover:text-gold-soft">info@vonschelling.co.ke</a></li>
-            <li><a href="https://vonschelling.co.ke" className="hover:text-gold-soft">vonschelling.co.ke</a></li>
+            <li><a href="https://www.vonschelling.co.ke" className="hover:text-gold-soft">www.vonschelling.co.ke</a></li>
           </ul>
         </div>
       </div>
