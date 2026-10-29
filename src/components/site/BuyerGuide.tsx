@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageHero, Section } from "@/components/site/Layout";
-import { BUYER_GUIDES, type BuyerGuide } from "@/lib/buyer-guides";
+import { BUYER_GUIDES, GUIDE_PATHS, type BuyerGuide } from "@/lib/buyer-guides";
 import { seo, SITE_URL } from "@/lib/seo";
 import { jsonLd } from "@/lib/coffee-schema";
 import beans from "@/assets/Burlap_Sacks_of_Green_Coffee_Beans.webp";
@@ -66,7 +66,11 @@ export function BuyerGuidePage({ guide }: { guide: BuyerGuide }) {
             <Button asChild variant="outline" className="h-auto whitespace-normal py-3"><Link to="/contact" search={{ request: "sample" }}>Request an evaluation sample<ArrowUpRight /></Link></Button>
           </div>
           <h2 className="mt-10 text-2xl">More buyer guides</h2>
-          <ul className="mt-5 space-y-4">{BUYER_GUIDES.filter(item => item.slug !== guide.slug).map(item => <li key={item.slug}><Link to="/guides/$slug" params={{ slug: item.slug }} className="text-sm leading-relaxed text-primary">{item.title}</Link></li>)}</ul>
+          <ul className="mt-5 space-y-4">{BUYER_GUIDES.map((item, index) => {
+            const path = GUIDE_PATHS[index];
+            if (!path || item.slug === guide.slug) return null;
+            return <li key={item.slug}><Link to={path} className="text-sm leading-relaxed text-primary">{item.title}</Link></li>;
+          })}</ul>
         </aside>
       </div>
     </Section>

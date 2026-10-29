@@ -1,3 +1,11 @@
+export const GUIDE_PATHS = [
+  "/guides/kenyan-coffee-grades-explained",
+  "/guides/kenyan-coffee-crop-calendar",
+  "/guides/kenyan-green-coffee-importing-guide",
+  "/guides/coffee-auction-vs-direct-trade-kenya",
+  "/guides/coffee-moisture-and-water-activity-standards",
+] as const;
+
 export type BuyerGuide = {
   slug: string;
   title: string;
