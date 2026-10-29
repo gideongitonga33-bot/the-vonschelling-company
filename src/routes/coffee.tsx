@@ -118,12 +118,14 @@ function Coffee() {
             <div className="space-y-6">
               <SpecTable title="Kenyan Grade Guide" rows={COFFEE_GRADES} />
               <SpecTable title="Green Coffee Beans · Technical Specification" rows={[
-                ["Varieties", "SL28, SL34, Ruiru 11 and Batian"],
-                ["Moisture Level", `${COFFEE_MOISTURE.min}% to ${COFFEE_MOISTURE.max}%`],
-                ["Physical Grading", "Screen distribution, defect count, sample weight and acceptance limits confirmed per lot"],
-                ["Water Activity", "Testing method, result and buyer acceptance limit agreed where required"],
-                ["Lot Details", "Origin, processing, crop, cup characteristics and available volume confirmed in the offer"],
+...
               ]} />
+              <SpecTable title="Indicative Cup Quality Tiers (SCA Scale)" rows={[
+                ["87+ points", "Specialty micro-lots from single estates and cooperative factories"],
+                ["84 to 86.5 points", "Specialty regional AA and AB for single-origin offers"],
+                ["82 to 84 points", "High-commercial AB and C for blends and volume programmes"],
+              ]} />
+              <p className="text-xs leading-relaxed text-muted-foreground">Tiers guide your selection. Each lot offer states its own score, evaluator and sample date.</p>
             </div>
           </div>
         </Section>
@@ -145,12 +147,18 @@ function Coffee() {
         <Section>
           <Heading eyebrow="Export Packing & Logistics" title="Protect the lot. Plan the load." intro="Agree net weight, protective liners, labelling and freight configuration before contracting." />
           <div className="mt-10"><SpecTable title="Packing & Freight · Options to Confirm" rows={[
+            ["Quotation Basis", "FOB Mombasa as standard; CFR or CIF to your named destination port on request"],
             ["Export Bags", "60 kg export-grade jute bags; hermetic GrainPro or Ecotact liners may be requested, subject to supplier confirmation"],
             ["Micro-Lot Formats", "Ask about smaller packs or 30 kg vacuum-sealed cartons; availability and packing costs confirmed per lot"],
             ["20 ft FCL Planning", `${CONTAINER_PLANNING.minBags} to ${CONTAINER_PLANNING.maxBags} bags at ${CONTAINER_PLANNING.bagKg} kg: ${plannedCoffeeTonnes(CONTAINER_PLANNING.minBags)} to ${plannedCoffeeTonnes(CONTAINER_PLANNING.maxBags)} metric tonnes, as an indicative planning range only`],
+            ["Container Protection", "Container desiccants and kraft lining can be specified for ocean freight and agreed in the packing list"],
             ["LCL & Air Freight", "Discuss palletised smaller consignments and sample courier options against volume, destination and cost"],
           ]} /></div>
           <p className="mt-6 text-sm leading-relaxed text-muted-foreground">Final loadability depends on container payload, pack dimensions, pallets, carrier and route. Confirm the liner brand and final packing list in writing.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="border-t-2 border-gold pt-6"><p className="eyebrow text-gold">Channel 01 · Direct Export</p><h3 className="mt-3 text-3xl">Full containers from Mombasa</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">For importers, trade houses and larger roasters. We quote FOB Mombasa or CFR and CIF to your named port, with lot, packing and shipment window agreed in the contract.</p></div>
+            <div className="border-t-2 border-gold pt-6"><p className="eyebrow text-gold">Channel 02 · Roastery Direct via Algrano</p><h3 className="mt-3 text-3xl">Europe & North America, to your door</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Through our partnership with Algrano, roasters in Europe and North America can buy our Kenyan lots in smaller volumes, with import handled and coffee delivered to their warehouse or chosen address.</p></div>
+          </div>
           <Button asChild variant="link" className="mt-4 h-auto whitespace-normal px-0"><Link to="/export-logistics">Review shipment stages and commercial terms<ArrowUpRight /></Link></Button>
         </Section>
       </section>
