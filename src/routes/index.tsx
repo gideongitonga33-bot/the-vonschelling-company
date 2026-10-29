@@ -69,7 +69,7 @@ function Index() {
             <Heading
               eyebrow="Flagship Operation · Coffee"
               title="Kenyan coffee. From origin to opportunity."
-              intro="We supply international importers, traders and roasters with Kenyan Green Coffee Beans, our Mizizi roasted coffee and private-label programmes, sourced and prepared at origin."
+              intro="Kenyan green coffee exporter: AA, AB, PB and specialty micro-lots, with sample-to-shipment consistency, moisture protection in transit, and verifiable traceability for importers and roasters."
             />
             <div className="mt-10 grid gap-6 sm:grid-cols-3">
               {[["01", "Green Coffee Beans", "Primary export offering"], ["02", "Mizizi Coffee", "Roasted & packaged"], ["03", "Private Label", "Your brand, Kenyan coffee"]].map(([n, t, s]) => (

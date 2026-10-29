@@ -23,3 +23,5 @@
 ## SEO
 - Build every page's head with `seo()` in `src/lib/seo.ts`, passing its own path and a 1200x630 copy of its hero photo in `public/og/`, so canonical, og:url and share images stay self-referencing and absolute.
 - Every route sets `staticData.sitemap`; `/sitemap.xml` derives its URLs from the router so new pages are listed without a manual list.
+- Keep business and coffee JSON-LD in a browser-safe schema module, with FAQ markup generated from the same answers shown on the Coffee page to prevent hidden or contradictory claims.
+- Buyer guides use shared editorial data and presentation with explicit leaf routes, so each guide has its own self-referencing Article metadata and sitemap entry.
