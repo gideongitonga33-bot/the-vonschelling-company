@@ -44,5 +44,5 @@ Enquiries prepare email drafts with an explicit buyer send step. Automated deliv
 
 ## Render www address alignment
 
-- [ ] Align website URLs, canonical and share URLs, structured data, robots and AI reference links with https://www.vonschelling.co.ke, keeping email unchanged.
-- [ ] Run regression tests and verify rendered page metadata and sitemap.
+- [x] Align website URLs, canonical and share URLs, structured data, robots and AI reference links with https://www.vonschelling.co.ke, keeping email unchanged.
+- [x] Run regression tests and verify rendered page metadata and sitemap.
