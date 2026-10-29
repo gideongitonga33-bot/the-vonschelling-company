@@ -118,7 +118,11 @@ function Coffee() {
             <div className="space-y-6">
               <SpecTable title="Kenyan Grade Guide" rows={COFFEE_GRADES} />
               <SpecTable title="Green Coffee Beans · Technical Specification" rows={[
-...
+                ["Varieties", "SL28, SL34, Ruiru 11 and Batian"],
+                ["Moisture Level", `${COFFEE_MOISTURE.min}% to ${COFFEE_MOISTURE.max}%`],
+                ["Physical Grading", "Screen distribution, defect count, sample weight and acceptance limits confirmed per lot"],
+                ["Water Activity", "Testing method, result and buyer acceptance limit agreed where required"],
+                ["Lot Details", "Origin, processing, crop, cup characteristics and available volume confirmed in the offer"],
               ]} />
               <SpecTable title="Indicative Cup Quality Tiers (SCA Scale)" rows={[
                 ["87+ points", "Specialty micro-lots from single estates and cooperative factories"],
