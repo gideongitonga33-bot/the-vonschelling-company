@@ -36,8 +36,8 @@ Enquiries prepare email drafts with an explicit buyer send step. Automated deliv
 
 ## Approved search and trust follow-up
 
-- [ ] Add explicit AI crawler access and a factual llms.txt reference.
-- [ ] Harmonise company website links and add Buyer Guides navigation and Coffee cross-link.
-- [ ] Add guide bylines, review dates, summaries and matching Article metadata.
-- [ ] Add concise Privacy and Terms of Trade pages with footer links.
-- [ ] Verify pages, navigation, enquiry flow and tests. Preserve /chilies with no rename or redirect.
+- [x] Add explicit AI crawler access and a factual llms.txt reference.
+- [x] Harmonise company website links and add Buyer Guides navigation and Coffee cross-link.
+- [x] Add guide bylines, review dates, summaries and matching Article metadata. No unverified LinkedIn URL added.
+- [x] Add concise Privacy and Terms of Trade pages with footer links.
+- [x] Verify pages, navigation, enquiry flow and tests. Preserve /chilies with no rename or redirect.
