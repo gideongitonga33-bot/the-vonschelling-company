@@ -124,6 +124,12 @@ function Coffee() {
                 ["Water Activity", "Testing method, result and buyer acceptance limit agreed where required"],
                 ["Lot Details", "Origin, processing, crop, cup characteristics and available volume confirmed in the offer"],
               ]} />
+              <SpecTable title="Indicative Cup Quality Tiers (SCA Scale)" rows={[
+                ["87+ points", "Specialty micro-lots from single estates and cooperative factories"],
+                ["84 to 86.5 points", "Specialty regional AA and AB for single-origin offers"],
+                ["82 to 84 points", "High-commercial AB and C for blends and volume programmes"],
+              ]} />
+              <p className="text-xs leading-relaxed text-muted-foreground">Tiers guide your selection. Each lot offer states its own score, evaluator and sample date.</p>
             </div>
           </div>
         </Section>
@@ -145,12 +151,18 @@ function Coffee() {
         <Section>
           <Heading eyebrow="Export Packing & Logistics" title="Protect the lot. Plan the load." intro="Agree net weight, protective liners, labelling and freight configuration before contracting." />
           <div className="mt-10"><SpecTable title="Packing & Freight · Options to Confirm" rows={[
+            ["Quotation Basis", "FOB Mombasa as standard; CFR or CIF to your named destination port on request"],
             ["Export Bags", "60 kg export-grade jute bags; hermetic GrainPro or Ecotact liners may be requested, subject to supplier confirmation"],
             ["Micro-Lot Formats", "Ask about smaller packs or 30 kg vacuum-sealed cartons; availability and packing costs confirmed per lot"],
             ["20 ft FCL Planning", `${CONTAINER_PLANNING.minBags} to ${CONTAINER_PLANNING.maxBags} bags at ${CONTAINER_PLANNING.bagKg} kg: ${plannedCoffeeTonnes(CONTAINER_PLANNING.minBags)} to ${plannedCoffeeTonnes(CONTAINER_PLANNING.maxBags)} metric tonnes, as an indicative planning range only`],
+            ["Container Protection", "Container desiccants and kraft lining can be specified for ocean freight and agreed in the packing list"],
             ["LCL & Air Freight", "Discuss palletised smaller consignments and sample courier options against volume, destination and cost"],
           ]} /></div>
           <p className="mt-6 text-sm leading-relaxed text-muted-foreground">Final loadability depends on container payload, pack dimensions, pallets, carrier and route. Confirm the liner brand and final packing list in writing.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="border-t-2 border-gold pt-6"><p className="eyebrow text-gold">Channel 01 · Direct Export</p><h3 className="mt-3 text-3xl">Full containers from Mombasa</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">For importers, trade houses and larger roasters. We quote FOB Mombasa or CFR and CIF to your named port, with lot, packing and shipment window agreed in the contract.</p></div>
+            <div className="border-t-2 border-gold pt-6"><p className="eyebrow text-gold">Channel 02 · Roastery Direct via Algrano</p><h3 className="mt-3 text-3xl">Europe & North America, to your door</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Through our partnership with Algrano, roasters in Europe and North America can buy our Kenyan lots in smaller volumes, with import handled and coffee delivered to their warehouse or chosen address.</p></div>
+          </div>
           <Button asChild variant="link" className="mt-4 h-auto whitespace-normal px-0"><Link to="/export-logistics">Review shipment stages and commercial terms<ArrowUpRight /></Link></Button>
         </Section>
       </section>
@@ -165,7 +177,12 @@ function Coffee() {
           <div><dl className="divide-y divide-border border-y border-border">{docs.map(([t, d]) => <div key={t} className="grid gap-3 py-5 sm:grid-cols-[1fr_1.4fr]"><dt className="font-display text-xl">{t}</dt><dd className="text-sm leading-relaxed text-muted-foreground">{d}</dd></div>)}</dl><div className="mt-6"><Note>No universal cup score, certification logo or blanket fully traceable promise. Request verifiable evidence for the lot, including EU due diligence records where relevant.</Note></div></div>
         </div>
         <div className="mt-14 grid gap-8 border-y border-gold/40 py-10 lg:grid-cols-[1.3fr_1fr]">
-          <div><Heading eyebrow="Sample First" title="Evaluate before you commit." intro="Request a representative Green Coffee Beans sample in AA, AB, PB, C or a specialty micro-lot. Share your preferred origin and target cup profile." /><p className="mt-5 text-sm leading-relaxed text-muted-foreground">Choose a 300g or 500g preference. Final size, availability, packaging, courier charges and dispatch timing are confirmed individually. Agree cup and physical acceptance criteria before contracting.</p></div>
+          <div><Heading eyebrow="Sample First" title="Evaluate before you commit." intro="Request a representative Green Coffee Beans sample in AA, AB, PB, C or a specialty micro-lot. Share your preferred origin and target cup profile." /><p className="mt-5 text-sm leading-relaxed text-muted-foreground">Choose a 300g or 500g preference. Final size, availability, packaging, courier charges and dispatch timing are confirmed individually. Agree cup and physical acceptance criteria before contracting.</p>
+            <ol className="mt-6 grid gap-4 sm:grid-cols-3">{[
+              ["Offer sample", "You cup the lot we offer and select the coffee."],
+              ["Pre-shipment sample", "Drawn from the milled, bagged lot. Your approval releases shipment."],
+              ["Arrival sample", "Checked at destination against the approved pre-shipment sample."],
+            ].map(([t, d], i) => <li key={t} className="border-t border-gold pt-4"><p className="font-display text-2xl text-gold">0{i + 1}</p><h3 className="mt-1 text-xl">{t}</h3><p className="mt-2 text-xs leading-relaxed text-muted-foreground">{d}</p></li>)}</ol></div>
           <div className="flex flex-col items-start justify-center gap-4"><Button asChild className="h-auto whitespace-normal px-6 py-4 text-left"><Link to="/contact" search={{ request: "sample" }}>Request an evaluation sample<ArrowUpRight /></Link></Button><Button asChild variant="outline" className="h-auto whitespace-normal px-6 py-4 text-left"><Link to="/contact" search={{ request: "documents" }}>Request buyer documentation<ArrowUpRight /></Link></Button></div>
         </div>
         <BuyerResources />
