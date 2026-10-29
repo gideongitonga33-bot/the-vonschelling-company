@@ -26,3 +26,10 @@ Enquiries prepare email drafts with an explicit buyer send step. Automated deliv
 - [x] Add same-origin downloads for both PDFs to the Coffee page and publish their static copies.
 - [x] Remove clickable links from photo captions; retain required documentary photo attribution in plain text.
 - [x] Run Coffee tests, verify build output and check the completed page and document downloads.
+
+## Approved SEO and buyer guides
+
+- [ ] Replace only the approved homepage coffee introduction; preserve layout, images and buttons.
+- [ ] Synchronise canonical URLs and sitemap with vonschelling.co.ke; add business and coffee structured data.
+- [ ] Add the buyer guide hub, five educational guides and a discreet footer link.
+- [ ] Verify structured data, routes, sitemap, buyer navigation and existing tests.
