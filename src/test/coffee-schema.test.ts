@@ -32,4 +32,7 @@ describe("Approved buyer search facts", () => {
   it("retains the approved office address", () => {
     expect(organizationSchema.address.streetAddress).toBe("90 JGO Building, Ikigai, Lavington");
   });
+  it("does not mark per-lot quoted coffee as a priced retail Product", () => {
+    expect(coffeeProductSchema["@type"]).toBe("Service");
+  });
 });

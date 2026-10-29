@@ -51,18 +51,22 @@ export const COFFEE_BUYER_FAQS = [
   },
 ] as const;
 
+// Modelled as a trade supply Service, not a retail Product: prices are quoted per lot,
+// and Google's Product rich result demands a published price, review or rating.
 export const coffeeProductSchema = {
   "@context": "https://schema.org",
-  "@type": "Product",
+  "@type": "Service",
   "@id": `${SITE_URL}/coffee#green-coffee-beans`,
   name: "Kenyan Green Coffee Beans",
+  serviceType: "Green Coffee Beans export supply",
   description: "Washed Kenyan Arabica for international importers and roasters, in AA, AB, PB and C grades plus specialty micro-lots. Lot specifications, sample approval and shipment terms are agreed for each order.",
   url: `${SITE_URL}/coffee`,
   image: `${SITE_URL}/og/coffee.jpg`,
   category: "Green Coffee Beans",
-  brand: { "@type": "Brand", name: "VonSchelling Limited" },
-  countryOfOrigin: { "@type": "Country", name: "Kenya" },
+  provider: { "@id": `${SITE_URL}/#organization` },
+  areaServed: "Worldwide",
   additionalProperty: [
+    { "@type": "PropertyValue", name: "Origin country", value: "Kenya" },
     { "@type": "PropertyValue", name: "Grades", value: "AA, AB, PB, C and specialty micro-lots" },
     { "@type": "PropertyValue", name: "Moisture target", value: `${COFFEE_MOISTURE.min}% to ${COFFEE_MOISTURE.max}%` },
     { "@type": "PropertyValue", name: "Origins", value: "Nyeri, Kirinyaga, Murang'a, Kiambu, Embu, Meru" },
