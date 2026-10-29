@@ -31,7 +31,7 @@ function Photo({ src, alt, credit, className = "" }: { src: string; alt: string;
 
 const journey = [
   ["Sourcing at origin", "Engage with farmers, cooperatives and licensed supply partners to understand available coffee, origin and supply conditions."],
-  ["Auction & market sourcing", "Where appropriate, source through authorised auction or market channels to access suitable grades and consolidate volumes."],
+  ["Auction & market sourcing", "We also purchase through the Nairobi Coffee Exchange (NCE) auction, especially to meet volume requirements, alongside direct estate channels. We confirm the selected lots and available records for each order."],
   ["Lot identification", "Record supplier, origin, grade and lot information; confirm preparation and packaging arrangements."],
   ["Quality evaluation & cupping", "Physical assessment and cup evaluation using qualified evaluators or partner facilities."],
   ["Scores & verification", "Share documented cupping results, test results and certifications only when available and verified."],

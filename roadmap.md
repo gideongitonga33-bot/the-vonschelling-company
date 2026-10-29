@@ -29,7 +29,7 @@ Enquiries prepare email drafts with an explicit buyer send step. Automated deliv
 
 ## Approved SEO and buyer guides
 
-- [ ] Replace only the approved homepage coffee introduction; preserve layout, images and buttons.
-- [ ] Synchronise canonical URLs and sitemap with vonschelling.co.ke; add business and coffee structured data.
-- [ ] Add the buyer guide hub, five educational guides and a discreet footer link.
-- [ ] Verify structured data, routes, sitemap, buyer navigation and existing tests.
+- [x] Replace only the approved homepage coffee introduction; preserve layout, images and buttons.
+- [x] Synchronise canonical URLs and sitemap with vonschelling.co.ke; add business and coffee structured data.
+- [x] Add the buyer guide hub, five educational guides and a discreet footer link.
+- [x] Verify structured data, routes, sitemap, buyer navigation and existing tests.
