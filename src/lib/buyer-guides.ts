@@ -13,8 +13,15 @@ export type BuyerGuide = {
   category: string;
   image: "beans" | "harvest" | "cupping" | "drying";
   shareImage: string;
+  summary: string;
   sections: { title: string; paragraphs: string[]; bullets?: string[] }[];
   sources: { label: string; url: string }[];
+};
+
+export const GUIDE_EDITOR = {
+  name: "Gideon G.",
+  role: "Founder & CEO, VonSchelling Limited",
+  reviewedOn: "2026-10-29",
 };
 
 export function getBuyerGuide(index: number): BuyerGuide {
@@ -29,6 +36,7 @@ export const BUYER_GUIDES: BuyerGuide[] = [
     title: "Kenyan coffee grades explained",
     description: "AA, AB, PB, C and specialty micro-lots: how to compare Kenyan Green Coffee Beans by screen, preparation and cup quality.",
     category: "Grades & buying", image: "beans", shareImage: "coffee.jpg",
+    summary: "AA, AB, PB and C describe physical size or shape, not a guaranteed cup quality. Compare the grade with a representative sample, physical report and agreed acceptance criteria; specialty micro-lots need their own lot-level evaluation.",
     sections: [
       { title: "Grade describes the bean. Cupping evaluates the coffee.", paragraphs: ["Kenyan grade names help buyers describe physical bean size and shape. They do not guarantee a cup score, density or flavour. An AA label is not, on its own, evidence that a coffee will outperform an AB or a peaberry lot on your cupping table.", "Use grade to narrow your brief, then compare the offered lot's physical report, representative sample and cup evaluation. Country and county notes are useful context, not a substitute for tasting."] },
       { title: "What AA, AB, PB and C mean", paragraphs: [], bullets: ["AA: large flat beans, commonly associated with screens 17/18.", "AB: medium flat beans, commonly associated with screens 15/16.", "PB: peaberries, rounded single beans separated by shape and graded using round-hole screens.", "C: smaller flat beans, commonly associated with screens 14/15.", "Specialty micro-lots: individually identified coffees selected for distinct attributes. Micro-lot is not a screen grade or a guaranteed score."] },
@@ -41,6 +49,7 @@ export const BUYER_GUIDES: BuyerGuide[] = [
     title: "Kenyan coffee crop calendar",
     description: "Plan Kenyan coffee purchases around indicative main and fly crops, lot preparation and agreed shipment windows.",
     category: "Origin & seasons", image: "harvest", shareImage: "guides-harvest.jpg",
+    summary: "Plan around an indicative October to January main harvest and May to July fly crop. Harvest dates are not shipment dates: preparation, sample approval and freight readiness determine the window agreed for your lot.",
     sections: [
       { title: "Two harvests, with regional variation", paragraphs: ["Kenya's main and fly crops give importers more than one buying window. November to January is a useful main-crop planning focus within a broader October to January harvest range. The fly crop is commonly planned around May to July.", "These are indicative harvest periods, not nationwide fixed dates. Rainfall, altitude, county and mill conditions affect picking and preparation. Nyeri, Kirinyaga, Murang'a, Kiambu, Embu and Meru do not all release coffee on the same timetable."] },
       { title: "Harvest is not the shipment date", paragraphs: ["Freshly picked cherries still need processing, drying, stabilisation, milling and grading before export preparation. Sampling, buyer approval, contracting, documentation and a freight booking also sit between harvest and departure.", "The Coffee page uses January to June for main-crop export planning and July to October for fly-crop planning. Treat these as a starting conversation. The offered lot's actual readiness, stock position and carrier schedule determine the window you can contract."] },
@@ -53,6 +62,7 @@ export const BUYER_GUIDES: BuyerGuide[] = [
     title: "Importing Kenyan Green Coffee Beans",
     description: "A buyer's guide to sample approval, export documents, EUDR evidence and FOB Mombasa versus CIF shipment terms.",
     category: "Documents & shipping", image: "cupping", shareImage: "guides-cupping.jpg",
+    summary: "Start with the selected lot, destination and sample acceptance criteria, then agree the export document pack and named shipping terms. EU buyers should verify production-plot evidence and their applicable due diligence obligations; origin paperwork alone does not establish EUDR compliance.",
     sections: [
       { title: "Start with the lot and your destination", paragraphs: ["A clear purchase brief states grade, crop, origin preference, volume, cup profile and destination. Review the supplier identity and applicable licensing, then approve a representative sample against agreed cup and physical acceptance criteria.", "There is no single document pack that satisfies every destination. Confirm requirements with your importer, customs agent and relevant authority before you contract. This guide is a planning reference, not a customs or legal clearance." ] },
       { title: "Agree the document pack before shipment", paragraphs: ["A commercial invoice, packing list and transport document support the shipment. Check which Kenyan export records, KEPHIS phytosanitary certificate and destination-specific tests apply to your order. An ICO Certificate of Origin identifies origin under the relevant coffee procedures; it is not a cupping or quality certificate.", "Preferential origin evidence is separate and depends on the trade arrangement. A lot-specific COA or cupping report also serves a different purpose from export paperwork."], bullets: ["Verify issuing bodies, scope, lot references and document validity.", "Match bag counts, net weights and labels to the packing list.", "Confirm who arranges each document and when it will be available."] },
@@ -71,6 +81,7 @@ export const BUYER_GUIDES: BuyerGuide[] = [
     title: "Kenyan coffee auction versus direct trade",
     description: "Compare Nairobi Coffee Exchange auction sourcing and direct estate channels for volume, lot selection and traceability.",
     category: "Sourcing channels", image: "harvest", shareImage: "guides-harvest.jpg",
+    summary: "Auction and direct-sale sourcing are different transaction channels, not automatic measures of quality or traceability. VonSchelling purchases through the Nairobi Coffee Exchange, especially for volume requirements, and evaluates each offer against your specification and the available lot records.",
     sections: [
       { title: "Two sourcing routes, one buyer specification", paragraphs: ["Kenyan coffee can be sourced through the Nairobi Coffee Exchange auction or through regulated direct-sale arrangements. The route explains how a transaction is organised; it does not, by itself, guarantee quality, pricing or traceability.", "VonSchelling also purchases through the NCE auction, especially to meet commercial volume requirements. Direct estate channels provide another sourcing path. We start with your specification and the available lot, rather than treating either route as universally better."] },
       { title: "Auction sourcing for lot choice and volume", paragraphs: ["The NCE provides a structured marketplace with identified lots and trading procedures. It can support comparison across offered grades and origins. For larger orders, clarify whether the offer is one lot or several lots and how the final consignment will be identified.", "Auction access does not mean every grade, county or volume is continuously available. Confirm current offerings, sample results and the authorised transaction arrangements. An auction reference should connect to the coffee you approve and the shipment records."] },
@@ -84,6 +95,7 @@ export const BUYER_GUIDES: BuyerGuide[] = [
     title: "Green coffee moisture and water activity",
     description: "Understand the 10% to 11% moisture target, separate water-activity testing and protective packaging for Kenyan coffee shipments.",
     category: "Quality & storage", image: "drying", shareImage: "guides-drying.jpg",
+    summary: "VonSchelling's Green Coffee Beans moisture target is 10% to 11%; water activity requires its own measurement. Agree the sampling method, acceptance point and protective packing for the lot rather than treating one reading or a liner as a storage guarantee.",
     sections: [
       { title: "Moisture content and water activity are different", paragraphs: ["Moisture content describes the amount of water in the coffee. Water activity describes how available that water is for reactions and microbial growth. A moisture result cannot be converted into a dependable water-activity result without measurement.", "VonSchelling's Green Coffee Beans moisture target is 10% to 11%. Treat it as the specification to verify for the selected lot, not proof of a particular water-activity value or a universal storage guarantee. Where water activity matters, agree a separate test method and buyer acceptance limit."] },
       { title: "Make the measurement part of the lot record", paragraphs: ["Ask when the sample was taken, how it represents the lot, which instrument or laboratory was used and how the result relates to dispatch. A single reading without a method, date or lot reference is difficult to use for a shipment decision.", "Coffee can exchange moisture with its surroundings during storage and transit. Record the agreed acceptance point and procedure if arrival quality is part of your contract. Representative sampling and consistent measurement methods help both parties interpret results fairly."], bullets: ["Lot reference, sampling date and moisture result.", "Measurement method and sample handling.", "Separate water-activity result where required.", "Agreed acceptance limits and inspection stage."] },

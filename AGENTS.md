@@ -25,3 +25,5 @@
 - Every route sets `staticData.sitemap`; `/sitemap.xml` derives its URLs from the router so new pages are listed without a manual list.
 - Keep business and coffee JSON-LD in a browser-safe schema module, with FAQ markup generated from the same answers shown on the Coffee page to prevent hidden or contradictory claims.
 - Buyer guides use shared editorial data and presentation with explicit leaf routes, so each guide has its own self-referencing Article metadata and sitemap entry.
+- Guide summaries, editorial identity and review dates live in shared browser-safe editorial data and feed both visible bylines and Article schema to keep them consistent. Add author social URLs only when verified.
+- Privacy and trade terms are standalone public content routes using the shared shell and SEO helper; describe the actual email-draft flow and leave negotiated legal terms to written agreements.

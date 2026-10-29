@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageHero, Section } from "@/components/site/Layout";
-import { BUYER_GUIDES, GUIDE_PATHS, type BuyerGuide } from "@/lib/buyer-guides";
+import { BUYER_GUIDES, GUIDE_PATHS, GUIDE_EDITOR, type BuyerGuide } from "@/lib/buyer-guides";
 import { seo, SITE_URL } from "@/lib/seo";
 import { jsonLd } from "@/lib/coffee-schema";
 import beans from "@/assets/Burlap_Sacks_of_Green_Coffee_Beans.webp";
@@ -23,9 +23,11 @@ export function guideHead(guide: BuyerGuide) {
       headline: guide.title, description: guide.description,
       url: `${SITE_URL}${path}`, mainEntityOfPage: `${SITE_URL}${path}`,
       image: `${SITE_URL}/og/${guide.shareImage}`,
-      author: { "@id": `${SITE_URL}/#organization` },
+      author: { "@type": "Person", name: GUIDE_EDITOR.name, jobTitle: "Founder & CEO", worksFor: { "@id": `${SITE_URL}/#organization` } },
+      dateModified: GUIDE_EDITOR.reviewedOn,
+      abstract: guide.summary,
       publisher: { "@id": `${SITE_URL}/#organization` },
-      articleBody: guide.sections.map(section => [section.title, ...section.paragraphs, ...(section.bullets ?? [])].join("\n")).join("\n\n"),
+      articleBody: [guide.summary, ...guide.sections.map(section => [section.title, ...section.paragraphs, ...(section.bullets ?? [])].join("\n"))].join("\n\n"),
     }), jsonLd({
       "@context": "https://schema.org", "@type": "BreadcrumbList",
       itemListElement: [
@@ -47,6 +49,11 @@ export function BuyerGuidePage({ guide }: { guide: BuyerGuide }) {
       {guide.image === "drying" && <p className="mb-8 text-xs text-muted-foreground">Raised drying beds, Fairview Estate, Kiambu. Daniel Case, CC BY-SA 4.0.</p>}
       <div className="grid gap-14 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
         <article className="min-w-0 space-y-12">
+          <div className="border-b border-border pb-8">
+            <p className="text-sm text-muted-foreground">By {GUIDE_EDITOR.name} · {GUIDE_EDITOR.role}</p>
+            <p className="mt-2 text-xs text-muted-foreground">Editorial review: <time dateTime={GUIDE_EDITOR.reviewedOn}>29 October 2026</time></p>
+            <div className="mt-6 border-l-2 border-gold pl-6"><h2 className="text-2xl">Buyer summary</h2><p className="mt-3 leading-relaxed text-muted-foreground">{guide.summary}</p></div>
+          </div>
           {guide.sections.map(section => <section key={section.title}>
             <h2 className="text-3xl leading-tight md:text-4xl">{section.title}</h2>
             {section.paragraphs.map(text => <p key={text} className="mt-5 leading-relaxed text-muted-foreground">{text}</p>)}

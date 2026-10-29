@@ -169,6 +169,11 @@ function Coffee() {
           <div className="flex flex-col items-start justify-center gap-4"><Button asChild className="h-auto whitespace-normal px-6 py-4 text-left"><Link to="/contact" search={{ request: "sample" }}>Request an evaluation sample<ArrowUpRight /></Link></Button><Button asChild variant="outline" className="h-auto whitespace-normal px-6 py-4 text-left"><Link to="/contact" search={{ request: "documents" }}>Request buyer documentation<ArrowUpRight /></Link></Button></div>
         </div>
         <BuyerResources />
+        <div className="mt-12 border-y border-gold/40 py-8">
+          <h2 className="text-3xl">Kenyan coffee buyer guides</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Compare grades, plan around crop seasons and review import documents, sourcing channels and moisture protection before selecting your lot.</p>
+          <Button asChild variant="link" className="mt-4 h-auto whitespace-normal px-0"><Link to="/guides">Explore the buyer guides<ArrowUpRight /></Link></Button>
+        </div>
         <div className="mt-12 border-t border-border pt-10">
           <h2 className="text-3xl">Green Coffee Beans buyer questions</h2>
           <div className="mt-6 divide-y divide-border border-y border-border">

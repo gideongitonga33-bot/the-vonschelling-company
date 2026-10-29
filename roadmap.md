@@ -33,3 +33,11 @@ Enquiries prepare email drafts with an explicit buyer send step. Automated deliv
 - [x] Synchronise canonical URLs and sitemap with vonschelling.co.ke; add business and coffee structured data.
 - [x] Add the buyer guide hub, five educational guides and a discreet footer link.
 - [x] Verify structured data, routes, sitemap, buyer navigation and existing tests.
+
+## Approved search and trust follow-up
+
+- [x] Add explicit AI crawler access and a factual llms.txt reference.
+- [x] Harmonise company website links and add Buyer Guides navigation and Coffee cross-link.
+- [x] Add guide bylines, review dates, summaries and matching Article metadata. No unverified LinkedIn URL added.
+- [x] Add concise Privacy and Terms of Trade pages with footer links.
+- [x] Verify pages, navigation, enquiry flow and tests. Preserve /chilies with no rename or redirect.

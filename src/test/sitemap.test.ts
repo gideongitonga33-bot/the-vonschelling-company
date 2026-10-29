@@ -23,8 +23,15 @@ describe("sitemap", () => {
       "/guides/kenyan-coffee-grades-explained",
       "/guides/kenyan-green-coffee-importing-guide",
       "/meats",
+      "/privacy",
       "/quality",
       "/sustainability",
+      "/terms",
     ]);
+  });
+  it("preserves the existing Chillies address without adding the excluded rename", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(sitemapStaticPaths(router)).toContain("/chilies");
+    expect(sitemapStaticPaths(router)).not.toContain("/chillies");
   });
 });
