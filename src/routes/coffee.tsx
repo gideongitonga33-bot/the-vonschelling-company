@@ -14,10 +14,14 @@ import harvestPhoto from "@/assets/Joyful_Coffee_Harvest_in_Lush_Plantation.png"
 import roastPhoto from "@/assets/coffee-roast.jpg";
 import { Heading, Note, PageHero, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
+import { COFFEE_BUYER_FAQS, coffeeProductSchema, coffeeFaqSchema, jsonLd } from "@/lib/coffee-schema";
 
 export const Route = createFileRoute("/coffee")({
   staticData: { sitemap: true },
-  head: () => seo("Kenyan Coffee Exports & Mizizi Coffee, VonSchelling", "Explore Kenyan Green Coffee Beans, highland origins, grades, crop seasons and export planning, plus Mizizi roasted and private-label coffee.", "/coffee", "coffee.jpg"),
+  head: () => ({
+    ...seo("Kenyan Coffee Exports & Mizizi Coffee, VonSchelling", "Explore Kenyan Green Coffee Beans, highland origins, grades, crop seasons and export planning, plus Mizizi roasted and private-label coffee.", "/coffee", "coffee.jpg"),
+    scripts: [jsonLd(coffeeProductSchema), jsonLd(coffeeFaqSchema)],
+  }),
   component: Coffee,
 });
 
@@ -165,6 +169,17 @@ function Coffee() {
           <div className="flex flex-col items-start justify-center gap-4"><Button asChild className="h-auto whitespace-normal px-6 py-4 text-left"><Link to="/contact" search={{ request: "sample" }}>Request an evaluation sample<ArrowUpRight /></Link></Button><Button asChild variant="outline" className="h-auto whitespace-normal px-6 py-4 text-left"><Link to="/contact" search={{ request: "documents" }}>Request buyer documentation<ArrowUpRight /></Link></Button></div>
         </div>
         <BuyerResources />
+        <div className="mt-12 border-t border-border pt-10">
+          <h2 className="text-3xl">Green Coffee Beans buyer questions</h2>
+          <div className="mt-6 divide-y divide-border border-y border-border">
+            {COFFEE_BUYER_FAQS.map(({ question, answer }) => (
+              <details key={question} className="py-5">
+                <summary className="cursor-pointer font-display text-2xl text-primary">{question}</summary>
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">{answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
       </Section>
 
       <section id="mizizi" className="bg-navy text-ivory">
