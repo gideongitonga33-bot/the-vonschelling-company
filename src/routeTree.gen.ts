@@ -20,6 +20,12 @@ import { Route as MeatsRouteImport } from './routes/meats'
 import { Route as QualityRouteImport } from './routes/quality'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SustainabilityRouteImport } from './routes/sustainability'
+import { Route as GuidesIndexRouteImport } from './routes/guides.index'
+import { Route as GuidesCoffeeAuctionVsDirectTradeKenyaRouteImport } from './routes/guides.coffee-auction-vs-direct-trade-kenya'
+import { Route as GuidesCoffeeMoistureAndWaterActivityStandardsRouteImport } from './routes/guides.coffee-moisture-and-water-activity-standards'
+import { Route as GuidesKenyanCoffeeCropCalendarRouteImport } from './routes/guides.kenyan-coffee-crop-calendar'
+import { Route as GuidesKenyanCoffeeGradesExplainedRouteImport } from './routes/guides.kenyan-coffee-grades-explained'
+import { Route as GuidesKenyanGreenCoffeeImportingGuideRouteImport } from './routes/guides.kenyan-green-coffee-importing-guide'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +82,41 @@ const SustainabilityRoute = SustainabilityRouteImport.update({
   path: '/sustainability',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GuidesIndexRoute = GuidesIndexRouteImport.update({
+  id: '/guides/',
+  path: '/guides/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidesCoffeeAuctionVsDirectTradeKenyaRoute =
+  GuidesCoffeeAuctionVsDirectTradeKenyaRouteImport.update({
+    id: '/guides/coffee-auction-vs-direct-trade-kenya',
+    path: '/guides/coffee-auction-vs-direct-trade-kenya',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GuidesCoffeeMoistureAndWaterActivityStandardsRoute =
+  GuidesCoffeeMoistureAndWaterActivityStandardsRouteImport.update({
+    id: '/guides/coffee-moisture-and-water-activity-standards',
+    path: '/guides/coffee-moisture-and-water-activity-standards',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GuidesKenyanCoffeeCropCalendarRoute =
+  GuidesKenyanCoffeeCropCalendarRouteImport.update({
+    id: '/guides/kenyan-coffee-crop-calendar',
+    path: '/guides/kenyan-coffee-crop-calendar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GuidesKenyanCoffeeGradesExplainedRoute =
+  GuidesKenyanCoffeeGradesExplainedRouteImport.update({
+    id: '/guides/kenyan-coffee-grades-explained',
+    path: '/guides/kenyan-coffee-grades-explained',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GuidesKenyanGreenCoffeeImportingGuideRoute =
+  GuidesKenyanGreenCoffeeImportingGuideRouteImport.update({
+    id: '/guides/kenyan-green-coffee-importing-guide',
+    path: '/guides/kenyan-green-coffee-importing-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -89,6 +130,12 @@ export interface FileRoutesByFullPath {
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
+  '/guides/coffee-auction-vs-direct-trade-kenya': typeof GuidesCoffeeAuctionVsDirectTradeKenyaRoute
+  '/guides/coffee-moisture-and-water-activity-standards': typeof GuidesCoffeeMoistureAndWaterActivityStandardsRoute
+  '/guides/kenyan-coffee-crop-calendar': typeof GuidesKenyanCoffeeCropCalendarRoute
+  '/guides/kenyan-coffee-grades-explained': typeof GuidesKenyanCoffeeGradesExplainedRoute
+  '/guides/kenyan-green-coffee-importing-guide': typeof GuidesKenyanGreenCoffeeImportingGuideRoute
+  '/guides/': typeof GuidesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -102,6 +149,12 @@ export interface FileRoutesByTo {
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
+  '/guides/coffee-auction-vs-direct-trade-kenya': typeof GuidesCoffeeAuctionVsDirectTradeKenyaRoute
+  '/guides/coffee-moisture-and-water-activity-standards': typeof GuidesCoffeeMoistureAndWaterActivityStandardsRoute
+  '/guides/kenyan-coffee-crop-calendar': typeof GuidesKenyanCoffeeCropCalendarRoute
+  '/guides/kenyan-coffee-grades-explained': typeof GuidesKenyanCoffeeGradesExplainedRoute
+  '/guides/kenyan-green-coffee-importing-guide': typeof GuidesKenyanGreenCoffeeImportingGuideRoute
+  '/guides': typeof GuidesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -116,6 +169,12 @@ export interface FileRoutesById {
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sustainability': typeof SustainabilityRoute
+  '/guides/coffee-auction-vs-direct-trade-kenya': typeof GuidesCoffeeAuctionVsDirectTradeKenyaRoute
+  '/guides/coffee-moisture-and-water-activity-standards': typeof GuidesCoffeeMoistureAndWaterActivityStandardsRoute
+  '/guides/kenyan-coffee-crop-calendar': typeof GuidesKenyanCoffeeCropCalendarRoute
+  '/guides/kenyan-coffee-grades-explained': typeof GuidesKenyanCoffeeGradesExplainedRoute
+  '/guides/kenyan-green-coffee-importing-guide': typeof GuidesKenyanGreenCoffeeImportingGuideRoute
+  '/guides/': typeof GuidesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -131,6 +190,12 @@ export interface FileRouteTypes {
     | '/quality'
     | '/sitemap.xml'
     | '/sustainability'
+    | '/guides/coffee-auction-vs-direct-trade-kenya'
+    | '/guides/coffee-moisture-and-water-activity-standards'
+    | '/guides/kenyan-coffee-crop-calendar'
+    | '/guides/kenyan-coffee-grades-explained'
+    | '/guides/kenyan-green-coffee-importing-guide'
+    | '/guides/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -144,6 +209,12 @@ export interface FileRouteTypes {
     | '/quality'
     | '/sitemap.xml'
     | '/sustainability'
+    | '/guides/coffee-auction-vs-direct-trade-kenya'
+    | '/guides/coffee-moisture-and-water-activity-standards'
+    | '/guides/kenyan-coffee-crop-calendar'
+    | '/guides/kenyan-coffee-grades-explained'
+    | '/guides/kenyan-green-coffee-importing-guide'
+    | '/guides'
   id:
     | '__root__'
     | '/'
@@ -157,6 +228,12 @@ export interface FileRouteTypes {
     | '/quality'
     | '/sitemap.xml'
     | '/sustainability'
+    | '/guides/coffee-auction-vs-direct-trade-kenya'
+    | '/guides/coffee-moisture-and-water-activity-standards'
+    | '/guides/kenyan-coffee-crop-calendar'
+    | '/guides/kenyan-coffee-grades-explained'
+    | '/guides/kenyan-green-coffee-importing-guide'
+    | '/guides/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -171,6 +248,12 @@ export interface RootRouteChildren {
   QualityRoute: typeof QualityRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SustainabilityRoute: typeof SustainabilityRoute
+  GuidesCoffeeAuctionVsDirectTradeKenyaRoute: typeof GuidesCoffeeAuctionVsDirectTradeKenyaRoute
+  GuidesCoffeeMoistureAndWaterActivityStandardsRoute: typeof GuidesCoffeeMoistureAndWaterActivityStandardsRoute
+  GuidesKenyanCoffeeCropCalendarRoute: typeof GuidesKenyanCoffeeCropCalendarRoute
+  GuidesKenyanCoffeeGradesExplainedRoute: typeof GuidesKenyanCoffeeGradesExplainedRoute
+  GuidesKenyanGreenCoffeeImportingGuideRoute: typeof GuidesKenyanGreenCoffeeImportingGuideRoute
+  GuidesIndexRoute: typeof GuidesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -252,6 +335,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SustainabilityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/guides/': {
+      id: '/guides/'
+      path: '/guides'
+      fullPath: '/guides/'
+      preLoaderRoute: typeof GuidesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides/coffee-auction-vs-direct-trade-kenya': {
+      id: '/guides/coffee-auction-vs-direct-trade-kenya'
+      path: '/guides/coffee-auction-vs-direct-trade-kenya'
+      fullPath: '/guides/coffee-auction-vs-direct-trade-kenya'
+      preLoaderRoute: typeof GuidesCoffeeAuctionVsDirectTradeKenyaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides/coffee-moisture-and-water-activity-standards': {
+      id: '/guides/coffee-moisture-and-water-activity-standards'
+      path: '/guides/coffee-moisture-and-water-activity-standards'
+      fullPath: '/guides/coffee-moisture-and-water-activity-standards'
+      preLoaderRoute: typeof GuidesCoffeeMoistureAndWaterActivityStandardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides/kenyan-coffee-crop-calendar': {
+      id: '/guides/kenyan-coffee-crop-calendar'
+      path: '/guides/kenyan-coffee-crop-calendar'
+      fullPath: '/guides/kenyan-coffee-crop-calendar'
+      preLoaderRoute: typeof GuidesKenyanCoffeeCropCalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides/kenyan-coffee-grades-explained': {
+      id: '/guides/kenyan-coffee-grades-explained'
+      path: '/guides/kenyan-coffee-grades-explained'
+      fullPath: '/guides/kenyan-coffee-grades-explained'
+      preLoaderRoute: typeof GuidesKenyanCoffeeGradesExplainedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides/kenyan-green-coffee-importing-guide': {
+      id: '/guides/kenyan-green-coffee-importing-guide'
+      path: '/guides/kenyan-green-coffee-importing-guide'
+      fullPath: '/guides/kenyan-green-coffee-importing-guide'
+      preLoaderRoute: typeof GuidesKenyanGreenCoffeeImportingGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -267,6 +392,16 @@ const rootRouteChildren: RootRouteChildren = {
   QualityRoute: QualityRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SustainabilityRoute: SustainabilityRoute,
+  GuidesCoffeeAuctionVsDirectTradeKenyaRoute:
+    GuidesCoffeeAuctionVsDirectTradeKenyaRoute,
+  GuidesCoffeeMoistureAndWaterActivityStandardsRoute:
+    GuidesCoffeeMoistureAndWaterActivityStandardsRoute,
+  GuidesKenyanCoffeeCropCalendarRoute: GuidesKenyanCoffeeCropCalendarRoute,
+  GuidesKenyanCoffeeGradesExplainedRoute:
+    GuidesKenyanCoffeeGradesExplainedRoute,
+  GuidesKenyanGreenCoffeeImportingGuideRoute:
+    GuidesKenyanGreenCoffeeImportingGuideRoute,
+  GuidesIndexRoute: GuidesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
