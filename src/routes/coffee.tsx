@@ -3,15 +3,12 @@ import { ArrowUpRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BuyerResources } from "@/components/site/BuyerResources";
 import { COFFEE_MOISTURE } from "@/lib/procurement";
-import { COFFEE_GRADES, CONTAINER_PLANNING, plannedCoffeeTonnes, PRIVATE_LABEL_MOQ_KG } from "@/lib/coffee";
+import { COFFEE_GRADES, CONTAINER_PLANNING, plannedCoffeeTonnes } from "@/lib/coffee";
 import hero from "@/assets/Burlap_Sacks_of_Green_Coffee_Beans.webp";
 import cupping from "@/assets/Professional_Coffee_Cupping_Evaluation.png";
-import bag from "@/assets/mizizi-bag.png";
-import range from "@/assets/mizizi-range.png";
 import greenPhoto from "@/assets/Macro_Pile_of_Green_Coffee_Beans.webp";
 import dryingPhoto from "@/assets/coffee-drying.jpg";
 import harvestPhoto from "@/assets/Joyful_Coffee_Harvest_in_Lush_Plantation.png";
-import roastPhoto from "@/assets/coffee-roast.jpg";
 import { Heading, Note, PageHero, Section, SpecTable } from "@/components/site/Layout";
 import { seo } from "@/lib/seo";
 import { COFFEE_BUYER_FAQS, coffeeProductSchema, coffeeFaqSchema, jsonLd } from "@/lib/coffee-schema";
@@ -19,7 +16,7 @@ import { COFFEE_BUYER_FAQS, coffeeProductSchema, coffeeFaqSchema, jsonLd } from 
 export const Route = createFileRoute("/coffee")({
   staticData: { sitemap: true },
   head: () => ({
-    ...seo("Kenyan Coffee Exports & Mizizi Coffee, VonSchelling", "Explore Kenyan Green Coffee Beans, highland origins, grades, crop seasons and export planning, plus Mizizi roasted and private-label coffee.", "/coffee", "coffee.jpg"),
+    ...seo("Kenyan Green Coffee Beans Exporter, VonSchelling", "Kenyan Green Coffee Beans for importers and roasters: highland origins, AA, AB, PB and C grades, crop seasons, samples and FOB Mombasa export planning.", "/coffee", "coffee.jpg"),
     scripts: [jsonLd(coffeeProductSchema), jsonLd(coffeeFaqSchema)],
   }),
   component: Coffee,
@@ -60,15 +57,12 @@ const docs = [
 function Coffee() {
   return (
     <>
-      <PageHero image={hero} eyebrow="VonSchelling Coffee Operations" title="Kenyan Coffee. From Origin to Opportunity." intro="Green Coffee Beans for international importers and roasters, Mizizi-branded roasted coffee and private-label opportunities. Every offer comes with its lot specification." />
+      <PageHero image={hero} eyebrow="VonSchelling Coffee Operations · Green Export" title="Kenyan Green Coffee Beans. From Origin to Opportunity." intro="AA, AB, PB, C and specialty micro-lots for importers, roasters and trade houses. Every offer comes with its lot specification." />
 
       <Section className="!py-16">
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            ["01", "Green Coffee Beans", "Washed Kenyan Arabica in AA, AB, PB and C grades, plus specialty micro-lots for qualified trade buyers."],
-            ["02", "Mizizi Coffee", "Our specialist Kenyan coffee brand for retail, hospitality and distribution, in whole-bean and ground formats."],
-            ["03", "Private Label", "Coffee selection, custom roast profiles and packaging coordination under your brand, from 1,000 kg per roast profile."],
-          ].map(([n, t, d]) => <div key={n} className="border-t border-gold pt-5"><p className="font-display text-4xl text-gold">{n}</p><h2 className="mt-3 text-3xl">{t}</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d}</p></div>)}
+        <div className="grid gap-8 md:grid-cols-2">
+          <div className="border-t border-gold pt-5"><p className="font-display text-4xl text-gold">01</p><h2 className="mt-3 text-3xl">Green Coffee Beans</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Washed Kenyan Arabica in AA, AB, PB and C grades, plus specialty micro-lots, in 60 kg bags or full containers from Mombasa.</p></div>
+          <div className="border-t border-gold pt-5"><p className="font-display text-4xl text-gold">02</p><h2 className="mt-3 text-3xl">Mizizi & Private Label</h2><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Need finished roasted coffee? Buy Mizizi Kenya AA, stock it wholesale or roast under your own brand.</p><Link to="/mizizi" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-primary">Visit Mizizi & Private Label<ArrowUpRight className="h-4 w-4" /></Link></div>
         </div>
         <div className="mt-12 flex flex-col gap-5 border-y border-gold/40 py-6 md:flex-row md:items-center md:justify-between">
           <div><p className="eyebrow text-gold">Coffee Buyer Documents</p><p className="mt-2 font-display text-2xl">Take our coffee story to your buying team.</p></div>
@@ -204,29 +198,8 @@ function Coffee() {
         </div>
       </Section>
 
-      <section id="mizizi" className="bg-navy text-ivory">
-        <div className="mx-auto max-w-7xl px-6 py-24">
-          <p className="eyebrow mb-10 text-gold-soft">Chapter 02 · Finished & Branded Coffee</p>
-          <div className="grid items-center gap-12 md:grid-cols-2">
-            <img src={bag} alt="Mizizi Coffee bag" loading="lazy" className="h-auto w-full" />
-            <div><p className="eyebrow text-gold">A coffee brand of VonSchelling Limited</p><h2 className="mt-4 text-5xl md:text-7xl">Mizizi Coffee</h2><p className="mt-3 font-display text-2xl italic text-gold-soft">Exceptional coffee from the heart of Kenya.</p><div className="gold-rule my-8 w-32" /><p className="leading-relaxed text-ivory/75">Our special blend. 100% Arabica, roasted and packaged for retail, hospitality and distribution partners who want a finished Kenyan coffee. Product availability and production arrangements are confirmed for each order.</p>
-              <dl className="mt-8 grid gap-6 border-t border-ivory/20 pt-6 sm:grid-cols-3">{[["Roasts", "Light · Medium · Dark"], ["Formats", "Whole bean · Ground"], ["Sizes", "250g · 500g · 1kg"]].map(([t, d]) => <div key={t}><dt className="eyebrow text-gold">{t}</dt><dd className="mt-3 text-sm">{d}</dd></div>)}</dl>
-              <p className="mt-8 text-sm leading-relaxed text-ivory/75">500g and 1kg high-barrier nitrogen-flushed valve bags; 20 bags per master shipping carton. Confirm the case configuration for the chosen pack size.</p>
-            </div>
-          </div>
-          <img src={range} alt="Mizizi Coffee range, light, medium and dark roasts with gift box" loading="lazy" className="mt-12 h-auto w-full" />
-        </div>
-      </section>
-
-      <Section>
-        <div className="grid items-start gap-12 lg:grid-cols-2">
-          <div><Heading eyebrow="Private-Label Coffee" title="Your brand. Kenyan coffee." intro="Build around coffee selection, roast profile development, whole-bean or ground formats, pack sizes and target-market requirements." /><p className="mt-5 leading-relaxed text-muted-foreground">Depending on the production partner, services include packaging formats, label coordination and production planning. Lead times and branding capabilities are confirmed per project.</p><div className="mt-8 border-l-2 border-gold pl-6"><p className="eyebrow text-gold">Minimum Order Quantity</p><p className="mt-3 font-display text-3xl">{PRIVATE_LABEL_MOQ_KG.toLocaleString("en-US")} kg per roast profile</p></div></div>
-          <Photo src={roastPhoto} alt="Freshly roasted coffee beans turning in a roaster cooling tray" credit="Freshly roasted beans in the cooling tray. Jkafader, CC BY-SA 3.0." className="[&_img]:aspect-[4/3]" />
-        </div>
-      </Section>
-
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-20"><Heading light eyebrow="Your Next Coffee Order" title="Start with the right conversation." intro="Share your product, grade or roast, volume and destination. Request samples, a commercial quotation or Mizizi distribution and private-label terms." /><div className="mt-8 flex flex-wrap gap-4"><Button asChild className="h-auto whitespace-normal bg-gold px-6 py-4 text-forest-deep hover:bg-gold-soft"><Link to="/contact" search={{ request: "sample" }}>Request Green Coffee Beans samples<ArrowUpRight /></Link></Button><Button asChild className="h-auto whitespace-normal bg-ivory px-6 py-4 text-forest-deep hover:bg-gold-soft"><Link to="/contact" search={{ request: "quote" }}>Request a quotation<ArrowUpRight /></Link></Button></div></div>
+        <div className="mx-auto max-w-7xl px-6 py-20"><Heading light eyebrow="Your Next Coffee Order" title="Start with the right conversation." intro="Share your grade, volume and destination. Request samples or a commercial quotation for Green Coffee Beans." /><div className="mt-8 flex flex-wrap gap-4"><Button asChild className="h-auto whitespace-normal bg-gold px-6 py-4 text-forest-deep hover:bg-gold-soft"><Link to="/contact" search={{ request: "sample" }}>Request Green Coffee Beans samples<ArrowUpRight /></Link></Button><Button asChild className="h-auto whitespace-normal bg-ivory px-6 py-4 text-forest-deep hover:bg-gold-soft"><Link to="/contact" search={{ request: "quote" }}>Request a quotation<ArrowUpRight /></Link></Button></div><p className="mt-8 text-sm text-primary-foreground/75">Looking for finished roasted coffee or your own brand? <Link to="/mizizi" className="text-gold-soft underline underline-offset-4">Explore Mizizi & Private Label</Link>.</p></div>
       </section>
     </>
   );
