@@ -2,6 +2,8 @@
 // shop page, its order email and tests.
 
 export const MIZIZI_BAG = { grams: 500, priceUsd: 30 } as const;
+/** Bag size as shown to buyers everywhere: grams with ounces in brackets. */
+export const MIZIZI_SIZE_LABEL = "500g (17.6 oz)";
 export const MIZIZI_CARTON_BAGS = 20;
 export const MAX_BAGS_PER_ORDER = 12;
 
@@ -41,14 +43,14 @@ export const usd = (value: number) => `$${value.toFixed(2)} USD`;
 
 export function buildMiziziOrderEmail(order: { roast: string; grind: string; bags: number; region: ShippingRegion; name: string; destination: string }) {
   const t = orderTotals(order.region, order.bags);
-  const subject = `Mizizi Coffee order: ${t.bags} × ${MIZIZI_BAG.grams}g Kenya AA`;
+  const subject = `Mizizi Coffee order: ${t.bags} × ${MIZIZI_SIZE_LABEL} Kenya AA`;
   const body = [
     subject,
     `Name: ${order.name.trim()}`,
     `Delivery city & country: ${order.destination.trim()}`,
     `Roast: ${order.roast}`,
     `Grind: ${order.grind}`,
-    `Bags: ${t.bags} × ${MIZIZI_BAG.grams}g at ${usd(MIZIZI_BAG.priceUsd)}`,
+    `Bags: ${t.bags} × ${MIZIZI_SIZE_LABEL} at ${usd(MIZIZI_BAG.priceUsd)}`,
     `Subtotal: ${usd(t.subtotal)}`,
     `Delivery (${SHIPPING[order.region].label}): ${t.shipping === 0 ? "Free" : usd(t.shipping)}`,
     `Order total: ${usd(t.total)}`,

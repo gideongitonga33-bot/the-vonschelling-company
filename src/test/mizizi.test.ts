@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { MIZIZI_SIZE_LABEL, describe, expect, it } from "vitest";
 import { MIZIZI_BAG, orderTotals, shippingUsd } from "@/lib/mizizi";
 
 describe("Mizizi retail pricing", () => {
@@ -14,5 +14,8 @@ describe("Mizizi retail pricing", () => {
   });
   it("charges a $3 flat delivery within Kenya", () => {
     expect(orderTotals("kenya", 3).total).toBe(93);
+  });
+  it("shows the bag size as 500g (17.6 oz)", () => {
+    expect(MIZIZI_SIZE_LABEL).toBe("500g (17.6 oz)");
   });
 });
