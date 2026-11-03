@@ -5,7 +5,8 @@ import logo from "@/assets/vonschelling-logo-wide.png";
 import emblem from "@/assets/vonschelling-emblem.png";
 
 export const OPERATIONS = [
-  { to: "/coffee", label: "Coffee" },
+  { to: "/coffee", label: "Green Coffee Beans" },
+  { to: "/mizizi", label: "Mizizi & Private Label" },
   { to: "/chilies", label: "Chillies" },
   { to: "/meats", label: "Meats" },
   { to: "/dried-fruits", label: "Dried Fruits" },
@@ -100,7 +101,8 @@ export function Footer() {
         <div>
           <p className="eyebrow text-gold">Operations</p>
           <ul className="mt-5 space-y-2 text-sm text-ivory/75">
-            <li><Link to="/coffee">Coffee & Mizizi</Link></li>
+            <li><Link to="/coffee">Green Coffee Beans</Link></li>
+            <li><Link to="/mizizi">Mizizi & Private Label</Link></li>
             <li><Link to="/chilies">Chillies</Link></li>
             <li><Link to="/meats">Meats</Link></li>
             <li><Link to="/dried-fruits">Dried Fruits</Link></li>

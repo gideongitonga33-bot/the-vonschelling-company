@@ -93,15 +93,15 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:py-0">
           <img src={bag} alt="Mizizi Coffee 500g medium roast bag" loading="lazy" className="w-full md:max-h-[760px] md:object-cover" />
           <div className="md:py-24">
-            <p className="eyebrow text-gold">Our Special Blend</p>
+            <p className="eyebrow text-gold">Single-Origin Kenya AA</p>
             <h2 className="mt-4 text-5xl md:text-7xl">Mizizi Coffee</h2>
             <p className="mt-3 font-display text-2xl italic text-gold-soft">Rooted in Kenya. Crafted for the world.</p>
             <div className="gold-rule my-8 w-32" />
             <p className="max-w-lg leading-relaxed text-ivory/75">
-              "Mizizi" means <em>roots</em> in Swahili. Our premium roasted coffee, 100% Arabica from the heart of Kenya,
-              available in whole-bean or ground formats, light, medium and dark roasts, for retail, hospitality and distribution partners.
+              "Mizizi" means <em>roots</em> in Swahili. Our premium roasted coffee, 100% Kenya Grade AA Arabica,
+              available in whole-bean or ground formats, light, medium and dark roasts, for coffee lovers, retail, hospitality and distribution partners.
             </p>
-            <Link to="/coffee" hash="mizizi" className="mt-10 inline-block border border-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-gold transition hover:bg-gold hover:text-navy">
+            <Link to="/mizizi" className="mt-10 inline-block border border-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-gold transition hover:bg-gold hover:text-navy">
               Meet Mizizi
             </Link>
           </div>
