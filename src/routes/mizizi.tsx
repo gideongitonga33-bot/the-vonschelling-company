@@ -73,7 +73,7 @@ function Mizizi() {
             <div className="flex flex-wrap gap-2">
               {["100% Kenya Arabica Grade AA", "Single Origin", "Screen 17/18"].map((b) => <span key={b} className="border border-gold/60 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-soft">{b}</span>)}
             </div>
-            <h1 className="mt-6 text-5xl md:text-7xl">Mizizi Coffee</h1>
+            <h1 className="mt-6 text-5xl md:text-7xl">Mizizi Coffee<span className="mt-3 block font-display text-2xl md:text-3xl text-ivory/85">Single-Origin Kenya AA Roasted Coffee</span></h1>
             <p className="mt-3 font-display text-2xl italic text-gold-soft">Single-origin Kenya AA, fresh from the source.</p>
             <p className="mt-6 font-display text-4xl">{usd(MIZIZI_BAG.priceUsd)} <span className="text-lg text-ivory/60">· {MIZIZI_SIZE_LABEL} bag</span></p>
 
