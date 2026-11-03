@@ -1,5 +1,5 @@
-import { MIZIZI_SIZE_LABEL, describe, expect, it } from "vitest";
-import { MIZIZI_BAG, orderTotals, shippingUsd } from "@/lib/mizizi";
+import { describe, expect, it } from "vitest";
+import { MIZIZI_BAG, MIZIZI_SIZE_LABEL, orderTotals, shippingUsd } from "@/lib/mizizi";
 
 describe("Mizizi retail pricing", () => {
   it("sells a 500g bag at $30 USD", () => {
