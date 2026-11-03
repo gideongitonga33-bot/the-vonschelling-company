@@ -9,7 +9,7 @@ import { Heading, Section, SpecTable } from "@/components/site/Layout";
 import { PRIVATE_LABEL_MOQ_KG } from "@/lib/coffee";
 import { jsonLd } from "@/lib/coffee-schema";
 import {
-  buildMiziziOrderEmail, clampBags, GRINDS, MAX_BAGS_PER_ORDER, MIZIZI_BAG, MIZIZI_CARTON_BAGS,
+  buildMiziziOrderEmail, clampBags, GRINDS, MAX_BAGS_PER_ORDER, MIZIZI_BAG, MIZIZI_CARTON_BAGS, MIZIZI_SIZE_LABEL,
   orderTotals, ROASTS, SHIPPING, usd, type ShippingRegion,
 } from "@/lib/mizizi";
 import { seo, SITE_URL } from "@/lib/seo";
@@ -17,8 +17,8 @@ import { seo, SITE_URL } from "@/lib/seo";
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "Mizizi Coffee, Single-Origin Kenya AA, 500g",
-  description: "100% single-origin Kenya Grade AA Arabica, roasted in Nairobi and packed in 500g high-barrier valve bags. Light, medium or dark roast; whole bean or ground.",
+  name: "Mizizi Coffee, Single-Origin Kenya AA, 500g (17.6 oz)",
+  description: "100% single-origin Kenya Grade AA Arabica, roasted in Nairobi and packed in 500g (17.6 oz) high-barrier valve bags. Light, medium or dark roast; whole bean or ground.",
   image: `${SITE_URL}/og/mizizi.jpg`,
   brand: { "@type": "Brand", name: "Mizizi Coffee" },
   offers: {
@@ -34,8 +34,8 @@ export const Route = createFileRoute("/mizizi")({
   staticData: { sitemap: true },
   head: () => ({
     ...seo(
-      "Mizizi Coffee, Single-Origin Kenya AA 500g, VonSchelling",
-      "Buy Mizizi Coffee: 100% single-origin Kenya Grade AA, $30 USD per 500g bag, shipped from Nairobi. Wholesale and private-label roasting for cafes, retailers and brands.",
+      "Mizizi Coffee, Single-Origin Kenya AA 500g (17.6 oz), VonSchelling",
+      "Buy Mizizi Coffee: 100% single-origin Kenya Grade AA, $30 USD per 500g (17.6 oz) bag, shipped from Nairobi. Wholesale and private-label roasting for cafes, retailers and brands.",
       "/mizizi",
       "mizizi.jpg",
     ),
@@ -67,7 +67,7 @@ function Mizizi() {
       <section className="bg-navy text-ivory">
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 py-16 md:py-24 lg:grid-cols-2">
           <div className="lg:sticky lg:top-28">
-            <img src={bag} alt="Mizizi Coffee 500g bag, single-origin Kenya AA" width={1102} height={1427} className="mx-auto h-auto w-full max-w-md" />
+            <img src={bag} alt="Mizizi Coffee 500g (17.6 oz) bag, single-origin Kenya AA" width={1102} height={1427} className="mx-auto h-auto w-full max-w-md" />
           </div>
           <div>
             <div className="flex flex-wrap gap-2">
@@ -75,7 +75,7 @@ function Mizizi() {
             </div>
             <h1 className="mt-6 text-5xl md:text-7xl">Mizizi Coffee</h1>
             <p className="mt-3 font-display text-2xl italic text-gold-soft">Single-origin Kenya AA, fresh from the source.</p>
-            <p className="mt-6 font-display text-4xl">{usd(MIZIZI_BAG.priceUsd)} <span className="text-lg text-ivory/60">· {MIZIZI_BAG.grams}g bag</span></p>
+            <p className="mt-6 font-display text-4xl">{usd(MIZIZI_BAG.priceUsd)} <span className="text-lg text-ivory/60">· {MIZIZI_SIZE_LABEL} bag</span></p>
 
             <form onSubmit={submit} className="mt-8 space-y-8">
               <fieldset>
@@ -172,7 +172,7 @@ function Mizizi() {
           <Heading eyebrow="Freshness & Brewing" title="Sealed fresh. Easy to brew well." />
           <div className="mt-10 grid gap-10 lg:grid-cols-2">
             <SpecTable title="The Bag" rows={[
-              ["Net weight", `${MIZIZI_BAG.grams}g`],
+              ["Net weight", MIZIZI_SIZE_LABEL],
               ["Packaging", "High-barrier, nitrogen-flushed bag that protects aroma from air and light"],
               ["Valve", "One-way degassing valve releases CO₂ without letting air in"],
               ["Formats", "Whole bean or ground for filter, French press or espresso"],
@@ -192,7 +192,7 @@ function Mizizi() {
           <div className="border-t-2 border-gold pt-6">
             <p className="eyebrow text-gold">Path 01 · Wholesale Mizizi</p>
             <h3 className="mt-3 text-3xl">Stock and serve Mizizi</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Master cartons of {MIZIZI_CARTON_BAGS} × {MIZIZI_BAG.grams}g bags ({(MIZIZI_CARTON_BAGS * MIZIZI_BAG.grams) / 1000} kg) for cafes, hotels, offices and retail shelves. Ask for trade pricing and delivery to your market.</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Master cartons of {MIZIZI_CARTON_BAGS} × {MIZIZI_SIZE_LABEL} bags ({(MIZIZI_CARTON_BAGS * MIZIZI_BAG.grams) / 1000} kg) for cafes, hotels, offices and retail shelves. Ask for trade pricing and delivery to your market.</p>
             <Button asChild className="mt-6 h-auto whitespace-normal px-6 py-4"><Link to="/contact" search={{ request: "quote" }}>Request wholesale pricing<ArrowUpRight /></Link></Button>
           </div>
           <div className="border-t-2 border-gold pt-6">

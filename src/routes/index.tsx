@@ -91,7 +91,7 @@ function Index() {
       {/* Mizizi */}
       <section className="overflow-hidden bg-navy text-ivory">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:py-0">
-          <img src={bag} alt="Mizizi Coffee 500g medium roast bag" loading="lazy" className="w-full md:max-h-[760px] md:object-cover" />
+          <img src={bag} alt="Mizizi Coffee 500g (17.6 oz) medium roast bag" loading="lazy" className="w-full md:max-h-[760px] md:object-cover" />
           <div className="md:py-24">
             <p className="eyebrow text-gold">Single-Origin Kenya AA</p>
             <h2 className="mt-4 text-5xl md:text-7xl">Mizizi Coffee</h2>
