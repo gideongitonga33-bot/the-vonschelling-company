@@ -23,6 +23,7 @@ describe("sitemap", () => {
       "/guides/kenyan-coffee-grades-explained",
       "/guides/kenyan-green-coffee-importing-guide",
       "/meats",
+      "/mizizi",
       "/privacy",
       "/quality",
       "/sustainability",

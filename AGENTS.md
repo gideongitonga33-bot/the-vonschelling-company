@@ -27,3 +27,8 @@
 - Buyer guides use shared editorial data and presentation with explicit leaf routes, so each guide has its own self-referencing Article metadata and sitemap entry.
 - Guide summaries, editorial identity and review dates live in shared browser-safe editorial data and feed both visible bylines and Article schema to keep them consistent. Add author social URLs only when verified.
 - Privacy and trade terms are standalone public content routes using the shared shell and SEO helper; describe the actual email-draft flow and leave negotiated legal terms to written agreements.
+
+## Mizizi retail
+- Mizizi retail and private label live on `/mizizi`, separate from the green export `/coffee` page, so trade buyers and retail or brand buyers each see only their own ordering path.
+- Mizizi price, options and shipping tiers live in browser-safe `src/lib/mizizi.ts` so the order module, order email, structured data and tests share one source.
+- Until card checkout is enabled, Mizizi orders are prepared as email drafts with an explicit send step; never claim payment or receipt.

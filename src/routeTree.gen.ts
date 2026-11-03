@@ -17,6 +17,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DriedFruitsRouteImport } from './routes/dried-fruits'
 import { Route as ExportLogisticsRouteImport } from './routes/export-logistics'
 import { Route as MeatsRouteImport } from './routes/meats'
+import { Route as MiziziRouteImport } from './routes/mizizi'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as QualityRouteImport } from './routes/quality'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -67,6 +68,11 @@ const ExportLogisticsRoute = ExportLogisticsRouteImport.update({
 const MeatsRoute = MeatsRouteImport.update({
   id: '/meats',
   path: '/meats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MiziziRoute = MiziziRouteImport.update({
+  id: '/mizizi',
+  path: '/mizizi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -139,6 +145,7 @@ export interface FileRoutesByFullPath {
   '/dried-fruits': typeof DriedFruitsRoute
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
+  '/mizizi': typeof MiziziRoute
   '/privacy': typeof PrivacyRoute
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -160,6 +167,7 @@ export interface FileRoutesByTo {
   '/dried-fruits': typeof DriedFruitsRoute
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
+  '/mizizi': typeof MiziziRoute
   '/privacy': typeof PrivacyRoute
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -182,6 +190,7 @@ export interface FileRoutesById {
   '/dried-fruits': typeof DriedFruitsRoute
   '/export-logistics': typeof ExportLogisticsRoute
   '/meats': typeof MeatsRoute
+  '/mizizi': typeof MiziziRoute
   '/privacy': typeof PrivacyRoute
   '/quality': typeof QualityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -205,6 +214,7 @@ export interface FileRouteTypes {
     | '/dried-fruits'
     | '/export-logistics'
     | '/meats'
+    | '/mizizi'
     | '/privacy'
     | '/quality'
     | '/sitemap.xml'
@@ -226,6 +236,7 @@ export interface FileRouteTypes {
     | '/dried-fruits'
     | '/export-logistics'
     | '/meats'
+    | '/mizizi'
     | '/privacy'
     | '/quality'
     | '/sitemap.xml'
@@ -247,6 +258,7 @@ export interface FileRouteTypes {
     | '/dried-fruits'
     | '/export-logistics'
     | '/meats'
+    | '/mizizi'
     | '/privacy'
     | '/quality'
     | '/sitemap.xml'
@@ -269,6 +281,7 @@ export interface RootRouteChildren {
   DriedFruitsRoute: typeof DriedFruitsRoute
   ExportLogisticsRoute: typeof ExportLogisticsRoute
   MeatsRoute: typeof MeatsRoute
+  MiziziRoute: typeof MiziziRoute
   PrivacyRoute: typeof PrivacyRoute
   QualityRoute: typeof QualityRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -338,6 +351,13 @@ declare module '@tanstack/react-router' {
       path: '/meats'
       fullPath: '/meats'
       preLoaderRoute: typeof MeatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mizizi': {
+      id: '/mizizi'
+      path: '/mizizi'
+      fullPath: '/mizizi'
+      preLoaderRoute: typeof MiziziRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -429,6 +449,7 @@ const rootRouteChildren: RootRouteChildren = {
   DriedFruitsRoute: DriedFruitsRoute,
   ExportLogisticsRoute: ExportLogisticsRoute,
   MeatsRoute: MeatsRoute,
+  MiziziRoute: MiziziRoute,
   PrivacyRoute: PrivacyRoute,
   QualityRoute: QualityRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
