@@ -30,7 +30,7 @@ describe("Approved buyer search facts", () => {
     expect(coffeeProductSchema.additionalProperty.find(item => item.name === "Grades")?.value).toBe("AA, AB, PB, C and specialty micro-lots");
   });
   it("retains the approved office address", () => {
-    expect(organizationSchema.address.streetAddress).toBe("90 JGO Building, Ikigai, Lavington");
+    expect(organizationSchema.address.streetAddress).toBe("90 JGO Building, Lavington");
   });
   it("does not mark per-lot quoted coffee as a priced retail Product", () => {
     expect(coffeeProductSchema["@type"]).toBe("Service");

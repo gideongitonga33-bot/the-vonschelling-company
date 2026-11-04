@@ -34,7 +34,7 @@ function Contact() {
         <div>
           <Heading as="h1" eyebrow="Contact · Samples & Quotations" title="Request Kenyan Coffee Samples and Export Quotations." intro="Tell us what you're looking for. Share your product, specifications and destination. Sample availability, documentation and commercial terms are confirmed for your request." />
           <div className="mt-12 space-y-6 text-sm">
-            <div><p className={label}>Office</p><p className="mt-2 leading-relaxed">90 JGO Building, Ikigai, Lavington<br />P.O. Box 9226, 00300<br />Nairobi, Kenya</p></div>
+            <div><p className={label}>Office</p><p className="mt-2 leading-relaxed">90 JGO Building, Lavington<br />P.O. Box 9226, 00300<br />Nairobi, Kenya</p></div>
             <div><p className={label}>Email</p><p className="mt-2"><a href="mailto:info@vonschelling.co.ke" className="hover:text-primary">info@vonschelling.co.ke</a></p></div>
             <div><p className={label}>Web</p><p className="mt-2"><a href="https://www.vonschelling.co.ke" className="hover:text-primary">www.vonschelling.co.ke</a></p></div>
           </div>

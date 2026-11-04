@@ -13,7 +13,7 @@ export const organizationSchema = {
   email: "info@vonschelling.co.ke",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "90 JGO Building, Ikigai, Lavington",
+    streetAddress: "90 JGO Building, Lavington",
     addressLocality: "Nairobi",
     addressCountry: "KE",
   },
