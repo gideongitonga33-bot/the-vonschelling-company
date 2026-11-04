@@ -23,8 +23,8 @@ describe("Approved buyer search facts", () => {
     expect(coffeeProductSchema.url).toBe("https://www.vonschelling.co.ke/coffee");
     expect(organizationSchema.email).toBe("info@vonschelling.co.ke");
   });
-  it("keeps the stated export moisture target at 10% to 11%", () => {
-    expect(coffeeProductSchema.additionalProperty.find(item => item.name === "Moisture target")?.value).toBe("10% to 11%");
+  it("keeps the stated export moisture target at 10% to 12%", () => {
+    expect(coffeeProductSchema.additionalProperty.find(item => item.name === "Moisture target")?.value).toBe("10% to 12%");
   });
   it("includes all five approved grade offerings", () => {
     expect(coffeeProductSchema.additionalProperty.find(item => item.name === "Grades")?.value).toBe("AA, AB, PB, C and specialty micro-lots");

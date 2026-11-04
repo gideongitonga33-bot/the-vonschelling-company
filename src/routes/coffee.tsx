@@ -95,7 +95,7 @@ function Coffee() {
               {[
                 ["Pulp & ferment", "Remove the cherry skin and break down mucilage. Fermentation responds to temperature, ripeness and the mill's practice."],
                 ["Wash & soak", "Wash away mucilage; a further clean-water soak may form part of the mill's double-wash process."],
-                ["Dry & stabilise", "Turn and protect coffee on raised beds. Drying duration depends on weather; our export moisture target is 10% to 11%."],
+                ["Dry & stabilise", "Turn and protect coffee on raised beds. Drying duration depends on weather; our export moisture target is 10% to 12%."],
               ].map(([t, d], i) => <li key={t} className="flex gap-4 border-t border-border pt-5"><span className="font-display text-3xl text-gold">0{i + 1}</span><div><h3 className="text-2xl">{t}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d}</p></div></li>)}
             </ol>
           </div>
@@ -171,7 +171,7 @@ function Coffee() {
           <div><dl className="divide-y divide-border border-y border-border">{docs.map(([t, d]) => <div key={t} className="grid gap-3 py-5 sm:grid-cols-[1fr_1.4fr]"><dt className="font-display text-xl">{t}</dt><dd className="text-sm leading-relaxed text-muted-foreground">{d}</dd></div>)}</dl><div className="mt-6"><Note>No universal cup score, certification logo or blanket fully traceable promise. Request verifiable evidence for the lot, including EU due diligence records where relevant.</Note></div></div>
         </div>
         <div className="mt-14 grid gap-8 border-y border-gold/40 py-10 lg:grid-cols-[1.3fr_1fr]">
-          <div><Heading eyebrow="Sample First" title="Evaluate before you commit." intro="Request a representative Green Coffee Beans sample in AA, AB, PB, C or a specialty micro-lot. Share your preferred origin and target cup profile." /><p className="mt-5 text-sm leading-relaxed text-muted-foreground">Choose a 300g or 500g preference. Final size, availability, packaging, courier charges and dispatch timing are confirmed individually. Agree cup and physical acceptance criteria before contracting.</p>
+          <div><Heading eyebrow="Sample First" title="Evaluate before you commit." intro="Request a representative Green Coffee Beans sample in AA, AB, PB, C or a specialty micro-lot. Share your preferred origin and target cup profile." /><p className="mt-5 text-sm leading-relaxed text-muted-foreground">Choose a 250g or 500g preference. Final size, availability, packaging, courier charges and dispatch timing are confirmed individually. Agree cup and physical acceptance criteria before contracting.</p>
             <ol className="mt-6 grid gap-4 sm:grid-cols-3">{[
               ["Offer sample", "You cup the lot we offer and select the coffee."],
               ["Pre-shipment sample", "Drawn from the milled, bagged lot. Your approval releases shipment."],

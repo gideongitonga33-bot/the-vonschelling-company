@@ -31,7 +31,7 @@ export const websiteSchema = {
 export const COFFEE_BUYER_FAQS = [
   {
     question: "How do I request a Kenyan Green Coffee Beans evaluation sample?",
-    answer: "Choose AA, AB, PB, C or a specialty micro-lot and share your origin preference, cup profile and delivery destination. Request a 300g or 500g sample preference. We confirm the lot, sample size, packaging, courier charges and dispatch timing before arranging delivery. The enquiry page prepares an email draft for you to send.",
+    answer: "Choose AA, AB, PB, C or a specialty micro-lot and share your origin preference, cup profile and delivery destination. Request a 250g or 500g sample preference. We confirm the lot, sample size, packaging, courier charges and dispatch timing before arranging delivery. The enquiry page prepares an email draft for you to send.",
   },
   {
     question: "How much green coffee can I plan for a 20 ft container?",
