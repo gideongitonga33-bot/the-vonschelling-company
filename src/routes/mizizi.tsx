@@ -9,7 +9,7 @@ import { Heading, Section, SpecTable } from "@/components/site/Layout";
 import { PRIVATE_LABEL_MOQ_KG } from "@/lib/coffee";
 import { jsonLd } from "@/lib/coffee-schema";
 import {
-  buildMiziziOrderEmail, clampBags, GRINDS, MAX_BAGS_PER_ORDER, MIZIZI_BAG, MIZIZI_CARTON_BAGS, MIZIZI_SIZE_LABEL,
+  buildMiziziOrderEmail, clampBags, GRINDS, MAX_BAGS_PER_ORDER, MIZIZI_BAG, MIZIZI_CARTON_BAGS, MIZIZI_ORIGIN_LABEL, MIZIZI_SIZE_LABEL,
   orderTotals, ROASTS, SHIPPING, usd, type ShippingRegion,
 } from "@/lib/mizizi";
 import { seo, SITE_URL } from "@/lib/seo";
@@ -17,8 +17,8 @@ import { seo, SITE_URL } from "@/lib/seo";
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "Mizizi Coffee, Single-Origin Kenya AA, 500g (17.6 oz)",
-  description: "100% single-origin Kenya Grade AA Arabica, roasted in Nairobi and packed in 500g (17.6 oz) high-barrier valve bags. Light, medium or dark roast; whole bean or ground.",
+  name: "Mizizi Coffee, Single-Origin Kenya Arabica (Nyeri), 500g (17.6 oz)",
+  description: "100% single-origin Kenyan Arabica from Nyeri, roasted in Nairobi and packed in 500g (17.6 oz) high-barrier valve bags. Light, medium or dark roast; whole bean or ground.",
   image: `${SITE_URL}/og/mizizi.jpg`,
   brand: { "@type": "Brand", name: "Mizizi Coffee" },
   offers: {
@@ -34,8 +34,8 @@ export const Route = createFileRoute("/mizizi")({
   staticData: { sitemap: true },
   head: () => ({
     ...seo(
-      "Mizizi Coffee, Single-Origin Kenya AA 500g (17.6 oz), VonSchelling",
-      "Buy Mizizi Coffee: 100% single-origin Kenya Grade AA, $30 USD per 500g (17.6 oz) bag, shipped from Nairobi. Wholesale and private-label roasting for cafes, retailers and brands.",
+      "Mizizi Coffee, Single-Origin Kenya Arabica (Nyeri) 500g (17.6 oz), VonSchelling",
+      "Buy Mizizi Coffee: 100% single-origin Kenyan Arabica from Nyeri, $30 USD per 500g (17.6 oz) bag, shipped from Nairobi. Wholesale and private-label roasting for cafes, retailers and brands.",
       "/mizizi",
       "mizizi.jpg",
     ),
@@ -67,14 +67,14 @@ function Mizizi() {
       <section className="bg-navy text-ivory">
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-6 py-16 md:py-24 lg:grid-cols-2">
           <div className="lg:sticky lg:top-28">
-            <img src={bag} alt="Mizizi Coffee 500g (17.6 oz) bag, single-origin Kenya AA" width={1102} height={1427} className="mx-auto h-auto w-full max-w-md" />
+            <img src={bag} alt="Mizizi Coffee 500g (17.6 oz) bag, single-origin Kenyan Arabica from Nyeri" width={1102} height={1427} className="mx-auto h-auto w-full max-w-md" />
           </div>
           <div>
             <div className="flex flex-wrap gap-2">
-              {["100% Kenya Arabica Grade AA", "Single Origin", "Screen 17/18"].map((b) => <span key={b} className="border border-gold/60 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-soft">{b}</span>)}
+              {["100% Kenyan Arabica", "Single Origin", "Nyeri, Mount Kenya"].map((b) => <span key={b} className="border border-gold/60 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-gold-soft">{b}</span>)}
             </div>
-            <h1 className="mt-6 text-5xl md:text-7xl">Mizizi Coffee<span className="mt-3 block font-display text-2xl md:text-3xl text-ivory/85">Single-Origin Kenya AA Roasted Coffee</span></h1>
-            <p className="mt-3 font-display text-2xl italic text-gold-soft">Single-origin Kenya AA, fresh from the source.</p>
+            <h1 className="mt-6 text-5xl md:text-7xl">Mizizi Coffee<span className="mt-3 block font-display text-2xl md:text-3xl text-ivory/85">{MIZIZI_ORIGIN_LABEL}</span></h1>
+            <p className="mt-3 font-display text-2xl italic text-gold-soft">Single-origin Kenyan Arabica, fresh from the source.</p>
             <p className="mt-6 font-display text-4xl">{usd(MIZIZI_BAG.priceUsd)} <span className="text-lg text-ivory/60">· {MIZIZI_SIZE_LABEL} bag</span></p>
 
             <form onSubmit={submit} className="mt-8 space-y-8">
@@ -160,8 +160,8 @@ function Mizizi() {
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <Heading eyebrow="Our Roots" title="One origin. The top Kenyan grade." intro={'"Mizizi" means roots in Swahili. Every bag is 100% Kenya Grade AA Arabica from the volcanic highlands of Mount Kenya and the Aberdares. Never a blend.'} />
-            <p className="mt-6 leading-relaxed text-muted-foreground">AA is the largest bean screen in Kenya's grading system, screens 17 and 18. Large, dense, uniform beans roast evenly and give the bright, juicy cup Kenyan coffee is known for.</p>
+            <Heading eyebrow="Our Roots" title="One origin. Nyeri's highlands." intro={'"Mizizi" means roots in Swahili. Every bag is 100% Kenyan Arabica from Nyeri, grown on the volcanic slopes between Mount Kenya and the Aberdares.'} />
+            <p className="mt-6 leading-relaxed text-muted-foreground">Rich red volcanic soils, high altitude and cool nights give Nyeri coffee its celebrated cup: bright, juicy and sweet, with the blackcurrant and citrus character Kenyan coffee is known for.</p>
           </div>
           <img src={range} alt="Mizizi Coffee range in light, medium and dark roasts" loading="lazy" width={1536} height={1024} className="h-auto w-full" />
         </div>
@@ -197,7 +197,7 @@ function Mizizi() {
           </div>
           <div className="border-t-2 border-gold pt-6">
             <p className="eyebrow text-gold">Path 02 · Private Label</p>
-            <h3 className="mt-3 text-3xl">Your brand. Kenyan AA.</h3>
+            <h3 className="mt-3 text-3xl">Your brand. Kenyan coffee.</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Coffee selection, roast profile development, whole-bean or ground formats and packaging coordination under your brand. Lead times and print options are confirmed per project.</p>
             <p className="mt-4 font-display text-2xl">From {PRIVATE_LABEL_MOQ_KG.toLocaleString("en-US")} kg per roast profile</p>
             <Button asChild variant="outline" className="mt-6 h-auto whitespace-normal px-6 py-4"><Link to="/contact" search={{ request: "quote" }}>Discuss private label<ArrowUpRight /></Link></Button>

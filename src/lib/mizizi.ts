@@ -4,6 +4,8 @@
 export const MIZIZI_BAG = { grams: 500, priceUsd: 30 } as const;
 /** Bag size as shown to buyers everywhere: grams with ounces in brackets. */
 export const MIZIZI_SIZE_LABEL = "500g (17.6 oz)";
+/** Flagship retail origin as shown to buyers. */
+export const MIZIZI_ORIGIN_LABEL = "Single-Origin Kenya Arabica · Nyeri";
 export const MIZIZI_CARTON_BAGS = 20;
 export const MAX_BAGS_PER_ORDER = 12;
 
@@ -43,7 +45,7 @@ export const usd = (value: number) => `$${value.toFixed(2)} USD`;
 
 export function buildMiziziOrderEmail(order: { roast: string; grind: string; bags: number; region: ShippingRegion; name: string; destination: string }) {
   const t = orderTotals(order.region, order.bags);
-  const subject = `Mizizi Coffee order: ${t.bags} × ${MIZIZI_SIZE_LABEL} Kenya AA`;
+  const subject = `Mizizi Coffee order: ${t.bags} × ${MIZIZI_SIZE_LABEL} Single-Origin Nyeri`;
   const body = [
     subject,
     `Name: ${order.name.trim()}`,
