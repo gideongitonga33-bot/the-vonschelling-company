@@ -6,7 +6,7 @@ describe("Coffee procurement", () => {
     expect(COFFEE_MOISTURE).toEqual({ min: 10, max: 11 });
   });
   it("offers 250g and 500g evaluation sample preferences", () => {
-    expect(SAMPLE_SIZES).toEqual([300, 500]);
+    expect(SAMPLE_SIZES).toEqual([250, 500]);
   });
   it("defaults unknown request kinds to commercial quotations", () => {
     expect(parseRequestKind("invalid")).toBe("quote");
