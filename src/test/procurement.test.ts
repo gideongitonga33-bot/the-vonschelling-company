@@ -3,7 +3,7 @@ import { buildEnquiryEmail, COFFEE_MOISTURE, parseRequestKind, SAMPLE_SIZES } fr
 
 describe("Coffee procurement", () => {
   it("keeps the confirmed moisture target at 10% to 12%", () => {
-    expect(COFFEE_MOISTURE).toEqual({ min: 10, max: 11 });
+    expect(COFFEE_MOISTURE).toEqual({ min: 10, max: 12 });
   });
   it("offers 250g and 500g evaluation sample preferences", () => {
     expect(SAMPLE_SIZES).toEqual([250, 500]);
