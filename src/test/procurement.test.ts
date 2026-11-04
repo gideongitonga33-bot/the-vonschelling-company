@@ -2,10 +2,10 @@ import { describe, expect, it } from "vitest";
 import { buildEnquiryEmail, COFFEE_MOISTURE, parseRequestKind, SAMPLE_SIZES } from "@/lib/procurement";
 
 describe("Coffee procurement", () => {
-  it("keeps the confirmed moisture target at 10% to 11%", () => {
+  it("keeps the confirmed moisture target at 10% to 12%", () => {
     expect(COFFEE_MOISTURE).toEqual({ min: 10, max: 11 });
   });
-  it("offers 300g and 500g evaluation sample preferences", () => {
+  it("offers 250g and 500g evaluation sample preferences", () => {
     expect(SAMPLE_SIZES).toEqual([300, 500]);
   });
   it("defaults unknown request kinds to commercial quotations", () => {

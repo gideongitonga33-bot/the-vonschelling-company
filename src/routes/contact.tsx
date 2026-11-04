@@ -57,7 +57,7 @@ function Contact() {
                 <div><label className={label} htmlFor="sampleSize">Preferred sample size</label><select id="sampleSize" name="sampleSize" className={field}>{SAMPLE_SIZES.map(size => <option key={size} value={size}>{size}g</option>)}</select></div>
                 <div><label className={label} htmlFor="grade">Coffee grade</label><select id="grade" name="grade" className={field}><option>AA</option><option>AB</option><option>PB (Peaberry)</option><option>C</option><option>Specialty micro-lot</option><option>Please advise</option></select></div>
                 <div><label className={label} htmlFor="origin">Preferred origin or lot</label><input id="origin" name="origin" className={field} placeholder="e.g. Nyeri or a lot reference" /></div>
-                <div className="md:col-span-2"><Note>300g and 500g are requested preferences, not guaranteed pack sizes. We confirm the representative lot, packaging, sample cost, courier charges and dispatch window before arranging a sample.</Note></div>
+                <div className="md:col-span-2"><Note>250g and 500g are requested preferences, not guaranteed pack sizes. We confirm the representative lot, packaging, sample cost, courier charges and dispatch window before arranging a sample.</Note></div>
               </>
             ) : (
               <div><label className={label} htmlFor="commodity">Commodity category</label><select id="commodity" name="commodity" required className={field} defaultValue=""><option value="" disabled>Select commodity</option><option>Green Coffee Beans</option><option>Mizizi Roasted Coffee</option><option>Private-Label Coffee</option><option>Bulk Chillies</option><option>Inspected Meat</option><option>Dried Fruits</option></select></div>

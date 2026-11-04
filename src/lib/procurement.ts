@@ -1,4 +1,4 @@
-export const COFFEE_MOISTURE = { min: 10, max: 11 } as const;
+export const COFFEE_MOISTURE = { min: 10, max: 12 } as const;
 export const SAMPLE_SIZES = [300, 500] as const;
 export type RequestKind = "quote" | "sample" | "documents";
 
