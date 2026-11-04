@@ -115,7 +115,7 @@ export function Footer() {
         <div>
           <p className="eyebrow text-gold">Contact</p>
           <ul className="mt-5 space-y-2 text-sm text-ivory/75">
-            <li>90 JGO Building, Ikigai, Lavington</li>
+            <li>90 JGO Building, Lavington</li>
             <li>P.O. Box 9226, 00300 Nairobi, Kenya</li>
             <li><a href="mailto:info@vonschelling.co.ke" className="hover:text-gold-soft">info@vonschelling.co.ke</a></li>
             <li><a href="https://www.vonschelling.co.ke" className="hover:text-gold-soft">www.vonschelling.co.ke</a></li>
