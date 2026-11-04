@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { MIZIZI_BAG, MIZIZI_SIZE_LABEL, orderTotals, shippingUsd } from "@/lib/mizizi";
+import { buildMiziziOrderEmail, MIZIZI_BAG, MIZIZI_ORIGIN_LABEL, MIZIZI_SIZE_LABEL, orderTotals, shippingUsd } from "@/lib/mizizi";
 
 describe("Mizizi retail pricing", () => {
   it("sells a 500g bag at $30 USD", () => {
@@ -17,5 +17,11 @@ describe("Mizizi retail pricing", () => {
   });
   it("shows the bag size as 500g (17.6 oz)", () => {
     expect(MIZIZI_SIZE_LABEL).toBe("500g (17.6 oz)");
+  });
+  it("presents Mizizi as single-origin Nyeri, not Kenya AA", () => {
+    expect(MIZIZI_ORIGIN_LABEL).toBe("Single-Origin Kenya Arabica · Nyeri");
+    const email = buildMiziziOrderEmail({ roast: "Medium Roast", grind: "Whole Bean", bags: 1, region: "kenya", name: "A", destination: "Nairobi" });
+    expect(email.subject).toContain("Single-Origin Nyeri");
+    expect(email.subject).not.toContain("AA");
   });
 });

@@ -26,7 +26,7 @@ function About() {
       <Section>
         <div className="grid items-center gap-16 md:grid-cols-2">
           <div className="space-y-5 text-lg leading-relaxed text-foreground/80">
-            <p>We are developing our business around four product categories: coffee, chillies, meats and dried fruits. Coffee is our flagship, green coffee beans for international trade, Mizizi single-origin Kenya AA roasted coffee and private-label opportunities.</p>
+            <p>We are developing our business around four product categories: coffee, chillies, meats and dried fruits. Coffee is our flagship, green coffee beans for international trade, Mizizi single-origin Nyeri roasted coffee and private-label opportunities.</p>
             <p>We work with farmers, cooperatives and licensed supply partners, and where appropriate use authorised auction and market channels to meet buyer specifications and volumes.</p>
             <p>International agricultural trade depends on more than product availability, it requires accurate specifications, credible supply, documentation, logistics and clear contractual responsibilities. Our role is to coordinate these elements and give buyers transparent information about each offer.</p>
           </div>
