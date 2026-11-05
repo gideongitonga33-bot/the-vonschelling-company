@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import hero from "@/assets/hero-farm.jpg";
+import hero from "@/assets/hero-fairview-coffee-fields.jpg";
 import chillies from "@/assets/chilies.jpg";
 import meats from "@/assets/meats.jpg";
 import fruits from "@/assets/dried-fruits.jpg";
@@ -36,8 +36,9 @@ function Index() {
   return (
     <>
       <section className="relative flex min-h-[92vh] items-end overflow-hidden">
-        <img src={hero} alt="Kenyan highland coffee farm at sunrise" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={hero} alt="Coffee fields and shade trees at Fairview Estate, Kiambu County, Kenya" width={1920} height={1281} className="absolute inset-0 h-full w-full object-cover" />
         <div className="hero-overlay absolute inset-0" />
+        <p className="absolute bottom-3 right-4 z-10 text-[0.65rem] text-ivory/60">Fairview Estate, Kiambu · Photo: Daniel Case, CC BY-SA 4.0</p>
         <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-24 text-ivory">
           <p className="eyebrow text-gold-soft">Premium Kenyan Agri-Exports</p>
           <h1 className="mt-6 max-w-4xl text-6xl leading-[0.98] md:text-8xl">
