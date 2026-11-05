@@ -38,7 +38,7 @@ function Index() {
       <section className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden">
         <img src={hero} alt="Coffee fields and shade trees at Fairview Estate, Kiambu County, Kenya" width={1920} height={1281} className="absolute inset-0 h-full w-full object-cover" />
         <div className="hero-overlay absolute inset-0" />
-        <div className="fade-up relative mx-auto w-full max-w-7xl px-6 py-10 text-ivory sm:py-14 md:py-16">
+        <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-16 pt-10 text-ivory sm:pb-24 sm:pt-14 md:pb-32 md:pt-16">
           <p className="eyebrow text-gold-soft">Premium Kenyan Agri-Exports</p>
           <h1 className="mt-2 max-w-4xl text-[2.35rem] leading-[1.0] sm:mt-4 sm:text-[3.4rem] md:text-[4.25rem] lg:text-[5rem] xl:text-[5.5rem]">
             <span className="whitespace-nowrap">From Kenyan soil</span><br /><em className="whitespace-nowrap text-gold-soft">to world markets.</em>
