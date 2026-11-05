@@ -35,15 +35,17 @@ const pillars = [
 function Index() {
   return (
     <>
-      <section className="relative flex min-h-[92vh] items-end overflow-hidden">
+      <section className="relative flex min-h-[88vh] items-center overflow-hidden">
         <img src={hero} alt="Coffee fields and shade trees at Fairview Estate, Kiambu County, Kenya" width={1920} height={1281} className="absolute inset-0 h-full w-full object-cover" />
         <div className="hero-overlay absolute inset-0" />
-        <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-24 text-ivory">
+        <div className="hero-side-overlay absolute inset-0" />
+        <div className="fade-up relative mx-auto w-full max-w-7xl px-6 py-28 text-ivory">
           <p className="eyebrow text-gold-soft">Premium Kenyan Agri-Exports</p>
-          <h1 className="mt-6 max-w-4xl text-6xl leading-[0.98] md:text-8xl">
-            From Kenyan soil{" "}<br /><em className="text-gold-soft">to world markets.</em>
+          <h1 className="mt-6 max-w-3xl text-5xl leading-[1.02] sm:text-6xl md:text-7xl lg:text-8xl">
+            From Kenyan soil<br /><em className="text-gold-soft">to world markets.</em>
           </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-ivory/85">
+          <div className="gold-rule mt-8 w-28" />
+          <p className="mt-8 max-w-xl text-base leading-relaxed text-ivory/90 md:text-lg">
             Sourced, graded and shipped from Kenya to international buyers, with clear specifications
             and documented traceability at every step.
           </p>

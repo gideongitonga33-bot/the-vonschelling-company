@@ -96,6 +96,9 @@
 @utility hero-overlay {
   background: var(--gradient-hero);
 }
+@utility hero-side-overlay {
+  background: linear-gradient(90deg, oklch(0.16 0.03 165 / 0.7) 0%, oklch(0.16 0.03 165 / 0.35) 50%, transparent 80%);
+}
 @utility shadow-elegant {
   box-shadow: var(--shadow-elegant);
 }
