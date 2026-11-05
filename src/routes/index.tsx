@@ -40,8 +40,8 @@ function Index() {
         <div className="hero-overlay absolute inset-0" />
         <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-24 text-ivory sm:pt-14 md:pb-32 md:pt-16">
           <p className="eyebrow text-gold-soft">Premium Kenyan Agri-Exports</p>
-          <h1 className="mt-6 max-w-4xl text-6xl leading-[0.98] sm:mt-4 sm:text-[3.4rem] sm:leading-[1.0] md:text-[4.25rem] lg:text-[5rem] xl:text-[5.5rem]">
-            <span className="sm:whitespace-nowrap">From Kenyan soil</span><br /><em className="sm:whitespace-nowrap text-gold-soft">to world markets.</em>
+          <h1 className="mt-6 max-w-4xl text-[clamp(2.4rem,11vw,2.75rem)] leading-[0.98] sm:mt-4 sm:text-[3.4rem] sm:leading-[1.0] md:text-[4.25rem] lg:text-[5rem] xl:text-[5.5rem]">
+            <span className="whitespace-nowrap">From Kenyan soil</span><br /><em className="whitespace-nowrap text-gold-soft">to world markets.</em>
           </h1>
           <div className="gold-rule mt-4 hidden w-24 sm:block md:mt-5 md:w-28" />
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ivory/85 sm:mt-3 sm:max-w-[34rem] sm:text-ivory/90 md:mt-5 md:text-xl">
