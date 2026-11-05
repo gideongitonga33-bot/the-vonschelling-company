@@ -31,7 +31,7 @@ export function Header() {
           <img src={emblem} alt="" className="h-12 w-12 shrink-0 object-contain md:h-14 md:w-14" />
           <span className="ml-3 flex flex-col leading-none">
             <span className="font-display text-2xl font-semibold tracking-wide text-primary md:text-[1.7rem]">VonSchelling</span>
-            <span className="mt-1.5 text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-gold md:text-[0.6rem]">Premium Kenyan Agricultural Exports</span>
+            <span className="mt-1.5 text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-gold md:text-[0.6rem]">Agricultural Trade</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
