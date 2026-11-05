@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import logo from "@/assets/vonschelling-logo-wide.png";
 import emblem from "@/assets/vonschelling-emblem.png";
 
 export const OPERATIONS = [
@@ -29,7 +28,11 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center" aria-label="VonSchelling home">
-          <img src={logo} alt="VonSchelling, Premium Kenyan Agricultural Exports" className="h-14 w-auto" />
+          <img src={emblem} alt="" className="h-12 w-12 shrink-0 object-contain md:h-14 md:w-14" />
+          <span className="ml-3 flex flex-col leading-none">
+            <span className="font-display text-2xl font-semibold tracking-wide text-primary md:text-[1.7rem]">VonSchelling</span>
+            <span className="mt-1.5 text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-gold md:text-[0.6rem]">Premium Kenyan Agricultural Exports</span>
+          </span>
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           <Link to="/" className={linkCls} activeProps={{ className: "text-primary" }}>Home</Link>
