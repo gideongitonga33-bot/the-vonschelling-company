@@ -35,20 +35,20 @@ const pillars = [
 function Index() {
   return (
     <>
-      <section className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden">
+      <section className="relative flex min-h-[92vh] items-end overflow-hidden sm:min-h-[calc(100vh-5rem)] sm:items-center">
         <img src={hero} alt="Coffee fields and shade trees at Fairview Estate, Kiambu County, Kenya" width={1920} height={1281} className="absolute inset-0 h-full w-full object-cover" />
         <div className="hero-overlay absolute inset-0" />
-        <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-16 pt-10 text-ivory sm:pb-24 sm:pt-14 md:pb-32 md:pt-16">
+        <div className="fade-up relative mx-auto w-full max-w-7xl px-6 pb-24 text-ivory sm:pt-14 md:pb-32 md:pt-16">
           <p className="eyebrow text-gold-soft">Premium Kenyan Agri-Exports</p>
-          <h1 className="mt-2 max-w-4xl text-[2.35rem] leading-[1.0] sm:mt-4 sm:text-[3.4rem] md:text-[4.25rem] lg:text-[5rem] xl:text-[5.5rem]">
-            <span className="whitespace-nowrap">From Kenyan soil</span><br /><em className="whitespace-nowrap text-gold-soft">to world markets.</em>
+          <h1 className="mt-6 max-w-4xl text-6xl leading-[0.98] sm:mt-4 sm:text-[3.4rem] sm:leading-[1.0] md:text-[4.25rem] lg:text-[5rem] xl:text-[5.5rem]">
+            <span className="sm:whitespace-nowrap">From Kenyan soil</span><br /><em className="sm:whitespace-nowrap text-gold-soft">to world markets.</em>
           </h1>
-          <div className="gold-rule mt-4 w-24 md:mt-5 md:w-28" />
-          <p className="mt-3 max-w-[34rem] text-[1.05rem] leading-relaxed text-ivory/90 sm:text-lg md:mt-5 md:text-xl">
+          <div className="gold-rule mt-4 hidden w-24 sm:block md:mt-5 md:w-28" />
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-ivory/85 sm:mt-3 sm:max-w-[34rem] sm:text-ivory/90 md:mt-5 md:text-xl">
             Sourced, graded and shipped from Kenya to international buyers, with clear specifications
             and documented traceability at every step.
           </p>
-          <div className="mt-5 flex flex-wrap gap-4 sm:mt-7">
+          <div className="mt-10 flex flex-wrap gap-4 sm:mt-7">
             <Link to="/coffee" className="bg-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-forest-deep transition hover:bg-gold-soft">Explore Our Coffee</Link>
             <Link to="/contact" className="border border-ivory/60 px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-ivory transition hover:bg-ivory/10">Request a Quotation</Link>
           </div>
