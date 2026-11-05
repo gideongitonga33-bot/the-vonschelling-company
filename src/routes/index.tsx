@@ -35,20 +35,20 @@ const pillars = [
 function Index() {
   return (
     <>
-      <section className="relative flex min-h-[88vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden">
         <img src={hero} alt="Coffee fields and shade trees at Fairview Estate, Kiambu County, Kenya" width={1920} height={1281} className="absolute inset-0 h-full w-full object-cover" />
         <div className="hero-overlay absolute inset-0" />
-        <div className="fade-up relative mx-auto w-full max-w-7xl px-6 py-14 text-ivory sm:py-24 md:py-28">
+        <div className="fade-up relative mx-auto w-full max-w-7xl px-6 py-10 text-ivory sm:py-14 md:py-16">
           <p className="eyebrow text-gold-soft">Premium Kenyan Agri-Exports</p>
-          <h1 className="mt-3 max-w-4xl text-[2.6rem] leading-[1.0] sm:mt-6 sm:text-[3.75rem] md:text-[4.75rem] lg:text-[5.75rem] xl:text-[6.5rem]">
+          <h1 className="mt-2 max-w-4xl text-[2.35rem] leading-[1.0] sm:mt-4 sm:text-[3.4rem] md:text-[4.25rem] lg:text-[5rem] xl:text-[5.5rem]">
             <span className="whitespace-nowrap">From Kenyan soil</span><br /><em className="whitespace-nowrap text-gold-soft">to world markets.</em>
           </h1>
-          <div className="gold-rule mt-5 w-24 md:mt-8 md:w-28" />
-          <p className="mt-4 max-w-[34rem] text-[1.05rem] leading-relaxed text-ivory/90 sm:text-lg md:mt-8 md:text-xl">
+          <div className="gold-rule mt-4 w-24 md:mt-5 md:w-28" />
+          <p className="mt-3 max-w-[34rem] text-[1.05rem] leading-relaxed text-ivory/90 sm:text-lg md:mt-5 md:text-xl">
             Sourced, graded and shipped from Kenya to international buyers, with clear specifications
             and documented traceability at every step.
           </p>
-          <div className="mt-6 flex flex-wrap gap-4 sm:mt-10">
+          <div className="mt-5 flex flex-wrap gap-4 sm:mt-7">
             <Link to="/coffee" className="bg-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-forest-deep transition hover:bg-gold-soft">Explore Our Coffee</Link>
             <Link to="/contact" className="border border-ivory/60 px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-ivory transition hover:bg-ivory/10">Request a Quotation</Link>
           </div>
