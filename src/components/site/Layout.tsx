@@ -55,7 +55,6 @@ export function Header() {
               {n.label}
             </Link>
           ))}
-          <Link to="/guides" className={linkCls} activeProps={{ className: "text-primary" }}>Buyer Guides</Link>
           <Link to="/contact" className="bg-primary px-5 py-2.5 text-[0.75rem] font-semibold tracking-[0.18em] uppercase text-primary-foreground transition hover:bg-forest-deep">
             Request a Quote
           </Link>
@@ -74,7 +73,7 @@ export function Header() {
               {o.label}
             </Link>
           ))}
-          {[...NAV.slice(1), { to: "/guides", label: "Buyer Guides" } as const, { to: "/contact", label: "Request a Quote" } as const].map((n) => (
+          {[...NAV.slice(1), { to: "/contact", label: "Request a Quote" } as const].map((n) => (
             <Link key={n.to} to={n.to} onClick={() => setOpen(false)} className="py-2 text-sm">
               {n.label}
             </Link>
