@@ -28,10 +28,10 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center" aria-label="VonSchelling home">
-          <img src={emblem} alt="" className="h-12 w-12 shrink-0 object-contain md:h-14 md:w-14" />
-          <span className="ml-3 flex flex-col leading-none">
-            <span className="font-display text-2xl font-semibold tracking-wide text-primary md:text-[1.7rem]">VonSchelling</span>
-            <span className="mt-1.5 text-[0.55rem] font-semibold uppercase tracking-[0.22em] text-gold md:text-[0.6rem]">Agricultural Trade</span>
+          <img src={emblem} alt="" className="h-11 w-11 shrink-0 object-contain md:h-12 md:w-12" />
+          <span className="ml-3 flex flex-col justify-center border-l border-gold/40 pl-3 leading-none">
+            <span className="font-display text-[1.45rem] font-semibold tracking-wide text-primary md:text-[1.6rem]">VonSchelling</span>
+            <span className="mt-1 text-[0.55rem] font-semibold uppercase tracking-[0.33em] text-gold md:text-[0.6rem] md:tracking-[0.36em]">Agricultural Trade</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
