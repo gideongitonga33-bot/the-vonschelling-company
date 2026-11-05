@@ -44,8 +44,8 @@ function Index() {
             From Kenyan soil{" "}<br /><em className="text-gold-soft">to world markets.</em>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ivory/85">
-            We source, grade and export Kenyan agricultural products for international buyers, with clear specifications,
-            documented traceability and export handling managed from Nairobi to the port.
+            Sourced, graded and shipped from Kenya to international buyers, with clear specifications
+            and documented traceability at every step.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/coffee" className="bg-gold px-8 py-4 text-xs font-semibold tracking-[0.2em] uppercase text-forest-deep transition hover:bg-gold-soft">Explore Our Coffee</Link>
