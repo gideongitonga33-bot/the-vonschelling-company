@@ -10,6 +10,7 @@
 <!-- LOVABLE:END -->
 
 ## Website media
+- Embed the Contact office map with OpenStreetMap and keep a separate directions link so visitors can navigate without app credentials.
 - Keep website media as local files in `src/assets` and use direct image imports so GitHub deployments do not depend on Lovable asset delivery.
 - Attribute documentary photographs to their verified creator and licence; never retain a previous photograph's credit or location claim after replacing it.
 

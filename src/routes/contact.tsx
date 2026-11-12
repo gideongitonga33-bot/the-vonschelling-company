@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
-import { Mail, Copy, Check } from "lucide-react";
+import { Mail, Copy, Check, Navigation } from "lucide-react";
 import { Heading, Note, Section } from "@/components/site/Layout";
 import { Button } from "@/components/ui/button";
 import { buildEnquiryEmail, parseRequestKind, SAMPLE_SIZES, type RequestKind } from "@/lib/procurement";
@@ -85,6 +85,24 @@ function Contact() {
           </div>}
         </div>
       </div>
+      <section aria-labelledby="office-map-title" className="mt-16 border-t border-border pt-10">
+        <div className="mb-6 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
+          <div>
+            <h2 id="office-map-title" className="text-3xl">Our Nairobi Office</h2>
+            <p className="mt-2 text-sm text-muted-foreground">90 JGO Building, Lavington, Nairobi, Kenya</p>
+          </div>
+          <Button asChild variant="outline">
+            <a href="https://www.openstreetmap.org/directions?to=-1.28313%2C36.76671" target="_blank" rel="noopener noreferrer"><Navigation />Get directions</a>
+          </Button>
+        </div>
+        <iframe
+          title="Map showing JGO Building in Lavington, Nairobi"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=36.76171%2C-1.28663%2C36.77171%2C-1.27963&layer=mapnik&marker=-1.28313%2C36.76671"
+          className="h-80 w-full border border-border md:h-96"
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
+      </section>
     </Section>
   );
 }
